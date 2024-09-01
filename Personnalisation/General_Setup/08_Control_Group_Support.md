@@ -4,10 +4,8 @@
 ### A. Présentation
 
 <br />
-<br />
 
-### B. Configuraition
-
+### B. Configuration
 #### 01. Favor dynamic modification latency reduction by default
 <br />
 
