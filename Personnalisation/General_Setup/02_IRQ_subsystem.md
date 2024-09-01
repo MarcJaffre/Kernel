@@ -15,3 +15,4 @@ Cette option expose les informations internes sur les interruptions dans le syst
 Cela permet aux utilisateurs de déboguer les interruptions et de voir comment elles sont gérées par le noyau.
 
 
+☐ ☑
