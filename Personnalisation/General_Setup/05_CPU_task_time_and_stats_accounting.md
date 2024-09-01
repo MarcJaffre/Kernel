@@ -1,6 +1,14 @@
 ---------------------------------------------------------------------------------
 # <p align='center'>  CPU / Task time and stats accounting </p>
 ---------------------------------------------------------------------------------
+### A. Présentation
+Ces options permettent de configurer la façon dont les statistiques et les informations sur les processus sont collectées et exportées dans le kernel.
+
+Il est important de bien comprendre les implications de chaque option avant de les activer ou de les désactiver.
+
+<br />
+<br />
+
 #### 1. Cputime accounting []
 Permet d'activer la comptabilité du temps CPU, qui permet de mesurer le temps passé par chaque processus en mode utilisateur et en mode noyau.
 
