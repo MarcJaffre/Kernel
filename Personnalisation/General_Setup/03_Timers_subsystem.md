@@ -1,8 +1,8 @@
-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # <p align='center'> Timers Sub-System </p>
-------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ### A. Présentation
-Ces options de compilation du kernel permettent de configurer les paramètres de temporisation, de sécurité et de précision du noyau Linux. 
+Ces options de compilation du kernel permettent de configurer les paramètres de temporisation, de sécurité et de précision du noyau Linux.
 
 Il est important de choisir les options qui conviennent le mieux à vos besoins spécifiques.
 
@@ -40,15 +40,13 @@ Il existe deux options :
 
 
 #### 4. High Resolution Timer Support []
-Permet au noyau de prendre en charge les temporisateurs haute résolution, qui peuvent fournir une précision plus élevée que les temporisateurs standards. Cette option est utile pour les applications qui nécessitent une précision temporelle élevée, comme les applications de mesure de temps.
+Permet au noyau de prendre en charge les temporisateurs haute résolution, qui peuvent fournir une précision plus élevée que les temporisateurs standards.
+
+Cette option est utile pour les applications qui nécessitent une précision temporelle élevée, comme les applications de mesure de temps.
 
 <br />
 
 #### 5. ClockSource Watchdog maximum allowable skew (in ms)
-Définit la valeur maximale de dérive autorisée pour le watchdog de la source d'horloge. Le watchdog de la source d'horloge est un mécanisme qui vérifie si la source d'horloge est stable et précise. Si la dérive dépasse la valeur maximale autorisée, le noyau peut prendre des mesures correctives pour garantir la stabilité du système.
+Définit la valeur maximale de dérive autorisée pour le watchdog de la source d'horloge. Le watchdog de la source d'horloge est un mécanisme qui vérifie si la source d'horloge est stable et précise.
 
-
-
-
-
-
+Si la dérive dépasse la valeur maximale autorisée, le noyau peut prendre des mesures correctives pour garantir la stabilité du système.
