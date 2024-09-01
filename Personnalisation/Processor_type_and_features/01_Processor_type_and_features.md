@@ -88,143 +88,166 @@
 #### D. Support for old Pentium 5 / WinChip machine checks
  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 #### 
 ### 30. 
 ### 31. 
-### 32.
+### 32. 
 ### 33. 
 ### 34. 
 ### 35. 
 ### 36. 
+### 37. 
+### 38. 
+### 39. 
+### 40. 
+### 41. 
+### 42. 
+### 43. 
+### 44. 
+### 45. 
+### 46. 
+### 47. 
+### 48. 
+### 49. 
+### 50. 
+### 51. 
+### 52. 
+### 53. 
+### 54. 
+### 55. 
+### 56. 
+### 57. 
+### 58. 
+### 59. 
+### 60. 
+### 61. 
+### 62. 
+### 63. 
+### 64. 
+### 65. 
+### 66. 
+### 67. 
+### 68. 
+### 69. 
+
+
+Machine check injector support
+Legacy VM86 support
+Enable support for 16-bit segments
+Enable vsyscall emulation
+IOPERM and IOPL Emulation
+Toshiba Laptop support
+Enable X86 board specific fixups for reboot
+Late microcode loading (DANGEROUS)
+
+Enforce late microcode loading minimal revision check
+/dev/cpu//msr - Model-specific register support
+/dev/cpu//cpuid - CPU information support
+
+High Memory Support
+off
+4GB
+64GB
+
+Memory split
+3G/1G user/kernel split
+3G/1G user/kernel split (for full 1G low memory)
+2G/2G user/kernel split
+2G/2G user/kernel split (for full 2G low memory)
+1G/3G user/kernel split
+PAE (Physical Address Extension) Support
+Enable 5-level page tables support
+Enable statistic for Change Page Attribute
+AMD Secure Memory Encryption (SME) support
+
+NUMA Memory Allocation and Scheduler Support
+old style AMD Opteron NUMA detection
+ACPI NUMA detection
+NUMA emulation
+
+Maximum NUMA Nodes (as a power of 2)
+Enable sysfs memory/probe interface
+Support non-standard NVDIMMs and ADR protected memory
+Allocate 3rd-level pagetables from highmem
+Check for low memory corruption 
+Set the default setting of memory_corruption_check
 
 
 
 
+### 70. 
+### 71. 
+### 72. 
+### 73. 
+### 74. 
+### 75. 
+### 76. 
+### 77. 
+### 78. 
+### 79. 
 
+### 80. 
+### 81. 
+### 82. 
+### 83. 
+### 84. 
+### 85. 
+### 86. 
+### 87. 
+### 88. 
+### 89. 
 
+### 90. 
+### 91. 
+### 92. 
+### 93. 
+### 94. 
+### 95. 
+### 96. 
+### 97. 
+### 98. 
+### 99. 
 
+### 100. 
+### 101. 
+### 102. 
+### 103. 
+### 104. 
+### 105. 
+### 106. 
+### 107. 
+### 108. 
+### 109. 
 
+### 110. 
+### 111. 
+### 112. 
+### 113. 
+### 114. 
+### 115. 
+### 116. 
+### 117. 
+### 118. 
+### 119. 
 
+### 120. 
+### 121. 
+### 122. 
+### 123. 
+### 124. 
+### 125. 
+### 126. 
+### 127. 
+### 128. 
+### 129. 
 
-
-
-
-
-
-
-
-
-
-
-
-### 37.
-### 38.
-### 39.
-### 40.
-### 41
-### 42
-### 43
-### 44
-### 45
-### 46
-### 47
-### 48
-### 49
-### 50
-### 51
-### 52
-### 53
-### 54
-### 55
-### 56
-### 57
-### 58
-### 59
-### 60
-### 61
-### 62
-### 63
-### 64
-### 65
-### 66
-### 67
-### 68
-### 69
-
-### 70
-### 71
-### 72
-### 73
-### 74
-### 75
-### 76
-### 77
-### 78
-### 79
-
-### 80
-### 81
-### 82
-### 83
-### 84
-### 85
-### 86
-### 87
-### 88
-### 89
-
-### 90
-### 91
-### 92
-### 93
-### 94
-### 95
-### 96
-### 97
-### 98
-### 99
-
-### 100
-### 101
-### 102
-### 103
-### 104
-### 105
-### 106
-### 107
-### 108
-### 109
-
-### 110
-### 111
-### 112
-### 113
-### 114
-### 115
-### 116
-### 117
-### 118
-### 119
-
-### 120
-### 121
-### 122
-### 123
-### 124
-### 125
-### 126
-### 127
-### 128
-### 129
-
-### 130
-### 131
-### 132
-### 133
-### 134
-### 135
-### 136
-### 137
-### 138
-### 139
+### 130. 
+### 131. 
+### 132. 
+### 133. 
+### 134. 
+### 135. 
+### 136. 
+### 137. 
+### 138. 
+### 139. 
