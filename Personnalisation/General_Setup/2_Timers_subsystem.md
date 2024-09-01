@@ -13,7 +13,7 @@
 ### 4. High Resolution Timer Support
 <br />
 
-## 5. ClockSource Watchdog maximum allowable skew (in ms)
+### 5. ClockSource Watchdog maximum allowable skew (in ms)
 
 
 
