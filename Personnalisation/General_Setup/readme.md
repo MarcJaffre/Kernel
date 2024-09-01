@@ -29,7 +29,7 @@ General setup ▼
  >
  > Namespaces support
  >
- >  Configure standard kernel features (expert users)
+ > Configure standard kernel features (expert users)
  >
  > Kernel Performance Events And Counters
  >
