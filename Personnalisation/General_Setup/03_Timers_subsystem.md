@@ -9,7 +9,7 @@ Il est important de choisir les options qui conviennent le mieux à vos besoins 
 <br />
 <br />
 
-### B. Configuraition
+### B. Configuration
 
 #### 1. Timer tick handling [A Définir] (Amélioration perf / Risque de stress PC)
 L'option de gestion des ticks de temporisateur (CONFIG_HZ) définit la fréquence à laquelle le noyau Linux met à jour les compteurs de temps et exécute les tâches périodiques.
