@@ -4,6 +4,8 @@
 ### A. Présentation
 En général, cette option est destinée à des fins de débogage et ne doit pas être utilisée en production.
 
+Cependant, il est important de noter que l'utilisation de vmalloc() peut avoir un impact sur les performances, car elle est plus lente et consomme plus de mémoire que l'allocation de mémoire de la page du noyau.
+
 <br />
 
 ### B. Configuration
@@ -19,9 +21,14 @@ L'option Debug: use vmalloc to back perf mmap() buffers active un mode de débog
 
 **Activer ce mode de débogage peut être utile pour :**
 ```
-Détecter les erreurs d'allocation de mémoire: En utilisant vmalloc(), vous pouvez détecter plus facilement les erreurs d'allocation de mémoire qui pourraient se produire dans le code du noyau lié à la gestion des buffers de performance.
-Simplifier le débogage: En utilisant vmalloc(), les buffers de performance sont alloués dans l'espace d'adressage utilisateur, ce qui peut faciliter le débogage des buffers à l'aide d'outils comme gdb.
-Obtenir des informations plus détaillées: En utilisant vmalloc(), vous pouvez obtenir des informations plus détaillées sur l'allocation et l'utilisation de la mémoire des buffers de performance.
-Cependant, il est important de noter que l'utilisation de vmalloc() peut avoir un impact sur les performances, car elle est plus lente et consomme plus de mémoire que l'allocation de mémoire de la page du noyau.
+Détecter les erreurs d'allocation de mémoire:
+- En utilisant vmalloc(), vous pouvez détecter plus facilement les erreurs d'allocation de mémoire qui pourraient se produire dans le code du noyau lié à la gestion des buffers de performance.
+
+Simplifier le débogage:
+- En utilisant vmalloc(), les buffers de performance sont alloués dans l'espace d'adressage utilisateur, ce qui peut faciliter le débogage des buffers à l'aide d'outils comme gdb.
+
+
+Obtenir des informations plus détaillées:
+- En utilisant vmalloc(), vous pouvez obtenir des informations plus détaillées sur l'allocation et l'utilisation de la mémoire des buffers de performance.
 ```
 
