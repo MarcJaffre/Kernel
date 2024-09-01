@@ -2,6 +2,7 @@
 # <p align='center'> Configure standard kernel features </p>
 ---------------------------------------------------------------------------------
 
+## A. 29 Options
 
 #### 1. Enable 16-bit UID system calls
 <br />
@@ -27,65 +28,65 @@
 #### 8. BUG() support
 <br />
 
-#### 10. Enable ELF core dumps
+#### 9. Enable ELF core dumps
 <br />
 
-#### 11. Enable PC-Speaker support
+#### 10. Enable PC-Speaker support
 <br />
 
-#### 12. Enable smaller-sized data structures for core (NEW)
+#### 11. Enable smaller-sized data structures for core (NEW)
 <br />
 
-#### 13. Enable futex support
+#### 12. Enable futex support
 <br />
 
-#### 14. Enable eventpoll support
+#### 13. Enable eventpoll support
 <br />
 
-#### 15. Enable signalfd() system call
+#### 14. Enable signalfd() system call
 <br />
 
-#### 16. Enable timerfd() system call
+#### 15. Enable timerfd() system call
 <br />
 
-#### 17. Enable eventfd() system call
+#### 16. Enable eventfd() system call
 <br />
 
-#### 18. Use full shmem filesystem
+#### 17. Use full shmem filesystem
 <br />
 
-#### 19. Enable AIO support
+#### 18. Enable AIO support
 <br />
 
-#### 20. Enable IO uring support
+#### 19. Enable IO uring support
 <br />
 
-#### 21. Enable madvise/fadvise syscalls
+#### 20. Enable madvise/fadvise syscalls
 <br />
 
-#### 22. Enable membarrier() system call
+#### 21. Enable membarrier() system call
 <br />
 
-#### 23. Enable kcmp() system call
+#### 22. Enable kcmp() system call
 <br />
 
-#### 24. Enable rseq() system call
+#### 23. Enable rseq() system call
 <br />
 
-#### 25. Enable debugging of rseq() system call
+#### 24. Enable debugging of rseq() system call
 <br />
 
-#### 26. Enable cachestat() system call (NEW)
+#### 25. Enable cachestat() system call (NEW)
 <br />
 
-#### 27. PC/104 support
+#### 26. PC/104 support
 <br />
 
-#### 28. Load all symbols for debugging/ksymoops
+#### 27. Load all symbols for debugging/ksymoops
 <br />
 
-#### 29. Test the basic functions and performance of kallsyms (NEW)
+#### 28. Test the basic functions and performance of kallsyms (NEW)
 <br />
 
-#### 30. Include all symbols in kallsyms
+#### 29. Include all symbols in kallsyms
 <br />
