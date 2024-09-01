@@ -1,6 +1,12 @@
 ---------------------------------------------------------------------------------
 # <p align='center'> RCU Subsystem </p>
 ---------------------------------------------------------------------------------
+### A. Présentation
+
+<br />
+<br />
+
+### B. Configuraition
 #### 1. Make expert-level adjustments to RCU
 Permet d'activer les ajustements de niveau expert pour RCU, qui permettent de configurer les paramètres internes de RCU pour optimiser les performances.
 <br />
