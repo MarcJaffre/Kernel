@@ -174,124 +174,25 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+### 63. Build a relocatable kernel
+#### A. Randomize the address of the kernel image (KASLR) 
 
+### 64. Alignment value to which kernel should be aligned
 
-### 63. 
-### 64. 
-### 65. 
-### 66. 
-### 67. 
-### 68. 
-### 69. 
+### 65. Randomize the kernel memory sections Physical memory mapping padding
 
+### 66. Linear Address Masking support (NEW)
 
+### 67. Disable the 32-bit vDSO (needed for glibc 2.3.3)
 
+### 68. vsyscall table for legacy applications
+#### A. Emulate execution only
+#### B. None
 
+### 71. Built-in kernel command line
+#### A. Built-in kernel command string
+#### B. Built-in command line overrides boot loader arguments
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 70. 
-### 71. 
-### 72. 
-### 73. 
-### 74. 
-### 75. 
-### 76. 
-### 77. 
-### 78. 
-### 79. 
-
-### 80. 
-### 81. 
-### 82. 
-### 83. 
-### 84. 
-### 85. 
-### 86. 
-### 87. 
-### 88. 
-### 89. 
-
-### 90. 
-### 91. 
-### 92. 
-### 93. 
-### 94. 
-### 95. 
-### 96. 
-### 97. 
-### 98. 
-### 99. 
-
-### 100. 
-### 101. 
-### 102. 
-### 103. 
-### 104. 
-### 105. 
-### 106. 
-### 107. 
-### 108. 
-### 109. 
-
-### 110. 
-### 111. 
-### 112. 
-### 113. 
-### 114. 
-### 115. 
-### 116. 
-### 117. 
-### 118. 
-### 119. 
-
-### 120. 
-### 121. 
-### 122. 
-### 123. 
-### 124. 
-### 125. 
-### 126. 
-### 127. 
-### 128. 
-### 129. 
-
-### 130. 
-### 131. 
-### 132. 
-### 133. 
-### 134. 
-### 135. 
-### 136. 
-### 137. 
-### 138. 
-### 139. 
+### 72. Enable the LDT (local descriptor table)
+### 73. Enforce strict size checking for sigaltstack
+### 74. Kernel Live Patching
