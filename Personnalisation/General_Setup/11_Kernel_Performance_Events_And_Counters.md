@@ -12,11 +12,19 @@ Cependant, il est important de noter que l'utilisation de vmalloc() peut avoir u
 #### 1. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers
 Cette option de compilation du noyau (kernel) active un comportement de débogage pour les événements et compteurs de performance.
 
-Le noyau Linux utilise la fonction perf_mmap() pour allouer la mémoire pour les buffers de performance. Ces buffers stockent des informations sur les événements de performance, comme le nombre de cycles d'horloge utilisés par un processus ou le nombre de cache misses.
+Le noyau Linux utilise la fonction perf_mmap() pour allouer la mémoire pour les buffers de performance. 
 
-Par défaut, perf_mmap() utilise le système d'allocation de mémoire de la page du noyau. Cela signifie que la mémoire est allouée à partir d'un pool de pages spécifiques au noyau, et elle est gérée par le noyau.
+Ces buffers stockent des informations sur les événements de performance, comme le nombre de cycles d'horloge utilisés par un processus ou le nombre de cache misses.
 
-L'option Debug: use vmalloc to back perf mmap() buffers active un mode de débogage dans lequel perf_mmap() utilise la fonction vmalloc() au lieu de l'allocation de mémoire de la page du noyau. La fonction vmalloc() est une fonction d'allocation de mémoire plus flexible qui permet de réserver de grands blocs de mémoire contiguës.
+
+Par défaut, perf_mmap() utilise le système d'allocation de mémoire de la page du noyau. 
+
+Cela signifie que la mémoire est allouée à partir d'un pool de pages spécifiques au noyau, et elle est gérée par le noyau.
+
+
+L'option Debug: use vmalloc to back perf mmap() buffers active un mode de débogage dans lequel perf_mmap() utilise la fonction vmalloc() au lieu de l'allocation de mémoire de la page du noyau. 
+
+La fonction vmalloc() est une fonction d'allocation de mémoire plus flexible qui permet de réserver de grands blocs de mémoire contiguës.
 
 
 **Activer ce mode de débogage peut être utile pour :**
