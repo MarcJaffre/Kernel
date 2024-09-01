@@ -38,6 +38,7 @@ Un espace de nom IPC définit un ensemble de paramètres système tels que les c
 Chaque processus peut avoir son propre espace de nom IPC, ce qui signifie qu'il peut avoir ses propres clés de messagerie, ses propres sémaphores, ses propres mémoires partagées, etc.
 
 L'avantage de l'utilisation des espaces de nom IPC est que cela permet de créer des environnements système isolés pour chaque processus ou groupe de processus, ce qui peut améliorer la sécurité et la flexibilité du système.
+
 <br />
 
 #### 4. User namespace
@@ -47,6 +48,7 @@ Un espace de nom utilisateur définit un ensemble de paramètres système tels q
 Chaque processus peut avoir son propre espace de nom utilisateur, ce qui signifie qu'il peut avoir ses propres identifiants d'utilisateur, ses propres groupes d'utilisateur, etc.
 
 L'avantage de l'utilisation des espaces de nom utilisateur est que cela permet de créer des environnements système isolés pour chaque processus ou groupe de processus, ce qui peut améliorer la sécurité et la flexibilité du système.
+
 <br />
 
 #### 5. PID Namespaces
@@ -57,6 +59,7 @@ Un espace de nom PID définit un ensemble de paramètres système tels que les i
 Chaque processus peut avoir son propre espace de nom PID, ce qui signifie qu'il peut avoir ses propres identifiants de processus, ses propres tables de processus, etc.
 
 L'avantage de l'utilisation des espaces de nom PID est que cela permet de créer des environnements système isolés pour chaque processus ou groupe de processus, ce qui peut améliorer la sécurité et la flexibilité du système.
+
 <br />
 
 #### 6. Network namespace
