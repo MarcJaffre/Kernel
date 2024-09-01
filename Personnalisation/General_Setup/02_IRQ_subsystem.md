@@ -2,6 +2,7 @@
 # <p align='center'> IRQ Sub-System </p>
 ------------------------------------------------------------------------------------------------------------------------------------------
 #### 1. Supportsparse irq numbering
+<br />
 
 #### 2. Expose irq internals in debugfs
 
