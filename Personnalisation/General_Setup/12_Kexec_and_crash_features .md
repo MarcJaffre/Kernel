@@ -22,12 +22,8 @@ Permet de s'assurer que le noyau que vous chargez est authentique et n'a pas ét
 ##### A. Require a valid signature in kexec_file_load() syscall
 Permet de s'assurer que le noyau que vous chargez est signé par une autorité de confiance.
 
-<br />
-
 ##### B. Enable Image signature verification support (ARM)
 Permet de vérifier la signature d'un fichier image ARM, afin de s'assurer qu'il n'a pas été modifié.
-
-<br />
 
 ##### C. Enable bzlmage signature verification support
 Permet de vérifier la signature d'un fichier bzlmage, afin de s'assurer qu'il n'a pas été modifié.
