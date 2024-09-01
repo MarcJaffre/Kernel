@@ -7,21 +7,21 @@
  > 
   >> Preload BPF file system with kernel specific program and map iterators (+XX options)
  >
- > 5. CPU/Task time and stats accounting (+XX options)
+ > 4. CPU/Task time and stats accounting (+XX options)
  >
- > 6. RCU Subsystem (+XX options)
+ > 5. RCU Subsystem (+XX options)
  >
- > 7. Scheduler features (+XX options)
+ > 6. Scheduler features (+XX options)
  >
- > 8. Control Group support (+XX options)
+ > 7. Control Group support (+XX options)
  >
- > 9. Namespaces support (+XX options)
+ > 8. Namespaces support (+XX options)
  >
- > 10. Configure standard kernel features (+XX options)
+ > 9. Configure standard kernel features (+XX options)
  >
- > 11. Kernel Performance Events And Counters (+XX options)
+ > 10. Kernel Performance Events And Counters (+XX options)
  >
- > 12. Kexec and crash features (+XX options)
+ > 11. Kexec and crash features (+XX options)
 
 <br />
 
