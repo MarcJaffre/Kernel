@@ -10,6 +10,8 @@ Les valeurs possibles sont :
 - 300 Hz  : le noyau met à jour les compteurs de temps 300  fois par seconde.
 - 1000 Hz : le noyau met à jour les compteurs de temps 1000 fois par seconde.
 
+Une fréquence plus élevée peut améliorer la précision des compteurs de temps, mais peut également augmenter la charge du processeur.
+
 <br />
 
 #### 2. Force user context tracking
