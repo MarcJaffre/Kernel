@@ -13,6 +13,7 @@ Il est important de bien comprendre les implications de chaque option avant de l
 Permet d'activer la comptabilité du temps CPU, qui permet de mesurer le temps passé par chaque processus en mode utilisateur et en mode noyau.
 
 Cela permet de fournir des informations précises sur l'utilisation du CPU par les processus.
+
 <br />
 
 #### 2. Fine granularity task level IRQ time accounting []
