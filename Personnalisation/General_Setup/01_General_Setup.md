@@ -279,3 +279,7 @@ Kprobes : Kprobes est un outil de profilage qui permet de collecter des informat
 
 Ftrace : Ftrace est un outil de profilage qui permet de collecter des informations sur les performances du kernel en utilisant des traces de fonction. Les traces de fonction permettent de suivre l'exécution des fonctions dans le kernel et de collecter des informations sur les performances du kernel.
 ```
+
+
+
+☐ ☑
