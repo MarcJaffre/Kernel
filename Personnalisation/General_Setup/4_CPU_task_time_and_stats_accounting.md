@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------
-# <p align='center'>  CPU/Task time and stats accounting </p>
+# <p align='center'>  CPU / Task time and stats accounting </p>
 ---------------------------------------------------------------------------------
 
 #### X. RCU SubSystem
