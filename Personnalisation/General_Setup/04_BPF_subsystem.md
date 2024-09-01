@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------------------------------------------------------------------
 # <p align='center'> BPF Sub-System </p>
 ------------------------------------------------------------------------------------------------------------------------------------------
-### I. Global
+### I. Présentation
 Ces options permettent de configurer la façon dont les programmes BPF sont exécutés et sécurisés dans le kernel.
 
 Il est important de bien comprendre les implications de chaque option avant de les activer ou de les désactiver. 
