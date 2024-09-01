@@ -36,6 +36,7 @@ Le contrôleur d'E/S peut aider à éviter les problèmes de surcharge d'E/S et 
 Permet d'activer le clamping d'utilisation pour chaque groupe de tâches.
 
 Le clamping d'utilisation permet de limiter l'utilisation des ressources par les tâches pour éviter les problèmes de surcharge et de sous-utilisation.
+
 <br />
 
 ### 05. PIDs controller
