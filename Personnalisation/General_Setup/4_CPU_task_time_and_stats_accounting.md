@@ -1,6 +1,6 @@
-
-### X. CPU/Task time and stats accounting
-<br />
+---------------------------------------------------------------------------------
+# <p align='center'>  CPU/Task time and stats accounting </p>
+---------------------------------------------------------------------------------
 
 ### X. RCU SubSystem
 <br />
