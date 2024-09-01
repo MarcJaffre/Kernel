@@ -3,7 +3,7 @@
  > 
  > Timers subsystem
  > 
- > BPF subsystem
+ > BPF subsystem ▼
  > 
   > Preload BPF file system with kernel specific program and map iterators
  >
