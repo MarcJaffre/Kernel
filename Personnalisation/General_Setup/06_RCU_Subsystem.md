@@ -4,7 +4,6 @@
 ### A. Présentation
 
 <br />
-<br />
 
 ### B. Configuraition
 #### 1. Make expert-level adjustments to RCU
