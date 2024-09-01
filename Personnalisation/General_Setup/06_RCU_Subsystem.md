@@ -19,7 +19,7 @@
 #### 5. Enable RCU priority boosting 
 <br />
 
-#### 6.   Offload RCU callback processing from boot-selected CPUs 
+#### 6. Offload RCU callback processing from boot-selected CPUs 
 <br />
 
 #### 7. Tasks Trace RCU readers use memory barriers in user and idle
@@ -28,10 +28,9 @@
 #### 8. RCU callback lazy invocation functionality (NEW)
 <br />
 
-#### 9.  RCU callback-batch backup time check
+#### 9. RCU callback-batch backup time check
 <br />
 
 
 
-Transformer moi l'image en format texte en respectant la mise en forme
 
