@@ -2,38 +2,58 @@
 # <p align='center'> Configure standard kernel features </p>
 ---------------------------------------------------------------------------------
 ### A. Présentation
-Ces options activent divers appels système, interfaces et fonctionnalités qui permettent aux applications d'interagir avec le noyau et d'accéder à diverses ressources système. Ils activent également des outils de débogage et d'analyse qui aident les développeurs à déboguer et à optimiser le code du noyau.
+Ces options activent divers appels système, interfaces et fonctionnalités qui permettent aux applications d'interagir avec le noyau et d'accéder à diverses ressources système.
+
+Ils activent également des outils de débogage et d'analyse qui aident les développeurs à déboguer et à optimiser le code du noyau.
 
 <br />
 
 ### B. Configuration
 #### 1. Enable 16-bit UID system calls
-Permet d'activer les appels système UID 16 bits. Les UID (User ID) sont des identifiants uniques attribués à chaque utilisateur du système. Les appels système UID 16 bits permettent de gérer les utilisateurs et les groupes avec des identifiants plus petits, ce qui peut être utile pour les systèmes embarqués ou les systèmes anciens.
+Permet d'activer les appels système UID 16 bits.
+
+Les UID (User ID) sont des identifiants uniques attribués à chaque utilisateur du système.
+
+Les appels système UID 16 bits permettent de gérer les utilisateurs et les groupes avec des identifiants plus petits, ce qui peut être utile pour les systèmes embarqués ou les systèmes anciens.
 
 <br />
 
 #### 2. Multiple users, groups and capabilities support
-Permet de prendre en charge plusieurs utilisateurs, groupes et capacités. Les capacités sont des autorisations spécifiques qui peuvent être attribuées à des utilisateurs ou des groupes pour leur permettre d'accéder à certaines ressources système. Cette option permet de gérer de manière plus fine les autorisations et les accès aux ressources système.
+Permet de prendre en charge plusieurs utilisateurs, groupes et capacités.
+
+Les capacités sont des autorisations spécifiques qui peuvent être attribuées à des utilisateurs ou des groupes pour leur permettre d'accéder à certaines ressources système.
+
+Cette option permet de gérer de manière plus fine les autorisations et les accès aux ressources système.
 
 <br />
 
 #### 3. sgetmask/ssetmask syscalls support
-Permet de prendre en charge les appels système sgetmask et ssetmask. Ces appels système permettent de gérer les masques de signal, qui définissent les signaux que les processus peuvent recevoir.
+Permet de prendre en charge les appels système sgetmask et ssetmask.
+
+Ces appels système permettent de gérer les masques de signal, qui définissent les signaux que les processus peuvent recevoir.
 
 <br />
 
 #### 4. Sysfs syscall support
-Permet de prendre en charge les appels système Sysfs. Sysfs est un système de fichiers virtuel qui fournit des informations sur les périphériques et les ressources système. Les appels système Sysfs permettent d'accéder à ces informations et de les modifier.
+Permet de prendre en charge les appels système Sysfs.
+
+Sysfs est un système de fichiers virtuel qui fournit des informations sur les périphériques et les ressources système.
+
+Les appels système Sysfs permettent d'accéder à ces informations et de les modifier.
 
 <br />
 
 #### 5. open by fhandle syscalls
-Permet de prendre en charge les appels système open by fhandle. Ces appels système permettent d'ouvrir des fichiers en utilisant des descripteurs de fichier (fhandle) au lieu de noms de fichiers.
+Permet de prendre en charge les appels système open by fhandle.
+
+Ces appels système permettent d'ouvrir des fichiers en utilisant des descripteurs de fichier (fhandle) au lieu de noms de fichiers.
 
 <br />
 
 #### 6. Posix Clocks & timers
-Permet de prendre en charge les horloges et les minuteries POSIX. Les horloges et les minuteries POSIX sont des mécanismes qui permettent de gérer les événements temporisés et les alarmes dans le système.
+Permet de prendre en charge les horloges et les minuteries POSIX.
+
+Les horloges et les minuteries POSIX sont des mécanismes qui permettent de gérer les événements temporisés et les alarmes dans le système.
 
 <br />
 
