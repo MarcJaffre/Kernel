@@ -3,10 +3,11 @@
 ---------------------------------------------------------------------------------
 
 ### A. Présentation
-29 Options
 
 <br />
+<br />
 
+### B. Configuraition
 #### 1. Enable 16-bit UID system calls
 <br />
 
