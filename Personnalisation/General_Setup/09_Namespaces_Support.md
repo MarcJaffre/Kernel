@@ -5,6 +5,7 @@
 Ces options de compilation permettent de prendre en charge les différents espaces de nom qui définissent les paramètres système pour chaque processus ou groupe de processus.
 
 Cela permet de créer des environnements système isolés pour chaque processus ou groupe de processus, ce qui peut améliorer la sécurité et la flexibilité du système.
+
 <br />
 
 ### B. Configuration
