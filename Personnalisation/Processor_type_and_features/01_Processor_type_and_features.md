@@ -7,31 +7,25 @@
 <br />
 
 ## B. Configuration
-### 01.
+### 01. Symmetric multi-processing support
+### 02. Support x2apic
+### 03. Enable MSI and MSI-x delivery by posted interrupts (NEW)
+### 04. Enable MPS table
+### 05. x86 CPU resource control support
+### 06. Flexible Return and Event Delivery (NEW)
 
-### 02.
+### 07. Support for big SMP systems with more than 8 CPUs
 
-### 03.
-
-### 04.
-
-### 05.
-
-### 06.
-
-### 07.
-
-### 08.
-#### A.
-#### B.
-#### C.
-#### D.
-#### E.
-#### F.
-#### G.
+### 08. Support for extended (non-PC) x86 platforms
+#### A. Numascale NumaChip
+#### B. ScaleMP VSMP
+#### C. SGI Ultraviolet
+#### D. Goldfish (Virtual Platform)
+#### E. CE4100 TV platform
+#### F. Intel MID platform support
+#### G. Intel Quark platform support 
 
 ### 09.
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 10.
