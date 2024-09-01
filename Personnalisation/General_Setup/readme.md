@@ -5,7 +5,7 @@
  > 
  > BPF subsystem ▼
  > 
-  > Preload BPF file system with kernel specific program and map iterators
+  >> Preload BPF file system with kernel specific program and map iterators
  >
  > CPU/Task time and stats accounting
  >
