@@ -1,47 +1,54 @@
 ---------------------------------------------------------------------------------
 # <p align='center'> Control Group Support </p>
 ---------------------------------------------------------------------------------
-#### 01. 
+#### 01. Favor dynamic modification latency reduction by default
 <br />
 
-#### 02. 
+#### 02. Memory controller
 <br />
 
-#### 03. 
+#### 03. IO controller
 <br />
 
-#### 04. 
+#### 04. Utilization clamping per group of tasks
 <br />
 
-#### 05. 
+#### 05. PIDs controller
 <br />
 
-#### 06. 
+#### 06. RDMA controller
 <br />
 
-#### 07. 
+#### 07. Freezer controller
 <br />
 
-#### 08. 
+#### 08. HugeTLB controller
 <br />
 
-#### 09. 
+#### 09. Cpuset controller
 <br />
 
-#### 10. 
+#### 10. Include legacy /proc/<pid>/cpuset file
 <br />
 
-#### 11. 
+#### 11. Device controller
 <br />
 
-#### 12. 
+#### 12. Simple CPU accounting controller
 <br />
 
-#### 13. 
+#### 13. Perf controller
 <br />
 
-#### 14. 
+#### 14. Support for eBPF programs attached to cgroups
 <br />
 
-#### 15. 
+#### 15. Misc resource controller
 <br />
+
+#### 16. Debug controller
+<br />
+
+
+
+
