@@ -139,18 +139,41 @@
 ### 51. Set the default setting of memory_corruption_check
 
 
+### 52. Math emulation
+### 53. MTRR (Memory Type Range Register) support
+#### A. MTRR cleanup support
+#### B. MTRR cleanup enable value (0-1)
+#### C. MTRR cleanup spare reg num (0-7)
+#### D. x86 PAT support
 
-### 52. 
-### 53. 
-### 54. 
-### 55. 
-### 56. 
-### 57. 
-### 58. 
-### 59. 
-### 60. 
-### 61. 
-### 62. 
+### 54. User Mode Instruction Prevention
+### 55. Indirect Branch Tracking
+### 56. Memory Protection Keys
+### 57. TSX enable mode
+#### A. off
+#### B. on
+#### C. auto
+
+### 58. Software Guard extensions (SGX)
+### 59. X86 userspace shadow stack (NEW)
+### 60. Intel Trust Domain Extensions (TDX) host support
+
+### 61. EFI runtime service support
+#### A. EFI stub support
+#### A1. EFI handover protocol (DEPRECATED)
+#### A2. EFI mixed-mode support
+#### B1. Enable EFI fake memory map
+#### B2. maximum allowable number of ranges in efi_fake_mem boot option
+#### C1. Export EFI runtime maps to sysfs
+
+### 62. Timer frequency
+#### A. 100 HZ
+#### B. 250 HZ
+#### C. 300 HZ
+#### D. 1000 HZ
+
+
+
 ### 63. 
 ### 64. 
 ### 65. 
@@ -158,6 +181,20 @@
 ### 67. 
 ### 68. 
 ### 69. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
