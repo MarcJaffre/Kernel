@@ -10,6 +10,8 @@ Cela permet d'utiliser un plus petit nombre de numéros d'interruption tout en p
 <br />
 
 #### 2. Expose irq internals in debugfs
+Cette option expose les informations internes sur les interruptions dans le système de fichiers debugfs.
 
+Cela permet aux utilisateurs de déboguer les interruptions et de voir comment elles sont gérées par le noyau.
 
 
