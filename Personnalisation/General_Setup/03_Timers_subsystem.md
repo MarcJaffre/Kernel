@@ -7,7 +7,6 @@ Ces options de compilation du kernel permettent de configurer les paramètres de
 Il est important de choisir les options qui conviennent le mieux à vos besoins spécifiques.
 
 <br />
-<br />
 
 ### B. Configuration
 
