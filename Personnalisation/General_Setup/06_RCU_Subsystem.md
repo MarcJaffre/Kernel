@@ -2,6 +2,14 @@
 # <p align='center'> RCU Subsystem </p>
 ---------------------------------------------------------------------------------
 ### A. Présentation
+Les options de compilation liées à RCU permettent de configurer et d'optimiser les performances de RCU.
+
+Les options incluent la sélection de l'implémentation de RCU, la définition des valeurs de fanout, l'activation du renforcement de priorité, la décharge du traitement des rappels et l'utilisation de barrières de mémoire.
+
+Les nouvelles fonctionnalités incluent l'invocation paresseuse des rappels et la vérification de la durée de sauvegarde des rappels.
+
+J'espère que cela vous a aidé à comprendre les options de compilation liées à RCU. Si vous avez des questions supplémentaires, n'hésitez pas à me demander.
+
 
 <br />
 
