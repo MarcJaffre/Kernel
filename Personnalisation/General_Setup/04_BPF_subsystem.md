@@ -40,3 +40,4 @@ Cela signifie que seuls les utilisateurs privilégiés pourront charger et exéc
 #### 5. Enable BPF LSM Instrumentation
 Permet d'activer l'instrumentation BPF LSM (Linux Security Module) qui fournit des hooks de sécurité pour les programmes BPF. Cela permet de contrôler l'accès aux ressources système et de renforcer la sécurité du système.
 
+☐ ☑
