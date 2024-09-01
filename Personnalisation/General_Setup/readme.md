@@ -1,29 +1,29 @@
-### General setup ▼ 
- > IRQ subsystem
+### General setup ▼ (+30 options)
+ > IRQ subsystem (+XX options)
  > 
- > Timers subsystem
+ > Timers subsystem (+XX options)
  > 
- > BPF subsystem ▼
+ > BPF subsystem ▼ (+XX options)
  > 
-  >> Preload BPF file system with kernel specific program and map iterators
+  >> Preload BPF file system with kernel specific program and map iterators (+XX options)
  >
- > CPU/Task time and stats accounting
+ > CPU/Task time and stats accounting (+XX options)
  >
- > RCU Subsystem
+ > RCU Subsystem (+XX options)
  >
- > Scheduler features
+ > Scheduler features (+XX options)
  >
- > Control Group support
+ > Control Group support (+XX options)
  >
- > Namespaces support
+ > Namespaces support (+XX options)
  >
- > Configure standard kernel features (expert users)
+ > Configure standard kernel features (+XX options)
  >
- > Kernel Performance Events And Counters
+ > Kernel Performance Events And Counters (+XX options)
  >
- > Kexec and crash features
+ > Kexec and crash features (+XX options)
 
-
+<br />
 
 <br />
 
