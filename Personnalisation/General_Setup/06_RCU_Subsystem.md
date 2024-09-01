@@ -11,10 +11,8 @@
 <br />
 
 #### 4. Force selection of Tasks Trace RCU
-
-Tree-based hierarchical RCU fanout value
-
-Tree-based hierarchical RCU leaf-level fanout value
+##### A. Tree-based hierarchical RCU fanout value
+##### B. Tree-based hierarchical RCU leaf-level fanout value
 
 <br />
 
