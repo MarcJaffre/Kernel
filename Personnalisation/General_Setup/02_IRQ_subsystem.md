@@ -1,11 +1,11 @@
 ------------------------------------------------------------------------------------------------------------------------------------------
 # <p align='center'> IRQ Sub-System </p>
 ------------------------------------------------------------------------------------------------------------------------------------------
-### A. Présentation
+## A. Présentation
 
 <br />
 
-### B. Configuration
+## B. Configuration
 #### 1. Supportsparse irq numbering [Y]
 Cette option active le support pour une numérotation d'interruption clairsemée. 
 
@@ -15,7 +15,7 @@ Cela permet d'utiliser un plus petit nombre de numéros d'interruption tout en p
 
 <br />
 
-#### 2. Expose irq internals in debugfs [Y] (Mitigé, Sécurité)
+### 2. Expose irq internals in debugfs [Y] (Mitigé, Sécurité)
 Cette option expose les informations internes sur les interruptions dans le système de fichiers debugfs.
 
 Cela permet aux utilisateurs de déboguer les interruptions et de voir comment elles sont gérées par le noyau.
