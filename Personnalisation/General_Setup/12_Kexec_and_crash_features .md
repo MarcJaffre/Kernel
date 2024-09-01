@@ -4,9 +4,8 @@
 ### A. Présentation
 
 <br />
-<br />
 
-### B. Configuraition
+### B. Configuration
 #### 1. 
 <br />
 
