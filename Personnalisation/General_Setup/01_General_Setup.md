@@ -1,9 +1,12 @@
 ------------------------------------------------------------------------------------------------------------------------------------------
 # <p align='center'> General Setup </p>
 ------------------------------------------------------------------------------------------------------------------------------------------
-
-
 ### A. Genetal Setup (+30 options)
+
+
+
+
+
 #### 1. Compile also drivers which will not load [N]
 Cette option permet de compiler les pilotes qui ne seront pas chargés par défaut. Cela peut être utile pour les développeurs de pilotes ou pour les utilisateurs qui veulent avoir accès à des pilotes expérimentaux.
 
