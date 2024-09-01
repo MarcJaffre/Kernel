@@ -2,29 +2,20 @@
 # <p align='center'> Namespaces support </p>
 ---------------------------------------------------------------------------------
 
-#### 1. 
+#### 1. UTS namespace
 <br />
 
-#### 2. 
+#### 2. TIME namespace
 <br />
 
-#### 3. 
+#### 3. IPC namespace
 <br />
 
-#### 4. 
+#### 4. User namespace
 <br />
 
-#### 5. 
+#### 5. PID Namespaces
 <br />
 
-#### 6. 
-<br />
-
-#### 7. 
-<br />
-
-#### 8. 
-<br />
-
-#### 9. 
+#### 6. Network namespace
 <br />
