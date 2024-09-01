@@ -6,4 +6,3 @@ Aller dans le dossier du Noyau et taper la commande `make xconfig`.
 
 ### Menu Cacher
 Option > Show Prompts Options : Permet d'avoir débloquer des options (Exemple: CPU_Isolation)
-
