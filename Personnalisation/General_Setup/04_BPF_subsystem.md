@@ -9,7 +9,6 @@ Il est important de bien comprendre les implications de chaque option avant de l
 <br />
 
 ### B. Configuration
-
 #### 1. Enable bpf() system call
 Permet d'activer l'appel système bpf() qui est utilisé pour charger et exécuter des programmes BPF.
 
