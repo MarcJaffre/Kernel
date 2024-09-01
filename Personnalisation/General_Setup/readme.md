@@ -9,3 +9,24 @@ Aller dans le dossier du Noyau et taper la commande `make xconfig`.
 Option > Show Prompts Options : Permet d'avoir débloquer des options (Exemple: CPU_Isolation)
 
 
+General setup ▼ 
+ > IRQ subsystem
+ > Timers subsystem
+ > BPF subsystem
+  > Preload BPF file system with kernel specific program and map iterators
+ 
+ > CPU/Task time and stats accounting
+ 
+ > RCU Subsystem
+ 
+ > Scheduler features
+ 
+ > Control Group support
+ 
+ > Namespaces support
+ 
+ >  Configure standard kernel features (expert users)
+ 
+ > Kernel Performance Events And Counters
+ 
+ > Kexec and crash features
