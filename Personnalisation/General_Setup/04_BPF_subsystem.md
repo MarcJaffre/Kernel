@@ -7,9 +7,8 @@ Ces options permettent de configurer la façon dont les programmes BPF sont exé
 Il est important de bien comprendre les implications de chaque option avant de les activer ou de les désactiver. 
 
 <br />
-<br />
 
-### B. Configuraition
+### B. Configuration
 
 #### 1. Enable bpf() system call
 Permet d'activer l'appel système bpf() qui est utilisé pour charger et exécuter des programmes BPF.
