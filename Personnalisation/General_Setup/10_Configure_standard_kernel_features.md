@@ -2,8 +2,10 @@
 # <p align='center'> Configure standard kernel features </p>
 ---------------------------------------------------------------------------------
 
+### A. Présentation
 29 Options
 
+<br />
 
 #### 1. Enable 16-bit UID system calls
 <br />
