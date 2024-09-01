@@ -1,19 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------------------------
 # <p align='center'> Configuration d'un Noyau Debian - General Setup </p>
 
-------------------------------------------------------------------------------------------------------------------------------------------
-## I. Configuration du Noyau
-### A. Accéder au menu de configuration
-Aller dans le dossier du Noyau et taper la commande `make xconfig` .
-
-**IMPORTANT:** Permet d'avoir débloquer des options (Exemple: CPU_Isolation)
-Option > Show Prompts Options
-
-<br />
-
-------------------------------------------------------------------------------------------------------------------------------------------
-## II. Base
 Les options suivants ont étés relevés sur le Kernel 6.10.7 de Kernel.org
+
 ### A. Genetal Setup (+30 options)
 #### 1. Compile also drivers which will not load [N]
 Cette option permet de compiler les pilotes qui ne seront pas chargés par défaut. Cela peut être utile pour les développeurs de pilotes ou pour les utilisateurs qui veulent avoir accès à des pilotes expérimentaux.
