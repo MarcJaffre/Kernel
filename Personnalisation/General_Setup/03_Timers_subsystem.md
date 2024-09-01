@@ -50,3 +50,6 @@ Cette option est utile pour les applications qui nécessitent une précision tem
 Définit la valeur maximale de dérive autorisée pour le watchdog de la source d'horloge. Le watchdog de la source d'horloge est un mécanisme qui vérifie si la source d'horloge est stable et précise.
 
 Si la dérive dépasse la valeur maximale autorisée, le noyau peut prendre des mesures correctives pour garantir la stabilité du système.
+
+
+☐ ☑
