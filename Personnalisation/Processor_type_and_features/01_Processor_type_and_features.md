@@ -14,6 +14,7 @@
 ### 05. x86 CPU resource control support
 ### 06. Flexible Return and Event Delivery (NEW)
 ### 07. Support for big SMP systems with more than 8 CPUs
+
 ### 08. Support for extended (non-PC) x86 platforms
 #### A. Numascale NumaChip
 #### B. ScaleMP VSMP
@@ -27,8 +28,10 @@
 
 ### 09. Intel Low Power Subsystem Support
 ### 10. AMD ACPI2Platform devices support
+
 ### 11. Intel SoC IOSF Sideband support for SoC platforms
 #### A. Enable IOSF sideband access through debugfs
+
 ### 12. RDC R-321x SoC
 ### 13. Support non-standard 32-bit
 ### 14. SMP architectures
@@ -76,11 +79,15 @@
 ### 23. Enable Maximum number of SMP Processors and NUMA Nodes
 ### 24. Maximum number of CPUs
 ### 25. Cluster scheduler support
+
 ### 26. Multi-core scheduler support
 #### A. CPU core priorities scheduler support
+
 ### 27. Local APIC support on uniprocessors
 #### A. IO-APIC support on uniprocessors
+
 ### 28. Reroute for broken boot IRQs
+
 ### 29. Machine Check / overheating reporting
 #### A. Support for deprecated /dev/mcelog character device
 #### B. Intel MCE features
@@ -89,28 +96,50 @@
  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #### 
-### 30. 
-### 31. 
-### 32. 
-### 33. 
-### 34. 
-### 35. 
-### 36. 
-### 37. 
-### 38. 
-### 39. 
-### 40. 
-### 41. 
-### 42. 
-### 43. 
-### 44. 
-### 45. 
-### 46. 
-### 47. 
-### 48. 
-### 49. 
-### 50. 
-### 51. 
+### 30. Machine check injector support
+### 31. Legacy VM86 support
+### 32. Enable support for 16-bit segments
+### 33. Enable vsyscall emulation
+### 34. IOPERM and IOPL Emulation
+### 35. Toshiba Laptop support
+### 36. Enable X86 board specific fixups for reboot
+### 37. Late microcode loading (DANGEROUS)
+
+### 38. Enforce late microcode loading minimal revision check
+#### A. /dev/cpu/*/msr   - Model-specific register support
+#### B. /dev/cpu/*/cpuid - CPU information support
+
+### 39. High Memory Support
+#### A. off
+#### B. 4GB
+#### C. 64GB
+
+### 40. Memory split
+#### A. 3G/1G user/kernel split
+#### B. 3G/1G user/kernel split (for full 1G low memory)
+#### C. 2G/2G user/kernel split
+#### D. 2G/2G user/kernel split (for full 2G low memory)
+#### E. 1G/3G user/kernel split
+
+### 41. PAE (Physical Address Extension) Support
+### 42. Enable 5-level page tables support
+### 43. Enable statistic for Change Page Attribute
+### 44. AMD Secure Memory Encryption (SME) support
+
+### 45. NUMA Memory Allocation and Scheduler Support
+#### A. old style AMD Opteron NUMA detection
+#### B. ACPI NUMA detection
+#### C. NUMA emulation
+
+### 46. Maximum NUMA Nodes (as a power of 2)
+### 47. Enable sysfs memory/probe interface
+### 48. Support non-standard NVDIMMs and ADR protected memory
+### 49. Allocate 3rd-level pagetables from highmem
+### 50. Check for low memory corruption 
+### 51. Set the default setting of memory_corruption_check
+
+
+
 ### 52. 
 ### 53. 
 ### 54. 
@@ -131,46 +160,22 @@
 ### 69. 
 
 
-Machine check injector support
-Legacy VM86 support
-Enable support for 16-bit segments
-Enable vsyscall emulation
-IOPERM and IOPL Emulation
-Toshiba Laptop support
-Enable X86 board specific fixups for reboot
-Late microcode loading (DANGEROUS)
 
-Enforce late microcode loading minimal revision check
-/dev/cpu//msr - Model-specific register support
-/dev/cpu//cpuid - CPU information support
 
-High Memory Support
-off
-4GB
-64GB
 
-Memory split
-3G/1G user/kernel split
-3G/1G user/kernel split (for full 1G low memory)
-2G/2G user/kernel split
-2G/2G user/kernel split (for full 2G low memory)
-1G/3G user/kernel split
-PAE (Physical Address Extension) Support
-Enable 5-level page tables support
-Enable statistic for Change Page Attribute
-AMD Secure Memory Encryption (SME) support
 
-NUMA Memory Allocation and Scheduler Support
-old style AMD Opteron NUMA detection
-ACPI NUMA detection
-NUMA emulation
 
-Maximum NUMA Nodes (as a power of 2)
-Enable sysfs memory/probe interface
-Support non-standard NVDIMMs and ADR protected memory
-Allocate 3rd-level pagetables from highmem
-Check for low memory corruption 
-Set the default setting of memory_corruption_check
+
+
+
+
+
+
+
+
+
+
+
 
 
 
