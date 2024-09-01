@@ -1,13 +1,11 @@
 ---------------------------------------------------------------------------------
 # <p align='center'> Configure standard kernel features </p>
 ---------------------------------------------------------------------------------
-
 ### A. Présentation
 
 <br />
-<br />
 
-### B. Configuraition
+### B. Configuration
 #### 1. Enable 16-bit UID system calls
 <br />
 
