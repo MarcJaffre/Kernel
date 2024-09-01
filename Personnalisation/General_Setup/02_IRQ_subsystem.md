@@ -5,7 +5,7 @@
 
 <br />
 
-### B. Configuraition
+### B. Configuration
 #### 1. Supportsparse irq numbering [Y]
 Cette option active le support pour une numérotation d'interruption clairsemée. 
 
