@@ -8,15 +8,8 @@ Il est important de bien comprendre les implications de chaque option avant de l
 
 <br />
 <br />
+
 ### B. Configuraition
-
-
-
-
-
-
-
-
 #### 1. Cputime accounting []
 Permet d'activer la comptabilité du temps CPU, qui permet de mesurer le temps passé par chaque processus en mode utilisateur et en mode noyau.
 
