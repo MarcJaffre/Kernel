@@ -7,7 +7,6 @@ Ces options permettent de configurer la façon dont les statistiques et les info
 Il est important de bien comprendre les implications de chaque option avant de les activer ou de les désactiver.
 
 <br />
-<br />
 
 ### B. Configuraition
 #### 1. Cputime accounting []
