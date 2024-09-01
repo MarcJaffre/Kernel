@@ -1,6 +1,13 @@
 ---------------------------------------------------------------------------------
 # <p align='center'> Control Group Support </p>
 ---------------------------------------------------------------------------------
+### A. Présentation
+
+<br />
+<br />
+
+### B. Configuraition
+
 #### 01. Favor dynamic modification latency reduction by default
 <br />
 
