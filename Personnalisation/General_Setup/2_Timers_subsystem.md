@@ -1,19 +1,19 @@
 ------------------------------------------------------------------------------------------------------------------------------------------
 # <p align='center'> Timers SubSystem </p>
 ------------------------------------------------------------------------------------------------------------------------------------------
-## 1. Timer tick handling
+#### 1. Timer tick handling
 <br />
 
-### 2. Force user context tracking
+#### 2. Force user context tracking
 <br />
 
-### 3. Old Idle dynticks config
+#### 3. Old Idle dynticks config
 <br />
 
-### 4. High Resolution Timer Support
+#### 4. High Resolution Timer Support
 <br />
 
-### 5. ClockSource Watchdog maximum allowable skew (in ms)
+#### 5. ClockSource Watchdog maximum allowable skew (in ms)
 
 
 
