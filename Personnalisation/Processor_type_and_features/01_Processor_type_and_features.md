@@ -39,7 +39,62 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### 18.
+### 18. Processor Family
+#### XX. Generic-x86-64
+
+#### A. 486SX
+#### B. 486DX
+#### C. 586/K5/5x86/6x86/6x86MX
+
+#### D. Pentium-Classic
+
+#### E. Pentium-MMX
+
+#### F. Pentium-Pro
+
+#### G. Pentium-II/Celeron(pre-Coppermine)
+
+#### H. Pentium-III/Celeron(Coppermine)/Pentium-III Xeon
+
+#### I. Pentium M
+
+#### J. Pentium-4/Celeron(P4-based)/Pentium-4 M/older Xeon
+
+#### K. K6/K6-II/K6-III
+
+#### L. Athlon/Duron/K7
+
+#### M. Opteron/Athlon64/Hammer/K8
+
+#### N. Crusoe
+
+#### O. Efficeon
+
+#### P. Winchip-C6
+
+#### Q. Winchip-2/Winchip-2A/Winchip-3
+
+#### R. AMD Elan
+
+#### S. GeodeGX1
+
+#### T. Geode GX/LX
+
+#### U. CyrixIII/VIA-C3
+
+#### V. VIA C3-2 (Nehemiah)
+
+#### W. VIA C7
+
+#### X. Intel P4 / older Netburst based Xeon
+
+#### Y. Core 2/newer Xeon
+
+#### Z. Intel Atom
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### 19.
 ### 20.
 
