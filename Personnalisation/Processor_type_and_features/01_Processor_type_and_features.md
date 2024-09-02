@@ -644,26 +644,25 @@ Active la mise à jour en direct du noyau (Kernel Live Patching), qui permet d'a
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[NON TESTE]
+## II. Ryzen 7 - 3700X (Non testé)
 
 **Indispensables :**
 ```
-- Processor family : AMD-64 (pour prendre en charge les processeurs AMD 64 bits)
-Symmetric multi-processing support : Oui (pour prendre en charge le traitement multi-processeur symétrique)
-
-- High Memory Support : Oui (pour prendre en charge les adresses mémoire élevées)
-NX (No eXecute) protection : Oui (pour prendre en charge la protection NX pour améliorer la sécurité)
-EFI runtime service support : Oui (pour prendre en charge les services d'exécution EFI)
+- Processor family                   : AMD-64 (pour prendre en charge les processeurs AMD 64 bits)
+- Symmetric multi-processing support : Oui (pour prendre en charge le traitement multi-processeur symétrique)
+- High Memory Support                : Oui (pour prendre en charge les adresses mémoire élevées)
+- NX protection                      : Oui (pour prendre en charge la protection NX pour améliorer la sécurité)
+- EFI runtime service support        : Oui (pour prendre en charge les services d'exécution EFI)
 ```
 
 
 **Recommandées :**
 ```
-- SMT (Simultaneous Multithreading) support : Oui (pour activer le multithreading simultané)
-- AMD Extended APIC (EAPIC) support : Oui (pour prendre en charge les APIC étendus)
+- SMT support                   : Oui (pour activer le multithreading simultané)
+- AMD Extended APIC support     : Oui (pour prendre en charge les APIC étendus)
 - AMD No-Fill on L2 Cache Error : Oui (pour désactiver le remplissage de la mémoire cache L2 en cas d'erreur)
-- AMD IOMMU (Input/Output Memory Management Unit) support : Oui (pour prendre en charge l'IOMMU)
-- AMD Topology Extender : Oui (pour prendre en charge la topologie étendue des processeurs AMD)
+- AMD IOMMU support             : Oui (pour prendre en charge l'IOMMU)
+- AMD Topology Extender         : Oui (pour prendre en charge la topologie étendue des processeurs AMD)
 ```
 
 Il est important de noter que ces options peuvent varier en fonction de la génération du processeur AMD et de la version du kernel. Il est recommandé de consulter la documentation du kernel et de votre processeur pour obtenir des informations plus précises.
