@@ -101,11 +101,11 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                     |
 | ------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
-| Timer tick handling                               | -----      |
-| Force user context tracking                       | -----      |
-|  Old Idle dynticks config                         | -----      |
-| High Resolution Timer Suppor                      | -----      |
-|  ClockSource Watchdog maximum allowable skew      | -----      |
+| Timer tick handling                               | -----      | XXXXXXXXXXXXXXXXXX|
+| Force user context tracking                       | -----      | XXXXXXXXXXXXXXXXXX|
+| Old Idle dynticks config                          | -----      | XXXXXXXXXXXXXXXXXX|
+| High Resolution Timer Suppor                      | -----      | XXXXXXXXXXXXXXXXXX|
+| ClockSource Watchdog maximum allowable skew       | -----      | XXXXXXXXXXXXXXXXXX|
 
 <br />
 
