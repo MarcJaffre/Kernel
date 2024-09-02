@@ -92,8 +92,6 @@ Permet d'activer le support pour les périphériques AMD ACPI2Platform. Les pér
 
 <br />
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ### 11. Intel SoC IOSF Sideband support for SoC platforms
 Permet d'activer l'accès aux ressources de la plateforme SoC (System on Chip) Intel via le système de fichiers debugfs. Cela peut être utile pour les développeurs qui souhaitent accéder à ces ressources pour des raisons de débogage ou de développement.
 
@@ -229,6 +227,9 @@ Permet de prendre en charge le timer HPET (High Precision Event Timer), qui est 
 Cela peut être utile pour les applications qui nécessitent une synchronisation précise, comme les systèmes de temps réel ou les applications multimédia.
 
 <br />
+
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
