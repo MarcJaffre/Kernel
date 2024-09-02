@@ -8,50 +8,85 @@
 
 ## B. Configuration
 ### 01. Symmetric multi-processing support
+Permet d'activer le support pour les systèmes multiprocesseurs symétriques (SMP).
+
+Les systèmes SMP sont des ordinateurs qui utilisent plusieurs processeurs pour exécuter des tâches en parallèle, ce qui peut améliorer les performances globales du système.
 
 <br />
 
 ### 02. Support x2apic
+Permet d'activer le support pour les processeurs x86 qui utilisent l'interface x2apic pour gérer les interruptions.
+
+x2apic est une extension de l'interface APIC (Advanced Programmable Interrupt Controller) qui permet de gérer les interruptions de manière plus efficace.
 
 <br />
 
 ### 03. Enable MSI and MSI-x delivery by posted interrupts (NEW)
+Permet d'activer la livraison de messages d'interruption (MSI) et de messages d'interruption étendus (MSI-x) par les interruptions postées.
+
+Les interruptions postées sont une fonctionnalité qui permet de réduire la charge de travail du processeur en traitant les interruptions de manière plus efficace.
 
 <br />
 
 ### 04. Enable MPS table
+Permet d'activer la table MPS qui contient des informations sur les processeurs présents dans le système. Cette table est utilisée pour gérer les processeurs et les interruptions.
 
 <br />
 
 ### 05. x86 CPU resource control support
+Permet d'activer le support pour le contrôle des ressources CPU x86.
+
+Cette fonctionnalité permet de gérer les ressources CPU, telles que les registres et les caches, pour améliorer les performances du système.
 
 <br />
 
 ### 06. Flexible Return and Event Delivery (NEW)
+Permet d'activer la livraison flexible des événements et des retours.
+
+Cette fonctionnalité permet de gérer les événements et les retours de manière plus efficace, ce qui peut améliorer les performances du système.
 
 <br />
 
 ### 07. Support for big SMP systems with more than 8 CPUs
+Permet d'activer le support pour les systèmes SMP avec plus de 8 processeurs.
+
+Les systèmes SMP avec un grand nombre de processeurs nécessitent des fonctionnalités spécifiques pour gérer les processeurs et les interruptions.
 
 <br />
 
 ### 08. Support for extended (non-PC) x86 platforms
+Permet d'activer le support pour les plates-formes x86 étendues (non-PC).
+
+Les plates-formes x86 étendues sont des systèmes qui utilisent des processeurs x86 mais qui ne sont pas des ordinateurs personnels.
+
 #### A. Numascale NumaChip
+Permet d'activer le support pour les systèmes Numascale NumaChip.
 #### B. ScaleMP VSMP
+Permet d'activer le support pour les systèmes ScaleMP VSMP.
 #### C. SGI Ultraviolet
+Permet d'activer le support pour les systèmes SGI Ultraviolet.
 #### D. Goldfish (Virtual Platform)
+Permet d'activer le support pour les systèmes Goldfish (Virtual Platform).
 #### E. CE4100 TV platform
+Permet d'activer le support pour les systèmes CE4100 TV platform.
+
 #### F. Intel MID platform support
+Permet d'activer le support pour les systèmes Intel MID platform.
+
 #### G. Intel Quark platform support 
+Permet d'activer le support pour les systèmes Intel Quark platform.
+
 
 <br />
 
 ### 09. Intel Low Power Subsystem Support
 
+
 <br />
 
 
 ### 10. AMD ACPI2Platform devices support
+
 
 <br />
 
