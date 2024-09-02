@@ -119,6 +119,18 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. Enable BPF LSM Instrumentation : <>
 ```
 
+| Nom du paramètre                                       | Valeur     | Commentaire                                                                     |
+| ------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------- |
+| Enable bpf() system call                               | -----      | XXXXXXXXXXXXXXXXXX|
+| Enable BPF Just In Time compiler                       | -----      | XXXXXXXXXXXXXXXXXX|
+| Old Idle dynticks config                               | -----      | XXXXXXXXXXXXXXXXXX|
+| Permanently enable BPF JIT and remove BPF interpreter  | -----      | XXXXXXXXXXXXXXXXXX|
+| Disable unprivileged BPF by default                    | -----      | XXXXXXXXXXXXXXXXXX|
+| Enable BPF LSM Instrumentation                         | -----      | XXXXXXXXXXXXXXXXXX|
+
+
+
+
 <br />
 
 #### 05 CPU task time and stats accounting
