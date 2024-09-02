@@ -307,3 +307,9 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 5B. Specify the maximum number of memory regions for the elfcorehdr (NEW) []
 ```
 
+<br />
+
+#### 13. 64-Bit Kernel
+```
+64-bit kernel
+```
