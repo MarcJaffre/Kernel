@@ -45,7 +45,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                                |
 | -----                                             | -----      | -----                                                                                      |
 | 01. Compile also drivers which will not load      | false      | Sauf si vous avez des besoins spécifiques                                                  |
-| 02. Compile the kernel with warnings as errors    | false      | Pour éviter les erreurs de compilation inutiles                                            | 
+| 02. Compile the kernel with warnings as errors    | false      | Pour éviter les erreurs de compilation inutiles                                            |
 | 03. Compile test UAPI headers                     | false      | Sauf si vous développez des applications qui utilisent ces headers                         |
 | 04. Local Version - append to kernel release      | <Vide>     | Sauf si vous voulez personnaliser la version du noyau                                      |
 | 05. Automatically apprend version information ... | true       | Pour avoir des informations de version précises                                            |
@@ -140,13 +140,13 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. Pressure stall information tracking : <Boolean>
 ```
 
-| Nom du paramètre                                    | Valeur     | Commentaire        |
-| -----                                               | -----      | -----              |
-| 1. Cputime accounting                               | -----      | XXXXXXXXXXXXXXXXXX |
-| 2. Fine granularity task level IRQ time accounting  | -----      | XXXXXXXXXXXXXXXXXX |
-| 3. BSD Process Accounting                           | -----      | XXXXXXXXXXXXXXXXXX |
-| 4. Export task/process statistics through netlink   | -----      | XXXXXXXXXXXXXXXXXX |
-| 5. Pressure stall information tracking              | -----      | XXXXXXXXXXXXXXXXXX |
+| Nom du paramètre                                    | Valeur | Commentaire                                                                 |
+| -----                                               | -----  | -----                                                                       |
+| 1. Cputime accounting                               | False  | Comptabilité du temps CPU                                                   |
+| 2. Fine granularity task level IRQ time accounting  | False  | Comptabilité du temps d'interruption de niveau de tâche à granularité fine  |
+| 3. BSD Process Accounting                           | False  | Comptabilité des processus BSD                                              |
+| 4. Export task/process statistics through netlink   | False  | Exportation de statistiques de tâches/processus via netlink                 |
+| 5. Pressure stall information tracking              | False  | Suivi des informations de blocage de pression                               |
 
 <br />
 
@@ -165,21 +165,21 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 9. RCU callback-batch backup time check : <Boolean>
 ```
 
-| Nom du paramètre                                                 | Valeur     | Commentaire        |
-| -----                                                            | -----      | -----              |
-| 1. Make expert-level adjustments to RCU                          | -----      | XXXXXXXXXXXXXXXXXX |
-| 2. Configuration Force selection of TASKS_RCU                    | -----      | XXXXXXXXXXXXXXXXXX |
-| 3. Force selection of Tasks Rude RCU                             | -----      | XXXXXXXXXXXXXXXXXX |
-| -----                                                            | -----      | -----              |
-| 4. Force selection of Tasks Trace RCU                            | -----      | XXXXXXXXXXXXXXXXXX |
-| 4A. Tree-based hierarchical RCU fanout value                     | -----      | XXXXXXXXXXXXXXXXXX |
-| 4B. Tree-based hierarchical RCU leaf-level fanout value          | -----      | XXXXXXXXXXXXXXXXXX |
-| -----                                                            | -----      | -----              |
-| 5. Enable RCU priority boosting                                  | -----      | XXXXXXXXXXXXXXXXXX |
-| 6. Offload RCU callback processing from boot-selected CPUs       | -----      | XXXXXXXXXXXXXXXXXX |
-| 7. Tasks Trace RCU readers use memory barriers in user and idle  | -----      | XXXXXXXXXXXXXXXXXX |
-| 8. RCU callback lazy invocation functionality (NEW)              | -----      | XXXXXXXXXXXXXXXXXX |
-| 9. RCU callback-batch backup time check                          | -----      | XXXXXXXXXXXXXXXXXX |
+| Nom du paramètre                                                 | Valeur | Commentaire                                                                                        |
+| -----                                                            | -----  | -----                                                                                              |
+| 1. Make expert-level adjustments to RCU                          | False  | Sauf si vous êtes un expert et que vous savez ce que vous faites                                   |
+| 2. Configuration Force selection of TASKS_RCU                    | False  | Configuration Force la sélection de TASKS_RCU                                                      |
+| 3. Force selection of Tasks Rude RCU                             | False  | Force la sélection de Tasks Rude RCU                                                               |
+| -----                                                            | -----  | -----                                                                                              |
+| 4. Force selection of Tasks Trace RCU                            | False  | Force la sélection de Tasks Trace RCU                                                              |
+| 4A. Tree-based hierarchical RCU fanout value                     | False  | Valeur de fanout hiérarchique RCU basée sur l'arbre                                                |
+| 4B. Tree-based hierarchical RCU leaf-level fanout value          | False  | Valeur de fanout de niveau feuille hiérarchique RCU basée sur l'arbre                              |
+| -----                                                            | -----  | -----                                                                                              |
+| 5. Enable RCU priority boosting                                  | True   | Peut améliorer la réactivité du système                                                            |
+| 6. Offload RCU callback processing from boot-selected CPUs       | True   | Peut améliorer les performances du système                                                         |
+| 7. Tasks Trace RCU readers use memory barriers in user and idle  | False  | Les lecteurs de tâches Trace RCU utilisent des barrières de mémoire en mode utilisateur et inactif |
+| 8. RCU callback lazy invocation functionality (NEW)              | False  | Fonctionnalité d'invocation lazy des rappels RCU                                                   |
+| 9. RCU callback-batch backup time check                          | False  | Vérification de la sauvegarde du temps de traitement des rappels RCU                               |
 
 
 <br />
