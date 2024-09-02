@@ -3,6 +3,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## A. Présentation
+Ces options permettent de configurer le noyau pour prendre en charge différents types de processeurs et plateformes, ainsi que des fonctionnalités spécifiques pour améliorer les performances et la fiabilité du système.
 
 **EN COURS**
 
