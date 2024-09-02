@@ -131,6 +131,9 @@ Ces paramètres devraient fournir une bonne base pour la gestion des timers et d
 #### 04. BPF subsystem
 Ces paramètres devraient fournir une bonne base pour la gestion des fonctionnalités BPF*, mais n'oubliez pas de les ajuster en fonction de vos besoins spécifiques.
 
+BPF : Mécanisme de filtrage et de traitement de paquets de réseau pour exécuter des programmes de filtrage et de traitement de paquets à l'intérieur du noyau du système d'exploitation.
+
+
 ```
 1. Enable bpf() system call : <Boolean>
 2. Enable BPF Just In Time compiler : <Boolean>
@@ -139,7 +142,6 @@ Ces paramètres devraient fournir une bonne base pour la gestion des fonctionnal
 5. Enable BPF LSM Instrumentation : <Boolean>
 ```
 
-***** Mécanisme de filtrage et de traitement de paquets de réseau pour exécuter des programmes de filtrage et de traitement de paquets à l'intérieur du noyau du système d'exploitation.
 
 
 | Nom du paramètre                                          | Valeur | Commentaire                                                                                                                        |
