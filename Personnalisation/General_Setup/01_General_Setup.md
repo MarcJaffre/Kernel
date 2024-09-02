@@ -112,7 +112,11 @@ Recommandation: uselib à désactiver !
 
 <br />
 
-### 16. Preemption Model [Preemptible Kernel]
+### 16. KUnit test for kernel/time functions
+
+<br />
+
+### 17. Preemption Model [Preemptible Kernel]
 Cette option permet de choisir le modèle de préemption du kernel. 
 
 Les options disponibles sont : 
@@ -122,7 +126,7 @@ Les options disponibles sont :
 
 <br />
 
-### 17. Preemption behaviour defined on boot [Y]
+### 18. Preemption behaviour defined on boot [Y]
 Cette option permet de spécifier le comportement de préemption à l'amorçage.
 
 - none      : désactive la préemption
@@ -132,53 +136,53 @@ Cette option permet de spécifier le comportement de préemption à l'amorçage.
 
 <br />
 
-### 18. Core Scheduling for SMT [Y]
+### 19. Core Scheduling for SMT [Y]
 Cette option permet d'activer ou de désactiver la planification des cœurs pour les processeurs SMT.
 
 <br />
 
-### 19. CPU Isolation [Y] (Amélioration Gain de performance significativement)
+### 20. CPU Isolation [Y] (Amélioration Gain de performance significativement)
 Cette option permet d'activer ou de désactiver l'isolation des processeurs.
 
 <br />
 
-### 20. Kernel .config support [M + Y]
+### 21. Kernel .config support [M + Y]
 Cette option permet d'activer ou de désactiver la prise en charge du fichier de configuration du kernel.
 
 > Enable Access to .config throught /proc/config/gz : Permet de créer un fichier compresser contenant le paramétrage du Kernel.
 
 <br />
 
-### 21. Enable kernel headers throught /sys/kernel/kheaders.tar.xz [N]
+### 22. Enable kernel headers throught /sys/kernel/kheaders.tar.xz [N]
 Cette option permet d'activer ou de désactiver l'accès aux en-têtes du kernel à travers le fichier /sys/kernel/kheaders.tar.xz.
 
 <br />
 
-### 22. Kernel log buffer size [12] (Valeur par défaut: 17)
+### 23. Kernel log buffer size [12] (Valeur par défaut: 17)
 Cette option permet de spécifier la taille du tampon de journalisation du kernel.
 
 [ChatGPT] : Pour une journée de log théorique, mettre la valeur sur 12.
 
 <br />
 
-### 23. CPU Kernel log buffer size contribution [12]
+### 24. CPU Kernel log buffer size contribution [12]
 Cette option permet de spécifier la contribution de chaque processeur à la taille du tampon de journalisation du kernel.
 
 <br />
 
-### 24. Printk indexing debugfs interface [Y] (Message Kernel !)
+### 25. Printk indexing debugfs interface [Y] (Message Kernel !)
 Cette option permet d'activer ou de désactiver l'interface de débogage printk.
 
 <br />
 
-### 25. Memory placement award NUMA scheduler [Y + Y]
+### 26. Memory placement award NUMA scheduler [Y + Y]
 Cette option permet d'activer ou de désactiver la prise en compte de la placement de la mémoire pour les planificateurs NUMA.
 
 > Automatically enable NUMA aware memory/task placement
 
 <br />
 
-### 26. Checkpoint/restore support [Y] (Permet de capturer un proces pour le relancer)
+### 27. Checkpoint/restore support [Y] (Permet de capturer un proces pour le relancer)
 Cette option permet d'activer ou de désactiver la prise en charge de la sauvegarde et de la restauration des processus.
 
 ```bash
@@ -201,17 +205,17 @@ restore -r $DATE;
 
 <br />
 
-### 27. Automatic process group scheduling [Y]
+### 28. Automatic process group scheduling [Y]
 Cette option permet d'activer ou de désactiver la planification automatique des groupes de processus.
 
 <br />
 
-### 28. Kernel -> user space relay support [Y] (Utile pour le debuggage)
+### 29. Kernel -> user space relay support [Y] (Utile pour le debuggage)
 Cette option permet d'activer ou de désactiver la prise en charge du relais entre le kernel et l'espace utilisateur.
 
 <br />
 
-### 29. Initial Ram filesystem and RAM disk (initramfs/initrd) support [Y] (Mitigé)
+### 30. Initial Ram filesystem and RAM disk (initramfs/initrd) support [Y] (Mitigé)
 Cette option permet de compiler le support pour les systèmes de fichiers et les disques RAM initiaux (initramfs/initrd).
 
 Un système de fichiers RAM initial est une archive compressée qui contient les fichiers nécessaires pour démarrer le système, tandis qu'un disque RAM est un espace de stockage temporaire utilisé pendant le démarrage.
@@ -220,7 +224,7 @@ Si vous activez cette option, vous pourrez utiliser des systèmes de fichiers et
 
 <br />
 
-### 30. Boot config support [Y]
+### 31. Boot config support [Y]
 Cette option permet de compiler le support pour les configurations de démarrage.
 
 Les configurations de démarrage définissent les paramètres de démarrage du système, tels que les options de noyau, les paramètres de l'interface réseau, etc.
@@ -278,7 +282,7 @@ sched.sched_migration_cost_ns=500000
 
 <br />
 
-### 31. Preserve cpio archive mtimes in intiramfs [Y]
+### 32. Preserve cpio archive mtimes in intiramfs [Y]
 Cette option permet de conserver les dates de modification (mtimes) des archives cpio dans les systèmes de fichiers RAM initiaux (initramfs).
 
 Les archives cpio sont utilisées pour stocker les fichiers dans les systèmes de fichiers RAM initiaux.
@@ -287,7 +291,7 @@ Si vous activez cette option, les dates de modification des archives cpio seront
 
 <br />
 
-### 32. Compiler optimisation level [-o2]
+### 33. Compiler optimisation level [-o2]
 Cette option permet de définir le niveau d'optimisation du compilateur pour la compilation du noyau. 
 
 Les niveaux d'optimisation définissent la quantité d'optimisation effectuée par le compilateur pour améliorer les performances du code généré. 
@@ -304,7 +308,7 @@ Les niveaux d'optimisation les plus courants sont :
 
 <br />
 
-### 33. Profiling support [Y]
+### 34. Profiling support [Y]
 Cette option permet de compiler le support pour le profilage.
 
 Le profilage est une technique qui permet de mesurer les performances du code en cours d'exécution.
