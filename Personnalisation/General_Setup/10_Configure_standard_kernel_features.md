@@ -139,6 +139,7 @@ Active la prise en charge de l'appel système kcmp, qui permet aux applications 
 
 ### 23. Enable rseq() system call []
 Active la prise en charge de l'appel système rseq, qui permet aux applications d'exécuter des séquences de appels système redémarrables.
+
 <br />
 
 ### 24. Enable debugging of rseq() system call []
