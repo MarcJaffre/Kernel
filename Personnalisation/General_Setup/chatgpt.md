@@ -208,8 +208,8 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 07. Scheduler features
 ```
-01. Enable utilization clamping for RT/FAIR tasks
-02. Number of supported utilization clamp buckets
+01. Enable utilization clamping for RT/FAIR tasks : <>
+02. Number of supported utilization clamp buckets : <>
 ```
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                                |
@@ -221,22 +221,22 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 08. Control Group Support
 ```
-01. Favor dynamic modification latency reduction by default
-02. Memory controller
-03. IO controller
-04. Utilization clamping per group of tasks
-05. PIDs controller
-06. RDMA controller
-07. Freezer controller
-08. HugeTLB controller
-09. Cpuset controller
-10. Include legacy /proc/pid/cpuset file
-11. Device controller
-12. Simple CPU accounting controller
-13. Perf controller
-14. Support for eBPF programs attached to cgroups
-15. Misc resource controller
-16. Debug controller
+01. Favor dynamic modification latency reduction by default : <>
+02. Memory controller : <>
+03. IO controller : <>
+04. Utilization clamping per group of tasks : <>
+05. PIDs controller : <>
+06. RDMA controller : <>
+07. Freezer controller : <>
+08. HugeTLB controller : <>
+09. Cpuset controller : <>
+10. Include legacy /proc/pid/cpuset file : <>
+11. Device controller : <>
+12. Simple CPU accounting controller : <>
+13. Perf controller : <>
+14. Support for eBPF programs attached to cgroups : <>
+15. Misc resource controller : <>
+16. Debug controller : <>
 ```
 
 | Nom du paramètre                                            | Valeur | Commentaire                   |
@@ -262,12 +262,12 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 09. Namespaces Support
 ```
-01. UTS namespace
-02. TIME namespace
-03. IPC namespace
-04. User namespace
-05. PID Namespaces
-06. Network namespace
+01. UTS namespace : <>
+02. TIME namespace : <>
+03. IPC namespace : <>
+04. User namespace : <>
+05. PID Namespaces : <>
+06. Network namespace : <>
 ```
 
 | Nom du paramètre      | Valeur | Commentaire |
@@ -283,35 +283,35 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 10. Configure standard kernel features
 ```
-01. Enable 16-bit UID system calls
-02. Multiple users, groups and capabilities support
-03. sgetmask/ssetmask syscalls support
-04. Sysfs syscall support
-05. open by fhandle syscalls
-06. Posix Clocks & timers
-07. Enable support for printk
-08. BUG() support
-09. Enable ELF core dumps
-10. Enable PC-Speaker support
-11. Enable smaller-sized data structures for core (NEW)
-12. Enable futex support
-13. Enable eventpoll support
-14. Enable signalfd() system call
-15. Enable timerfd() system call
-16. Enable eventfd() system call
-17. Use full shmem filesystem
-18. Enable AIO support
-19. Enable IO uring support
-20. Enable madvise/fadvise syscalls
-21. Enable membarrier() system call
-22. Enable kcmp() system call
-23. Enable rseq() system call
-24. Enable debugging of rseq() system call
-25. Enable cachestat() system call (NEW)
-26. PC/104 support
-27. Load all symbols for debugging/ksymoops
-28. Test the basic functions and performance of kallsyms (NEW)
-29. Include all symbols in kallsyms
+01. Enable 16-bit UID system calls : <>
+02. Multiple users, groups and capabilities support : <>
+03. sgetmask/ssetmask syscalls support : <>
+04. Sysfs syscall support : <>
+05. open by fhandle syscalls : <>
+06. Posix Clocks & timers : <>
+07. Enable support for printk : <>
+08. BUG() support : <>
+09. Enable ELF core dumps : <>
+10. Enable PC-Speaker support : <>
+11. Enable smaller-sized data structures for core (NEW) : <>
+12. Enable futex support : <>
+13. Enable eventpoll support : <>
+14. Enable signalfd() system call : <>
+15. Enable timerfd() system call : <>
+16. Enable eventfd() system call : <>
+17. Use full shmem filesystem : <>
+18. Enable AIO support : <>
+19. Enable IO uring support : <>
+20. Enable madvise/fadvise syscalls : <>
+21. Enable membarrier() system call : <>
+22. Enable kcmp() system call : <>
+23. Enable rseq() system call : <>
+24. Enable debugging of rseq() system call : <>
+25. Enable cachestat() system call (NEW) : <>
+26. PC/104 support : <>
+27. Load all symbols for debugging/ksymoops : <>
+28. Test the basic functions and performance of kallsyms (NEW) : <>
+29. Include all symbols in kallsyms : <>
 ```
 
 | Nom du paramètre                                               | Valeur | Commentaire |
@@ -361,16 +361,16 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 12. Kexec and crash features
 ```
-1. Enable kexec system call 
-2. Enable kexec file based system call 
-3. Verify kernel signature during kexec_file_load() syscall 
-3A. Require a valid signature in kexec_file_load() syscall 
-3B. Enable Image signature verification support (ARM) 
-3C. Enable bzlmage signature verification support 
-4. kexec jump 
-5. kernel crash dumps 
-5A. Update the crash elfcorehdr on system configuration changes (NEW) 
-5B. Specify the maximum number of memory regions for the elfcorehdr (NEW) 
+1. Enable kexec system call : <>
+2. Enable kexec file based system call : <>
+3. Verify kernel signature during kexec_file_load() syscall : <>
+3A. Require a valid signature in kexec_file_load() syscall : <>
+3B. Enable Image signature verification support (ARM) : <>
+3C. Enable bzlmage signature verification support : <>
+4. kexec jump : <>
+5. kernel crash dumps : <>
+5A. Update the crash elfcorehdr on system configuration changes (NEW) : <>
+5B. Specify the maximum number of memory regions for the elfcorehdr (NEW) : <>
 ```
 
 | Nom du paramètre                                                          | Valeur | Commentaire |
@@ -390,7 +390,7 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 13. 64-Bit Kernel
 ```
-64-bit kernel
+64-bit kernel : <>
 ```
 
 | Nom du paramètre | Valeur | Commentaire |
