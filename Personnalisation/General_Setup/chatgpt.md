@@ -93,7 +93,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 <br />
 
-#### 03 Timers subsystem
+#### 03. Timers subsystem
 ```
 1. Timer tick handling : <Boolean>
 2. Force user context tracking : <Boolean>
@@ -112,7 +112,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 <br />
 
-#### 04 BPF subsystem
+#### 04. BPF subsystem
 ```
 1. Enable bpf() system call : <Boolean>
 2. Enable BPF Just In Time compiler : <Boolean>
@@ -132,7 +132,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 <br />
 
-#### 05 CPU task time and stats accounting
+#### 05. CPU task time and stats accounting
 ```
 1. Cputime accounting : <Boolean>
 2. Fine granularity task level IRQ time accounting : <Boolean>
@@ -151,7 +151,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 <br />
 
-#### 06 RCU Subsystem
+#### 06. RCU Subsystem
 ```
 1. Make expert-level adjustments to RCU : <Boolean>
 2. Configuration Force selection of TASKS_RCU : <Boolean>
@@ -183,47 +183,36 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | 9. RCU callback-batch backup time check                          | -----      | XXXXXXXXXXXXXXXXXX |
 
 
-
-
 <br />
 
-#### 07 Scheduler features
-```
-```
-
-<br />
-
-#### 08 Control Group Support
+#### 07. Scheduler features
 ```
 ```
 
 <br />
 
-#### 09 Namespaces Support
+#### 08. Control Group Support
 ```
 ```
 
 <br />
 
-#### 10 Configure standard kernel features
+#### 09. Namespaces Support
 ```
 ```
 
 <br />
 
-#### 11 Kernel Performance Events And Counters
+#### 10. Configure standard kernel features
 ```
 ```
 
 <br />
 
-#### 12 Kexec and crash features
+#### 11. Kernel Performance Events And Counters
+```
+```
 
+<br />
 
-
-
-
-
-
-
-
+#### 12. Kexec and crash features
