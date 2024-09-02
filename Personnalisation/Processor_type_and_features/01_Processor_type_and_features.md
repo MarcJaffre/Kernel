@@ -321,76 +321,119 @@ Active le support de l'injecteur d'erreurs de machine, qui est un outil qui simu
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 31. Legacy VM86 support
+Active le support pour les anciennes applications VM86, qui utilisent des instructions 8086 pour accéder à la mémoire.
 
 <br />
 
-
 ### 32. Enable support for 16-bit segments
+Active le support pour les segments de 16 bits, qui sont utilisés par les anciennes applications pour accéder à la mémoire.
 
 <br />
 
 ### 33. Enable vsyscall emulation
+Active l'émulation des appels système virtuels, qui permettent aux applications de faire des appels système sans avoir à passer par la table des descripteurs de segments.
 
 <br />
 
 ### 34. IOPERM and IOPL Emulation
+Active l'émulation des opérations d'entrée/sortie et des niveaux de priorité d'entrée/sortie, qui permettent aux applications de contrôler les opérations d'entrée/sortie.
 
 <br />
 
 ### 35. Toshiba Laptop support
+Active le support pour les ordinateurs portables Toshiba, qui nécessitent des pilotes spécifiques pour fonctionner correctement.
 
 <br />
 
 ### 36. Enable X86 board specific fixups for reboot
+Active les corrections spécifiques au matériel pour le redémarrage, qui permettent au noyau de redémarrer correctement sur les systèmes x86.
 
 <br />
 
 ### 37. Late microcode loading (DANGEROUS)
+Ative le chargement tardif du microcode, qui peut être dangereux car il peut causer des problèmes de stabilité du système.
 
 <br />
 
 ### 38. Enforce late microcode loading minimal revision check
+Active la vérification de la révision minimale du microcode lors du chargement tardif, pour s'assurer que le microcode est compatible avec le système.
+
 #### A. /dev/cpu/*/msr   - Model-specific register support
+Active le support pour les registres spécifiques au modèle de processeur, qui permettent d'accéder à des fonctionnalités spécifiques du processeur.
+
 #### B. /dev/cpu/*/cpuid - CPU information support
+Active le support pour les informations sur le processeur, qui permettent d'accéder à des informations sur le processeur.
 
 <br />
 
 ### 39. High Memory Support
+Active le support pour la mémoire haute, qui permet au noyau d'accéder à des adresses de mémoire élevées.
+
 #### A. off
+Définit la taille de la mémoire haute que le noyau peut utiliser.
+
 #### B. 4GB
+Définit la taille de la mémoire haute que le noyau peut utiliser.
+
 #### C. 64GB
+Définit la taille de la mémoire haute que le noyau peut utiliser.
 
 <br />
 
 ### 40. Memory split
+Définit la façon dont la mémoire est partagée entre l'espace utilisateur et l'espace noyau.
+
+L'option "for full 1G low memory" signifie que les 1 Go d'espace noyau sont réservés pour la mémoire basse (low memory), qui est la partie de la mémoire qui est accessible directement par le processeur sans avoir à passer par la mémoire virtuelle.
+
 #### A. 3G/1G user/kernel split
+3 Go pour l'espace utilisateur (applications et données)
+1 Go pour l'espace noyau (code du noyau et données du noyau)
+
 #### B. 3G/1G user/kernel split (for full 1G low memory)
+3 Go pour l'espace utilisateur (applications et données)
+1 Go pour l'espace noyau (code du noyau et données du noyau)
+
 #### C. 2G/2G user/kernel split
+2 Go pour l'espace utilisateur (applications et données)
+2 Go pour l'espace noyau (code du noyau et données du noyau)
+
 #### D. 2G/2G user/kernel split (for full 2G low memory)
+2 Go pour l'espace utilisateur (applications et données)
+2 Go pour l'espace noyau (code du noyau et données du noyau)
+
 #### E. 1G/3G user/kernel split
+1 Go pour l'espace utilisateur (applications et données)
+3 Go pour l'espace noyau (code du noyau et données du noyau)
 
 <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 41. PAE (Physical Address Extension) Support
+Active le support pour l'extension d'adresse physique, qui permet au noyau d'accéder à des adresses de mémoire plus élevées.
 
 <br />
 
 ### 42. Enable 5-level page tables support
+Active le support pour les tables de pages à 5 niveaux, qui permettent au noyau de gérer des adresses de mémoire plus élevées.
 
 <br />
 
 ### 43. Enable statistic for Change Page Attribute
+Active la collecte de statistiques sur les modifications des attributs de page, qui permettent d'améliorer les performances du système.
 
 <br />
 
 ### 44. AMD Secure Memory Encryption (SME) support
+Active le support pour la mémoire sécurisée par cryptographie d'AMD, qui permet de protéger la mémoire contre les attaques malveillantes.
 
 <br />
 
 ### 45. NUMA Memory Allocation and Scheduler Support
+Active le support pour l'allocation de mémoire et la planification de la mémoire non uniforme, qui permettent d'améliorer les performances du système sur les systèmes à plusieurs processeurs.
+
 #### A. old style AMD Opteron NUMA detection
+
 #### B. ACPI NUMA detection
 #### C. NUMA emulation
 
@@ -518,13 +561,16 @@ Active le support de l'injecteur d'erreurs de machine, qui est un outil qui simu
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 70. Enable the LDT (local descriptor table)
+Active la table des descripteurs locaux (LDT), qui permet de définir des segments de mémoire pour les processus.
 
 <br />
 
 ### 71. Enforce strict size checking for sigaltstack
+Impose une vérification stricte de la taille pour les piles de signaux (sigaltstack), ce qui peut aider à détecter et à prévenir les erreurs de mémoire.
 
 <br />
 
 ### 72. Kernel Live Patching
+Active la mise à jour en direct du noyau (Kernel Live Patching), qui permet d'appliquer des correctifs de sécurité sans redémarrer le système.
 
 <br />
