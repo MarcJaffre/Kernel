@@ -231,6 +231,11 @@ Les configurations de démarrage définissent les paramètres de démarrage du s
 
 Si vous activez cette option, vous pourrez utiliser des configurations de démarrage personnalisées pour démarrer votre système.
 
+#### 31A. Force Unconditional bootconfig processing (New)
+#### 31B. Embed bootconfig file in the kernel
+#### 31C. Embedded bootconfig file path
+
+
 **/boot/bootconfig**
 ```
 # Fichier bootconfig exemple
