@@ -222,6 +222,17 @@ Un système de fichiers RAM initial est une archive compressée qui contient les
 
 Si vous activez cette option, vous pourrez utiliser des systèmes de fichiers et des disques RAM initiaux pour démarrer votre système.
 
+#### 30A. Ignore the initramfs passed bu the bootloader
+#### 30B. User  ID to map to 0 (user root) (NEW)
+#### 30C. Group ID to map to 0 (user root) (NEW)
+#### 30D. Support initial ramdisk/ramfs compressed using gzip
+#### 30E. Support initial ramdisk/ramfs compressed using bzip2
+#### 30F. Support initial ramdisk/ramfs compressed using LZMA
+#### 30G. Support initial ramdisk/ramfs compressed using XZ
+#### 30H. Support initial ramdisk/ramfs compressed using LZO
+#### 30I. Support initial ramdisk/ramfs compressed using LZ4
+#### 30J. Support initial ramdisk/ramfs compressed using ZSTD
+
 <br />
 
 ### 31. Boot config support [Y]
