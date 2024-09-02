@@ -11,6 +11,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - Compile the kernel with warnings as errors :  <Boolean>
 - Compile test UAPI headers :  <Boolean>
 - Local Version - apprend to kernel release: <String>
+- Automatically apprend version information to the version string: <Boolean>
 - Build ID Salt : <String>
 - Kernel compression mode: <gzip, bzip, zstd, none>
 - Default init path: <string>  
@@ -49,6 +50,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | Compile the kernel with warnings as errors        | true       | Ensure the kernel is compiled with strict error checking                        | 
 | Compile test UAPI headers                         | false      | Not necessary for a standard kernel build                                       |
 | Local Version - append to kernel release          | Debian     | Nappend the Debian version to the kernel release string)                        |
+| Automatically apprend version information ...     | false      |                                                                                 |
 | Build ID Salt                                     | Debian     | Use a salt to ensure unique kernel builds                                       |
 | Kernel compression mode                           | zstd       | Use the zstd compression algorithm for a good balance                           |
 | Default init path                                 | /sbin/init | standard init path                                                              |
