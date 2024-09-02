@@ -42,7 +42,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - Profiling support : <Boolean>
 ```
 
-
+<br />
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                     |
 | ------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
@@ -99,6 +99,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. ClockSource Watchdog maximum allowable skew (in ms) :  <>
 ```
 
+<br />
 
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                     |
@@ -141,6 +142,8 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. Pressure stall information tracking : <>
 ```
 
+<br />
+
 | Nom du paramètre                                 | Valeur     | Commentaire                                                                     |
 | ------------------------------------------------ | ---------- | ------------------------------------------------------------------------------- |
 | Cputime accounting                               | -----      | XXXXXXXXXXXXXXXXXX|
@@ -148,7 +151,6 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | BSD Process Accounting                           | -----      | XXXXXXXXXXXXXXXXXX|
 | Export task/process statistics through netlink   | -----      | XXXXXXXXXXXXXXXXXX|
 | Pressure stall information tracking              | -----      | XXXXXXXXXXXXXXXXXX|
-
 
 <br />
 
@@ -182,8 +184,6 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | Tasks Trace RCU readers use memory barriers in user and idle  | -----      | XXXXXXXXXXXXXXXXXX|
 | RCU callback lazy invocation functionality (NEW)              | -----      | XXXXXXXXXXXXXXXXXX|
 | RCU callback-batch backup time check                          | -----      | XXXXXXXXXXXXXXXXXX|
-
-
 
 <br />
 
