@@ -46,8 +46,8 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 - 25. Printk indexing debugfs interface : <Boolean>
 - 26. Memory placement award NUMA scheduler : <Boolean>
 - 27. Checkpoint/restore support : <Boolean>
-- 28. Automatic process group scheduling : <number>
-- 29. Kernel -> user space relay support : <number>
+- 28. Automatic process group scheduling : <boolean>
+- 29. Kernel -> user space relay support : <boolean>
 - 30. Initial Ram filesystem and RAM disk (initramfs/initrd) support : <string>
 - 31. Boot config support : <Boolean>
 - 32. Preserve cpio archive mtimes in intiramfs : <Boolean>
@@ -84,8 +84,8 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 | 25. Printk indexing debugfs interface             | True       | Pour supporter l'interface de débogage de printk                                           |
 | 26. Memory placement award NUMA scheduler         | True       | Pour supporter la planification NUMA aware                                                 |
 | 27. Checkpoint/restore support                    | True       | Pour supporter la sauvegarde et la restauration des processus                              |
-| 28. Automatic process group scheduling            | 2          | Planification automatique des groupes de processus                                         |
-| 29. Kernel -> user space relay support            | 2          | Pupport de relais entre le noyau et l'espace utilisateur                                   |
+| 28. Automatic process group scheduling            | XXXX       | Planification automatique des groupes de processus                                         |
+| 29. Kernel -> user space relay support            | XXXX       | Pupport de relais entre le noyau et l'espace utilisateur                                   |
 | 30. Initial Ram filesystem and RAM disk ....      | initramfs  | Support de l'initramfs                                                                     |
 | 31. Boot config support                           | True       | Pour supporter la configuration du démarrage                                               |
 | 32. Preserve cpio archive mtimes in initramfs     | True       | Pour conserver les dates de modification des archives cpio dans l'initramfs                |
