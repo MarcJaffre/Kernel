@@ -94,62 +94,127 @@ Permet d'activer le support pour les périphériques AMD ACPI2Platform. Les pér
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 11. Intel SoC IOSF Sideband support for SoC platforms
+Permet d'activer l'accès aux ressources de la plateforme SoC (System on Chip) Intel via le système de fichiers debugfs. Cela peut être utile pour les développeurs qui souhaitent accéder à ces ressources pour des raisons de débogage ou de développement.
+
 #### A. Enable IOSF sideband access through debugfs
+Permet d'activer l'accès aux ressources de la plateforme SoC Intel via le système de fichiers debugfs.
 
 <br />
 
 ### 12. RDC R-321x SoC
+Permet de prendre en charge les processeurs RDC R-321x SoC.
 
 <br />
 
 ### 13. Support non-standard 32-bit
+Permet de prendre en charge les processeurs 32 bits non standard.
 
 <br />
 
-### 14. SMP architectures
+### 14. SMP architectures [] (AMD)
+Permet de prendre en charge les architectures SMP (Symmetric Multi-Processing), qui permettent de partager les ressources entre plusieurs processeurs.
 
 <br />
 
 ### 15. STA2X11 Companion Chip Support
+Permet de prendre en charge les puces STA2X11 Companion Chip.
 
 <br />
 
 ### 16. Eurobraille/Iris poweroff module
+Permet de prendre en charge le module de extinction de puissance Eurobraille/Iris.
 
 <br />
 
 ### 17. Single-depth WCHAN output
+Permet de configurer la sortie WCHAN (Wait Channel) pour afficher uniquement les informations de niveau supérieur.
 
 <br />
 
 ### 18. Processor Family
-#### XX. Generic-x86-64
+Permet de sélectionner la famille de processeurs à prendre en charge.
+
+#### XX. Generic-x86-64 [X]
+Prend en charge les processeurs x86-64 génériques.
+
 #### A. 486SX
+Prend en charge les processeurs 486SX.
+
 #### B. 486DX
+Prend en charge les processeurs 486DX.
+
 #### C. 586/K5/5x86/6x86/6x86MX
+Prend en charge les processeurs  586, K5, 5x86, 6x86, 6x86MX.
+
 #### D. Pentium-Classic
+Prend en charge les processeurs Pentium classiques.
+
 #### E. Pentium-MMX
+Prend en charge les processeurs Pentium avec instruction MMX.
+
 #### F. Pentium-Pro
+Prend en charge les processeurs Pentium Pro.
+
 #### G. Pentium-II/Celeron(pre-Coppermine)
+Prend en charge les processeurs Pentium II et Celeron (avant Coppermine).
+
 #### H. Pentium-III/Celeron(Coppermine)/Pentium-III Xeon
+Prend en charge les processeurs  Pentium III, Celeron (Coppermine) et Pentium III Xeon.
+
 #### I. Pentium M
+Prend en charge les processeurs Pentium M.
+
 #### J. Pentium-4/Celeron(P4-based)/Pentium-4 M/older Xeon
+Prend en charge les processeurs Pentium 4, Celeron (basé sur P4), Pentium 4 M et Xeon plus anciens.
+
 #### K. K6/K6-II/K6-III
+Prend en charge les processeurs K6, K6-II et K6-III.
+
 #### L. Athlon/Duron/K7
+Prend en charge les processeurs Athlon, Duron et K7.
+
 #### M. Opteron/Athlon64/Hammer/K8
+Prend en charge les processeurs Opteron, Athlon 64, Hammer et K8.
+
 #### N. Crusoe
+Prend en charge les processeurs Crusoe.
+
 #### O. Efficeon
+Prend en charge les processeurs Efficeon.
+
 #### P. Winchip-C6
+Prend en charge les processeurs Winchip-C6.
+
 #### Q. Winchip-2/Winchip-2A/Winchip-3
+Prend en charge les processeurs Winchip-2, Winchip-2A et Winchip-3.
+
 #### R. AMD Elan
+Prend en charge les processeurs AMD Elan.
+
 #### S. GeodeGX1
+Prend en charge les processeurs Geode GX1.
+
 #### T. Geode GX/LX
+Prend en charge les processeurs Geode GX et LX.
+
 #### U. CyrixIII/VIA-C3
+Prend en charge les processeurs Cyrix III et VIA C3.
+
 #### V. VIA C3-2 (Nehemiah)
+Prend en charge les processeurs
+
 #### W. VIA C7
+Prend en charge les processeurs
+
 #### X. Intel P4 / older Netburst based Xeon
+Prend en charge les processeurs
+
 #### Y. Core 2/newer Xeon
+Prend en charge les processeurs
+
 #### Z. Intel Atom
+Prend en charge les processeurs
+
 
 <br />
 
