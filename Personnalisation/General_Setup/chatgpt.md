@@ -8,19 +8,19 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 #### 01. General Setup
 ```
 - 01. Compile also drivers which will not load : <Boolean>
-- 02. Compile the kernel with warnings as errors :  <Boolean>
-- 03. Compile test UAPI headers :  <Boolean>
+- 02. Compile the kernel with warnings as errors : <Boolean>
+- 03. Compile test UAPI headers : <Boolean>
 - 04. Local Version - apprend to kernel release: <String>
 - 05. Automatically apprend version information to the version string: <Boolean>
 - 06. Build ID Salt : <String>
 - 07. Kernel compression mode: <gzip, bzip, zstd, none>
-- 08. Default init path: <string>  
+- 08. Default init path: <string>
 - 09. Default Hostname: <string>
 - 10. System V IPC: <Boolean>
 - 11. POSIX Message queues : <Boolean>
 - 12. General notification queue : <Boolean>
 - 13. Enable process_vm_readv/writev_syscalls : <Boolean>
-- 14. uselib syscall (for libc5 and earlier)  : <Boolean>
+- 14. uselib syscall (for libc5 and earlier) : <Boolean>
 - 15. Auditing support : <Boolean>
 - 16. Preemption Model : <Boolean>
 - 17. Preemption behaviour defined on boot : <Boolean>
