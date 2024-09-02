@@ -86,10 +86,11 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 2. Expose irq internals in debugfs : <Boolean>
 ```
 
-| Nom du paramètre                    | Valeur     | Commentaire        |
-| -----                               | -----      | -----              |
-| 1. Supportsparse irq numbering      | XXXXX      | XXXXXXXXXXXXXXXXXX |
-| 2. Expose irq internals in debugfs  | XXXXX      | XXXXXXXXXXXXXXXXXX |
+| Nom du paramètre                    | Valeur | Commentaire       |
+| -----                               | -----  | -----                                                         
+                                    |
+| 1. Supportsparse irq numbering      | True   |  Cela permet d'optimiser la gestion des interruptions (IRQ) et peut améliorer les performances. |
+| 2. Expose irq internals in debugfs  | True  | Cela n'est généralement pas nécessaire pour un usage normal et peut potentiellement créer des problèmes de sécurité. |
 
 <br />
 
