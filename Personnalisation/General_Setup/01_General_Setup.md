@@ -23,7 +23,7 @@ Les en-têtes UAPI sont des fichiers d'en-tête qui définissent les interfaces 
 
 Ils fournissent les déclarations de fonctions, les structures de données et les constantes nécessaires pour utiliser les fonctionnalités du noyau.
 
-L'option "Compile test UAPI headers" permet de compiler ces en-têtes UAPI pour vérifier leur cohérence et leur compatibilité avec le code du noyau. Cette étape est importante pour plusieurs raisons :
+L'option **Compile test UAPI headers** permet de compiler ces en-têtes UAPI pour vérifier leur cohérence et leur compatibilité avec le code du noyau. Cette étape est importante pour plusieurs raisons :
 
 - Validation des en-têtes UAPI : La compilation des en-têtes UAPI permet de vérifier qu'ils sont corrects et cohérents avec le code du noyau. Cela aide à détecter les erreurs de syntaxe, les incohérences de déclaration et les problèmes de compatibilité.
 - Détection des problèmes de compatibilité : La compilation des en-têtes UAPI permet de détecter les problèmes de compatibilité entre les différentes versions du noyau et les applications utilisateurs.
