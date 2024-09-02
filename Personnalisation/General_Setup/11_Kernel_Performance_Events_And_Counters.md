@@ -9,7 +9,7 @@ Cependant, il est important de noter que l'utilisation de vmalloc() peut avoir u
 <br />
 
 ## B. Configuration
-### 1. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers
+### 1. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers []
 Cette option de compilation du noyau (kernel) active un comportement de débogage pour les événements et compteurs de performance.
 
 Le noyau Linux utilise la fonction perf_mmap() pour allouer la mémoire pour les buffers de performance. 
