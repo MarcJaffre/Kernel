@@ -34,61 +34,63 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 - 13. Enable process_vm_readv/writev_syscalls : <Boolean>
 - 14. uselib syscall (for libc5 and earlier) : <Boolean>
 - 15. Auditing support : <Boolean>
-- 16. Preemption Model : <Boolean>
-- 17. Preemption behaviour defined on boot : <Boolean>
-- 18. Core Scheduling for SMT : <Boolean>
-- 19. CPU Isolation : <Boolean>
-- 20. Kernel .config support : <Boolean>
-- 21. Enable kernel headers throught /sys/kernel/kheaders.tar.xz : <Boolean>
-- 22. Kernel log buffer size : <Boolean>
-- 23. CPU Kernel log buffer size contribution : <Boolean>
-- 24. Printk indexing debugfs interface : <Boolean>
-- 25. Memory placement award NUMA scheduler : <Boolean>
-- 26. Checkpoint/restore support : <Boolean>
-- 27. Automatic process group scheduling : <number>
-- 28. Kernel -> user space relay support : <number>
-- 29. Initial Ram filesystem and RAM disk (initramfs/initrd) support : <string>
-- 30. Boot config support : <Boolean>
-- 31. Preserve cpio archive mtimes in intiramfs : <Boolean>
-- 32. Compiler optimisation level : <Boolean>
-- 33. Profiling support : <Boolean>
+- 16. KUnit test for kernel/time functions: <Boolean>
+- 17. Preemption Model : <Boolean>
+- 18. Preemption behaviour defined on boot : <Boolean>
+- 19. Core Scheduling for SMT : <Boolean>
+- 20. CPU Isolation : <Boolean>
+- 21. Kernel .config support : <Boolean>
+- 22. Enable kernel headers throught /sys/kernel/kheaders.tar.xz : <Boolean>
+- 23. Kernel log buffer size : <Boolean>
+- 24. CPU Kernel log buffer size contribution : <Boolean>
+- 25. Printk indexing debugfs interface : <Boolean>
+- 26. Memory placement award NUMA scheduler : <Boolean>
+- 27. Checkpoint/restore support : <Boolean>
+- 28. Automatic process group scheduling : <number>
+- 29. Kernel -> user space relay support : <number>
+- 30. Initial Ram filesystem and RAM disk (initramfs/initrd) support : <string>
+- 31. Boot config support : <Boolean>
+- 32. Preserve cpio archive mtimes in intiramfs : <Boolean>
+- 33. Compiler optimisation level : <Boolean>
+- 34. Profiling support : <Boolean>
 ```
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                                |
 | -----                                             | -----      | -----                                                                                      |
-| 01. Compile also drivers which will not load      | false      | Sauf si vous avez des besoins spécifiques                                                  |
-| 02. Compile the kernel with warnings as errors    | false      | Pour éviter les erreurs de compilation inutiles                                            |
-| 03. Compile test UAPI headers                     | false      | Sauf si vous développez des applications qui utilisent ces headers                         |
+| 01. Compile also drivers which will not load      | False      | Sauf si vous avez des besoins spécifiques                                                  |
+| 02. Compile the kernel with warnings as errors    | False      | Pour éviter les erreurs de compilation inutiles                                            |
+| 03. Compile test UAPI headers                     | False      | Sauf si vous développez des applications qui utilisent ces headers                         |
 | 04. Local Version - append to kernel release      | <Vide>     | Sauf si vous voulez personnaliser la version du noyau                                      |
-| 05. Automatically apprend version information ... | true       | Pour avoir des informations de version précises                                            |
+| 05. Automatically apprend version information ... | True       | Pour avoir des informations de version précises                                            |
 | 06. Build ID Salt                                 | <vide>     | Sauf si vous voulez personnaliser l'ID de build                                            |
 | 07. Kernel compression mode                       | zstd       | Pour une compression efficace                                                              |
 | 08. Default init path                             | /sbin/init | Chemin par défaut pour l'initialisation du système                                         |
 | 09. Default Hostname                              | Debian     | Nom d'hôte par défaut, mais vous pouvez le personnaliser                                   |
-| 10. System V IPC                                  | true       | Pour supporter les IPC de System V                                                         |
-| 11. POSIX Message queues                          | true       | Pour supporter les files d'attente de messages POSIX)                                      |
-| 12. General notification queue                    | true       | Pour supporter les notifications générales                                                 |
-| 13. Enable process_vm_readv/writev_syscalls       | true       | Pour supporter les appels système de lecture et d'écriture de processus                    |
-| 14. uselib syscall (for libc5 and earlier)        | false      | Sauf si vous utilisez une version de libc antérieure à la 5                                |
-| 15. Auditing support                              | true       | Pour supporter l'audit du système                                                          |
-| 16. Preemption Model                              | Desktop    | Pour un modèle de préemption adapté aux bureaux                                            |
-| 17. Preemption behaviour defined on boot          | true       | Pour définir le comportement de préemption au démarrage                                    |
-| 18. Core Scheduling for SMT                       | true       | Pour supporter la planification des cœurs pour SMT                                         |
-| 19. CPU Isolation                                 | false*     | Sauf si vous voulez isoler des CPU spécifiques                                             |
-| 20. Kernel .config support                        | true       | Pour supporter la configuration du noyau                                                   |
-| 21. Enable kernel headers through .....           | true       | Pour supporter les headers du noyau                                                        |
-| 22. Kernel log buffer size                        | 16         | Taille par défaut du tampon de journalisation du noyau                                     |
-| 23. CPU Kernel log buffer size contribution       | 8          | Contribution par défaut de la taille du tampon de journalisation du noyau pour chaque CPU  |
-| 24. Printk indexing debugfs interface             | true       | Pour supporter l'interface de débogage de printk                                           |
-| 25. Memory placement award NUMA scheduler         | true       | Pour supporter la planification NUMA aware                                                 |
-| 26. Checkpoint/restore support                    | true       | Pour supporter la sauvegarde et la restauration des processus                              |
-| 27. Automatic process group scheduling            | 2          | Planification automatique des groupes de processus                                         |
-| 28. Kernel -> user space relay support            | 2          | Pupport de relais entre le noyau et l'espace utilisateur                                   |
-| 29. Initial Ram filesystem and RAM disk ....      | initramfs  | Support de l'initramfs                                                                     |
-| 30. Boot config support                           | true       | Pour supporter la configuration du démarrage                                               |
-| 31. Preserve cpio archive mtimes in initramfs     | true       | Pour conserver les dates de modification des archives cpio dans l'initramfs                |
-| 32. Compiler optimisation level                   | -O2        | Niveau d'optimisation du compilateur                                                       |
-| 33. Profiling support                             | true       | Pour supporter le profilage du système                                                     |
+| 10. System V IPC                                  | True       | Pour supporter les IPC de System V                                                         |
+| 11. POSIX Message queues                          | True       | Pour supporter les files d'attente de messages POSIX)                                      |
+| 12. General notification queue                    | True       | Pour supporter les notifications générales                                                 |
+| 13. Enable process_vm_readv/writev_syscalls       | True       | Pour supporter les appels système de lecture et d'écriture de processus                    |
+| 14. uselib syscall (for libc5 and earlier)        | False      | Sauf si vous utilisez une version de libc antérieure à la 5                                |
+| 15. Auditing support                              | True       | Pour supporter l'audit du système                                                          |
+| 16. KUnit test for kernel/time functions          | True      |
+| 17. Preemption Model                              | Desktop    | Pour un modèle de préemption adapté aux bureaux                                            |
+| 18. Preemption behaviour defined on boot          | True       | Pour définir le comportement de préemption au démarrage                                    |
+| 19. Core Scheduling for SMT                       | True       | Pour supporter la planification des cœurs pour SMT                                         |
+| 20. CPU Isolation                                 | False*     | Sauf si vous voulez isoler des CPU spécifiques                                             |
+| 21. Kernel .config support                        | True       | Pour supporter la configuration du noyau                                                   |
+| 22. Enable kernel headers through .....           | True       | Pour supporter les headers du noyau                                                        |
+| 23. Kernel log buffer size                        | 16         | Taille par défaut du tampon de journalisation du noyau                                     |
+| 24. CPU Kernel log buffer size contribution       | 8          | Contribution par défaut de la taille du tampon de journalisation du noyau pour chaque CPU  |
+| 25. Printk indexing debugfs interface             | True       | Pour supporter l'interface de débogage de printk                                           |
+| 26. Memory placement award NUMA scheduler         | True       | Pour supporter la planification NUMA aware                                                 |
+| 27. Checkpoint/restore support                    | True       | Pour supporter la sauvegarde et la restauration des processus                              |
+| 28. Automatic process group scheduling            | 2          | Planification automatique des groupes de processus                                         |
+| 29. Kernel -> user space relay support            | 2          | Pupport de relais entre le noyau et l'espace utilisateur                                   |
+| 30. Initial Ram filesystem and RAM disk ....      | initramfs  | Support de l'initramfs                                                                     |
+| 31. Boot config support                           | True       | Pour supporter la configuration du démarrage                                               |
+| 32. Preserve cpio archive mtimes in initramfs     | True       | Pour conserver les dates de modification des archives cpio dans l'initramfs                |
+| 33. Compiler optimisation level                   | -O2        | Niveau d'optimisation du compilateur                                                       |
+| 34. Profiling support                             | True       | Pour supporter le profilage du système                                                     |
 
 <br />
 
@@ -213,10 +215,11 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 ```
 
 
-| Option                                            | Valeur recommandée |
-| ---                                               | --- |
-| 01. Enable utilization clamping for RT/FAIR tasks | Oui |
-| 02. Number of supported utilization clamp buckets | 5   |
+| Option                                            | Valeur |
+| ---                                               | -----  |
+| 01. Enable utilization clamping for RT/FAIR tasks | True   |
+| 02. Number of supported utilization clamp buckets | 5      |
+
 
 <br />
 
@@ -277,12 +280,12 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 | Nom du paramètre      | Valeur | Commentaire |
 | -----                 | -----  | -----       |
-| 01. UTS namespace     | true   |
-| 02. TIME namespace    | true   |
-| 03. IPC namespace     | true   |
-| 04. User namespace    | true   |
-| 05. PID Namespaces    | true   |
-| 06. Network namespace | true   |
+| 01. UTS namespace     | True   |
+| 02. TIME namespace    | True   |
+| 03. IPC namespace     | True   |
+| 04. User namespace    | True   |
+| 05. PID Namespaces    | True   |
+| 06. Network namespace | True   |
 
 
 
