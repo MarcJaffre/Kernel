@@ -42,12 +42,10 @@ Cette option permet d'ajouter une chaîne de caractères personnalisée à la ve
 
 <br />
 
-### 5. Automatically apprend version information to the version string
-
+### 5. Automatically apprend version information to the version string [N]
+Lorsqu'elle est activée, le noyau ajoutera automatiquement des informations de version à la chaîne de version du noyau. 
 
 <br />
-
-
 
 ### 6. Build ID Salt [???]
 Cette option permet de spécifier une valeur de **salt** pour le Build ID du kernel. Le Build ID est une valeur unique qui identifie une version spécifique du kernel.
