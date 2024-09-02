@@ -7,39 +7,39 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 #### 01. General Setup
 ```
-- Compile also drivers which will not load : <Boolean>
-- Compile the kernel with warnings as errors :  <Boolean>
-- Compile test UAPI headers :  <Boolean>
-- Local Version - apprend to kernel release: <String>
-- Automatically apprend version information to the version string: <Boolean>
-- Build ID Salt : <String>
-- Kernel compression mode: <gzip, bzip, zstd, none>
-- Default init path: <string>  
-- Default Hostname: <string>
-- System V IPC: <Boolean>
-- POSIX Message queues : <Boolean>
-- General notification queue : <Boolean>
-- Enable process_vm_readv/writev_syscalls : <Boolean>
-- uselib syscall (for libc5 and earlier)  : <Boolean>
-- Auditing support : <Boolean>
-- Preemption Model : <Boolean>
-- Preemption behaviour defined on boot : <Boolean>
-- Core Scheduling for SMT : <Boolean>
-- CPU Isolation : <Boolean>
-- Kernel .config support : <Boolean>
-- Enable kernel headers throught /sys/kernel/kheaders.tar.xz : <Boolean>
-- Kernel log buffer size : <Boolean>
-- CPU Kernel log buffer size contribution : <Boolean>
-- Printk indexing debugfs interface : <Boolean>
-- Memory placement award NUMA scheduler : <Boolean>
-- Checkpoint/restore support : <Boolean>
-- Automatic process group scheduling : <number>
-- Kernel -> user space relay support : <number>
-- Initial Ram filesystem and RAM disk (initramfs/initrd) support : <string>
-- Boot config support : <Boolean>
-- Preserve cpio archive mtimes in intiramfs : <Boolean>
-- Compiler optimisation level : <Boolean>
-- Profiling support : <Boolean>
+- 01. Compile also drivers which will not load : <Boolean>
+- 02. Compile the kernel with warnings as errors :  <Boolean>
+- 03. Compile test UAPI headers :  <Boolean>
+- 04. Local Version - apprend to kernel release: <String>
+- 05. Automatically apprend version information to the version string: <Boolean>
+- 06. Build ID Salt : <String>
+- 07. Kernel compression mode: <gzip, bzip, zstd, none>
+- 08. Default init path: <string>  
+- 09. Default Hostname: <string>
+- 10. System V IPC: <Boolean>
+- 11. POSIX Message queues : <Boolean>
+- 12. General notification queue : <Boolean>
+- 13. Enable process_vm_readv/writev_syscalls : <Boolean>
+- 14. uselib syscall (for libc5 and earlier)  : <Boolean>
+- 15. Auditing support : <Boolean>
+- 16. Preemption Model : <Boolean>
+- 17. Preemption behaviour defined on boot : <Boolean>
+- 18. Core Scheduling for SMT : <Boolean>
+- 19. CPU Isolation : <Boolean>
+- 20. Kernel .config support : <Boolean>
+- 21. Enable kernel headers throught /sys/kernel/kheaders.tar.xz : <Boolean>
+- 22. Kernel log buffer size : <Boolean>
+- 23. CPU Kernel log buffer size contribution : <Boolean>
+- 24. Printk indexing debugfs interface : <Boolean>
+- 25. Memory placement award NUMA scheduler : <Boolean>
+- 26. Checkpoint/restore support : <Boolean>
+- 27. Automatic process group scheduling : <number>
+- 28. Kernel -> user space relay support : <number>
+- 29. Initial Ram filesystem and RAM disk (initramfs/initrd) support : <string>
+- 30. Boot config support : <Boolean>
+- 31. Preserve cpio archive mtimes in intiramfs : <Boolean>
+- 32. Compiler optimisation level : <Boolean>
+- 33. Profiling support : <Boolean>
 ```
 
 <br />
@@ -96,7 +96,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 2. Force user context tracking : <Boolean>
 3. Old Idle dynticks config : <Boolean>
 4. High Resolution Timer Support : <Boolean>
-5. ClockSource Watchdog maximum allowable skew (in ms) :  <Number>
+5. ClockSource Watchdog maximum allowable skew (in ms) : <Number>
 ```
 
 <br />
