@@ -72,7 +72,7 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 | 13. Enable process_vm_readv/writev_syscalls       | True       | Pour supporter les appels système de lecture et d'écriture de processus                    |
 | 14. uselib syscall (for libc5 and earlier)        | False      | Sauf si vous utilisez une version de libc antérieure à la 5                                |
 | 15. Auditing support                              | True       | Pour supporter l'audit du système                                                          |
-| 16. KUnit test for kernel/time functions          | True      |
+| 16. KUnit test for kernel/time functions          | True       |
 | 17. Preemption Model                              | Desktop    | Pour un modèle de préemption adapté aux bureaux                                            |
 | 18. Preemption behaviour defined on boot          | True       | Pour définir le comportement de préemption au démarrage                                    |
 | 19. Core Scheduling for SMT                       | True       | Pour supporter la planification des cœurs pour SMT                                         |
@@ -85,7 +85,7 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 | 26. Memory placement award NUMA scheduler         | True       | Pour supporter la planification NUMA aware                                                 |
 | 27. Checkpoint/restore support                    | True       | Pour supporter la sauvegarde et la restauration des processus                              |
 | 28. Automatic process group scheduling            | XXXX       | Planification automatique des groupes de processus                                         |
-| 29. Kernel -> user space relay support            | XXXX       | Pupport de relais entre le noyau et l'espace utilisateur                                   |
+| 29. Kernel -> user space relay support            | XXXX       | Support de relais entre le noyau et l'espace utilisateur                                   |
 | 30. Initial Ram filesystem and RAM disk ....      | initramfs  | Support de l'initramfs                                                                     |
 | 31. Boot config support                           | True       | Pour supporter la configuration du démarrage                                               |
 | 32. Preserve cpio archive mtimes in initramfs     | True       | Pour conserver les dates de modification des archives cpio dans l'initramfs                |
