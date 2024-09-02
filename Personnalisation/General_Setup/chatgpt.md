@@ -77,8 +77,6 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | Preserve cpio archive mtimes in initramfs         | true       | Preserve cpio archive mtimes in initramfs for consistency                       |
 | Compiler optimisation level                       | 2          | Set a reasonable compiler optimisation level                                    |
 | Profiling support                                 | true       | Enable profiling support for performance analysis                               |
-| ------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
-
 
 <br />
 
@@ -98,6 +96,16 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 4. High Resolution Timer Support : <>
 5. ClockSource Watchdog maximum allowable skew (in ms) :  <>
 ```
+
+
+
+| Nom du paramètre                                  | Valeur     | Commentaire                                                                     |
+| ------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| Timer tick handling                               | -----      |
+| Force user context tracking                       | -----      |
+|  Old Idle dynticks config                         | -----      |
+| High Resolution Timer Suppor                      | -----      |
+|  ClockSource Watchdog maximum allowable skew      | -----      |
 
 <br />
 
