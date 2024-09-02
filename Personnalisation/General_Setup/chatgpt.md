@@ -67,7 +67,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | CPU Isolation                                     | false*     | Sauf si vous voulez isoler des CPU spécifiques
 | Kernel .config support                            | true       | Pour supporter la configuration du noyau
 | Enable kernel headers through .....               | true       | Pour supporter les headers du noyau
-| Kernel log buffer size                            | 16         | taille par défaut du tampon de journalisation du noyau
+| Kernel log buffer size                            | 16         | Taille par défaut du tampon de journalisation du noyau
 | CPU Kernel log buffer size contribution           | 8          | Contribution par défaut de la taille du tampon de journalisation du noyau pour chaque CPU
 | Printk indexing debugfs interface                 | true       | Pour supporter l'interface de débogage de printk
 | Memory placement award NUMA scheduler             | true       | Pour supporter la planification NUMA aware
