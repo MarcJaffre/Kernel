@@ -15,6 +15,7 @@ Cette option permet de compiler les pilotes qui ne seront pas chargés par défa
 Cette option permet de traiter les avertissements de compilation comme des erreurs. Cela signifie que si un avertissement est détecté pendant la compilation, la compilation sera arrêtée.
 
 <br />
+
 ### 3. Compile test UAPI headers
 Lorsque vous compilez un noyau Linux, vous avez la possibilité de compiler les en-têtes UAPI (User API) pour les tester. Les en-têtes UAPI sont des fichiers d'en-tête qui définissent les interfaces de programmation pour les applications utilisateurs. 
 
