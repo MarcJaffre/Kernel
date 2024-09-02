@@ -128,9 +128,6 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | Disable unprivileged BPF by default                    | -----      | XXXXXXXXXXXXXXXXXX|
 | Enable BPF LSM Instrumentation                         | -----      | XXXXXXXXXXXXXXXXXX|
 
-
-
-
 <br />
 
 #### 05 CPU task time and stats accounting
@@ -141,6 +138,15 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 4. Export task/process statistics through netlink : <>
 5. Pressure stall information tracking : <>
 ```
+
+| Nom du paramètre                                 | Valeur     | Commentaire                                                                     |
+| ------------------------------------------------ | ---------- | ------------------------------------------------------------------------------- |
+| Cputime accounting                               | -----      | XXXXXXXXXXXXXXXXXX|
+| Fine granularity task level IRQ time accounting  | -----      | XXXXXXXXXXXXXXXXXX|
+| BSD Process Accounting                           | -----      | XXXXXXXXXXXXXXXXXX|
+| Export task/process statistics through netlink   | -----      | XXXXXXXXXXXXXXXXXX|
+| Pressure stall information tracking              | -----      | XXXXXXXXXXXXXXXXXX|
+
 
 <br />
 
@@ -158,6 +164,24 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 8. RCU callback lazy invocation functionality (NEW) : <>
 9. RCU callback-batch backup time check : <>
 ```
+
+| Nom du paramètre                                              | Valeur     | Commentaire                                                                     |
+| ------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| Make expert-level adjustments to RCU                          | -----      | XXXXXXXXXXXXXXXXXX|
+| Configuration Force selection of TASKS_RCU                    | -----      | XXXXXXXXXXXXXXXXXX|
+| Force selection of Tasks Rude RCU                             | -----      | XXXXXXXXXXXXXXXXXX|
+| ------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| Force selection of Tasks Trace RCU                            | -----      | XXXXXXXXXXXXXXXXXX|
+| Tree-based hierarchical RCU fanout value                      | -----      | XXXXXXXXXXXXXXXXXX|
+| Tree-based hierarchical RCU leaf-level fanout value           | -----      | XXXXXXXXXXXXXXXXXX|
+| ------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| Enable RCU priority boosting                                  | -----      | XXXXXXXXXXXXXXXXXX|
+| Offload RCU callback processing from boot-selected CPUs       | -----      | XXXXXXXXXXXXXXXXXX|
+| Tasks Trace RCU readers use memory barriers in user and idle  | -----      | XXXXXXXXXXXXXXXXXX|
+| RCU callback lazy invocation functionality (NEW)              | -----      | XXXXXXXXXXXXXXXXXX|
+| RCU callback-batch backup time check                          | -----      | XXXXXXXXXXXXXXXXXX|
+
+
 
 <br />
 
