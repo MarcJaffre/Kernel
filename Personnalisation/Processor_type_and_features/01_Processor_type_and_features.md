@@ -215,14 +215,17 @@ Prend en charge les processeurs
 #### Z. Intel Atom
 Prend en charge les processeurs
 
-
 <br />
 
 ### 19. Generic x86 support
+Permet de prendre en charge les processeurs x86 génériques, ce qui signifie que le noyau pourra fonctionner sur une grande variété de processeurs x86, même si le processeur spécifique n'est pas explicitement pris en charge par une autre option.
 
 <br />
 
 ### 20. HPET Timer Support
+Permet de prendre en charge le timer HPET (High Precision Event Timer), qui est un timer matériel qui fournit une précision élevée pour les événements temporisés.
+
+Cela peut être utile pour les applications qui nécessitent une synchronisation précise, comme les systèmes de temps réel ou les applications multimédia.
 
 <br />
 
