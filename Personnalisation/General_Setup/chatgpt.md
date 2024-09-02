@@ -93,6 +93,8 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 <br />
 
 #### 02. IRQ Sub-System
+Ces paramètres devraient fournir une bonne base pour la gestion des interruptions, mais n'oubliez pas de les ajuster en fonction de vos besoins spécifiques.
+
 ```
 1. Supportsparse irq numbering : <Boolean>
 2. Expose irq internals in debugfs : <Boolean>
@@ -106,6 +108,8 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 <br />
 
 #### 03. Timers subsystem
+Ces paramètres devraient fournir une bonne base pour la gestion des timers et des interruptions, mais n'oubliez pas de les ajuster en fonction de vos besoins spécifiques.
+
 ```
 1. Timer tick handling : <Boolean>
 2. Force user context tracking : <Boolean>
@@ -125,6 +129,8 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 <br />
 
 #### 04. BPF subsystem
+Ces paramètres devraient fournir une bonne base pour la gestion des fonctionnalités BPF*, mais n'oubliez pas de les ajuster en fonction de vos besoins spécifiques.
+
 ```
 1. Enable bpf() system call : <Boolean>
 2. Enable BPF Just In Time compiler : <Boolean>
@@ -132,6 +138,9 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 4. Disable unprivileged BPF by default : <Boolean>
 5. Enable BPF LSM Instrumentation : <Boolean>
 ```
+
+***** Mécanisme de filtrage et de traitement de paquets de réseau pour exécuter des programmes de filtrage et de traitement de paquets à l'intérieur du noyau du système d'exploitation.
+
 
 | Nom du paramètre                                          | Valeur | Commentaire                                                                                                                        |
 | -----                                                     | -----  | -----                                                                                                                              |
