@@ -13,7 +13,7 @@ J'espère que cela vous a aidé à comprendre cette option de compilation. Si vo
 <br />
 
 ## B. Configuration
-### 1. Enable utilization clamping for RT/FAIR tasks
+### 1. Enable utilization clamping for RT/FAIR tasks []
 Permet d'activer le clamping d'utilisation pour les tâches RT (Real-Time) et FAIR (Fair Scheduling).
 
 Le clamping d'utilisation est une technique qui permet de limiter l'utilisation des ressources par les tâches pour éviter les problèmes de surcharge et de sous-utilisation.
