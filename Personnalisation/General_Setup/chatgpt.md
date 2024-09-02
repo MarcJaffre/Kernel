@@ -288,23 +288,23 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 11. Kernel Performance Events And Counters
 ```
-01. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers []
+01. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers 
 ```
 
 <br />
 
 #### 12. Kexec and crash features
 ```
-1. Enable kexec system call []
-2. Enable kexec file based system call []
-3. Verify kernel signature during kexec_file_load() syscall []
-3A. Require a valid signature in kexec_file_load() syscall []
-3B. Enable Image signature verification support (ARM) []
-3C. Enable bzlmage signature verification support []
-4. kexec jump []
-5. kernel crash dumps []
-5A. Update the crash elfcorehdr on system configuration changes (NEW) []
-5B. Specify the maximum number of memory regions for the elfcorehdr (NEW) []
+1. Enable kexec system call 
+2. Enable kexec file based system call 
+3. Verify kernel signature during kexec_file_load() syscall 
+3A. Require a valid signature in kexec_file_load() syscall 
+3B. Enable Image signature verification support (ARM) 
+3C. Enable bzlmage signature verification support 
+4. kexec jump 
+5. kernel crash dumps 
+5A. Update the crash elfcorehdr on system configuration changes (NEW) 
+5B. Specify the maximum number of memory regions for the elfcorehdr (NEW) 
 ```
 
 <br />
