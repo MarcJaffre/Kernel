@@ -84,19 +84,19 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 #### 02. IRQ Sub-System
 ```
-1. Supportsparse irq numbering : <>
-2. Expose irq internals in debugfs : <>
+1. Supportsparse irq numbering : <Boolean>
+2. Expose irq internals in debugfs : <Boolean>
 ```
 
 <br />
 
 #### 03 Timers subsystem
 ```
-1. Timer tick handling : <>
-2. Force user context tracking : <>
-3. Old Idle dynticks config : <>
-4. High Resolution Timer Support : <>
-5. ClockSource Watchdog maximum allowable skew (in ms) :  <>
+1. Timer tick handling : <Boolean>
+2. Force user context tracking : <Boolean>
+3. Old Idle dynticks config : <Boolean>
+4. High Resolution Timer Support : <Boolean>
+5. ClockSource Watchdog maximum allowable skew (in ms) :  <Number>
 ```
 
 <br />
@@ -115,11 +115,11 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 #### 04 BPF subsystem
 ```
-1. Enable bpf() system call : <>
-2. Enable BPF Just In Time compiler : <>
-3. Permanently enable BPF JIT and remove BPF interpreter : <>
-4. Disable unprivileged BPF by default : <>
-5. Enable BPF LSM Instrumentation : <>
+1. Enable bpf() system call : <Boolean>
+2. Enable BPF Just In Time compiler : <Boolean>
+3. Permanently enable BPF JIT and remove BPF interpreter : <Boolean>
+4. Disable unprivileged BPF by default : <Boolean>
+5. Enable BPF LSM Instrumentation : <Boolean>
 ```
 
 | Nom du paramètre                                       | Valeur     | Commentaire                                                                     |
@@ -135,11 +135,11 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 #### 05 CPU task time and stats accounting
 ```
-1. Cputime accounting : <>
-2. Fine granularity task level IRQ time accounting : <>
-3. BSD Process Accounting : <>
-4. Export task/process statistics through netlink : <>
-5. Pressure stall information tracking : <>
+1. Cputime accounting : <Boolean>
+2. Fine granularity task level IRQ time accounting : <Boolean>
+3. BSD Process Accounting : <Boolean>
+4. Export task/process statistics through netlink : <Boolean>
+5. Pressure stall information tracking : <Boolean>
 ```
 
 <br />
@@ -156,17 +156,17 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 #### 06 RCU Subsystem
 ```
-1. Make expert-level adjustments to RCU : <>
-2. Configuration Force selection of TASKS_RCU : <>
-3. Force selection of Tasks Rude RCU : <>
-4. Force selection of Tasks Trace RCU : <>
-4A. Tree-based hierarchical RCU fanout value : <>
-4B. Tree-based hierarchical RCU leaf-level fanout value : <>
-5. Enable RCU priority boosting : <>
-6. Offload RCU callback processing from boot-selected CPUs : <>
-7. Tasks Trace RCU readers use memory barriers in user and idle : <>
-8. RCU callback lazy invocation functionality (NEW) : <>
-9. RCU callback-batch backup time check : <>
+1. Make expert-level adjustments to RCU : <Boolean>
+2. Configuration Force selection of TASKS_RCU : <Boolean>
+3. Force selection of Tasks Rude RCU : <Boolean>
+4. Force selection of Tasks Trace RCU : <Boolean>
+4A. Tree-based hierarchical RCU fanout value : <Boolean>
+4B. Tree-based hierarchical RCU leaf-level fanout value : <Boolean>
+5. Enable RCU priority boosting : <Boolean>
+6. Offload RCU callback processing from boot-selected CPUs : <Boolean>
+7. Tasks Trace RCU readers use memory barriers in user and idle : <Boolean>
+8. RCU callback lazy invocation functionality (NEW) : <Boolean>
+9. RCU callback-batch backup time check : <Boolean>
 ```
 
 | Nom du paramètre                                              | Valeur     | Commentaire                                                                     |
