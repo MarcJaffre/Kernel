@@ -80,13 +80,12 @@ Permet d'activer le support pour les systèmes Intel Quark platform.
 <br />
 
 ### 09. Intel Low Power Subsystem Support
-
+Permet d'activer le support pour les sous-systèmes à faible consommation d'énergie Intel. Les sous-systèmes à faible consommation d'énergie sont des composants qui permettent de réduire la consommation d'énergie du système.
 
 <br />
 
-
 ### 10. AMD ACPI2Platform devices support
-
+Permet d'activer le support pour les périphériques AMD ACPI2Platform. Les périphériques ACPI2Platform sont des composants qui permettent de gérer les périphériques du système.
 
 <br />
 
