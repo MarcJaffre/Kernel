@@ -176,7 +176,6 @@ Ces options sont liées à la comptabilité des tâches et des statistiques.
 
 #### 06. RCU Subsystem
 RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux. Ces options permettent un contrôle fin de la comportement de RCU.
-
 ```
 1. Make expert-level adjustments to RCU : <Boolean>
 2. Configuration Force selection of TASKS_RCU : <Boolean>
@@ -212,12 +211,30 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 #### 07. Scheduler features
 ```
+1. Enable utilization clamping for RT/FAIR tasks
+2. Number of supported utilization clamp buckets
 ```
 
 <br />
 
 #### 08. Control Group Support
 ```
+01. Favor dynamic modification latency reduction by default
+02. Memory controller
+03. IO controller
+04. Utilization clamping per group of tasks
+05. PIDs controller
+06. RDMA controller
+07. Freezer controller
+08. HugeTLB controller
+09. Cpuset controller
+10. Include legacy /proc//cpuset file
+11. Device controller
+12. Simple CPU accounting controller
+13. Perf controller
+14. Support for eBPF programs attached to cgroups
+15. Misc resource controller
+16. Debug controller
 ```
 
 <br />
