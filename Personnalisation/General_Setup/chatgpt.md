@@ -102,13 +102,13 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. ClockSource Watchdog maximum allowable skew (in ms) : <Number>
 ```
 
-| Nom du paramètre                                  | Valeur     | Commentaire                                                                                                      |
-| -----                                             | True       | -----                                                                                                            |
-| 1. Timer tick handling                            | False      | Cela permet de gérer les ticks de l'horloge système de manière plus efficace.                                    |
-| 2. Force user context tracking                    | False      | Cela n'est généralement pas nécessaire pour un usage normal et peut créer des problèmes de performances.         |
-| 3. Old Idle dynticks config                       | False      | Cela est généralement déprécié et non recommandé.                                                                |
-| 4. High Resolution Timer Suppor                   | True       | Cela permet d'améliorer la précision des timers système.                                                         |
-| 5. ClockSource Watchdog maximum allowable skew    | 100        | Cela dépend de vos besoins spécifiques, mais une valeur de 100 ms est généralement considérée comme raisonnable. |
+| Nom du paramètre                                  | Valeur | Commentaire                                                                                                      |
+| -----                                             | ----   | -----                                                                                                            |
+| 1. Timer tick handling                            | False  | Cela permet de gérer les ticks de l'horloge système de manière plus efficace.                                    |
+| 2. Force user context tracking                    | False  | Cela n'est généralement pas nécessaire pour un usage normal et peut créer des problèmes de performances.         |
+| 3. Old Idle dynticks config                       | False  | Cela est généralement déprécié et non recommandé.                                                                |
+| 4. High Resolution Timer Suppor                   | True   | Cela permet d'améliorer la précision des timers système.                                                         |
+| 5. ClockSource Watchdog maximum allowable skew    | 100    | Cela dépend de vos besoins spécifiques, mais une valeur de 100 ms est généralement considérée comme raisonnable. |
 
 <br />
 
@@ -121,14 +121,13 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. Enable BPF LSM Instrumentation : <Boolean>
 ```
 
-| Nom du paramètre                                          | Valeur     | Commentaire        |
-| -----                                                     | -----      | -----              |
-| 1. Enable bpf() system call                               | -----      | XXXXXXXXXXXXXXXXXX |
-| 2. Enable BPF Just In Time compiler                       | -----      | XXXXXXXXXXXXXXXXXX |
-| 3. Old Idle dynticks config                               | -----      | XXXXXXXXXXXXXXXXXX |
-| 4. Permanently enable BPF JIT and remove BPF interpreter  | -----      | XXXXXXXXXXXXXXXXXX |
-| 5. Disable unprivileged BPF by default                    | -----      | XXXXXXXXXXXXXXXXXX |
-| 6. Enable BPF LSM Instrumentation                         | -----      | XXXXXXXXXXXXXXXXXX |
+| Nom du paramètre                                          | Valeur | Commentaire                                                                                                                        |
+| -----                                                     | -----  | -----                                                                                                                              |
+| 1. Enable bpf() system call                               | True   | Cela permet d'activer l'appel système bpf() qui est utilisé pour les opérations de filtrage de paquets.                            |
+| 2. Enable BPF Just In Time compiler                       | True   | Cela permet d'améliorer les performances des programmes utilisant BPF en compilant le code BPF en code machine à la volée.         |
+| 3. Permanently enable BPF JIT and remove BPF interpreter  | False  | Cela n'est généralement pas recommandé car il peut créer des problèmes de compatibilité avec les anciens programmes utilisant BPF. |
+| 4. Disable unprivileged BPF by default                    | False  | Cela permet aux utilisateurs non privilégiés d'utiliser BPF, ce qui est généralement souhaitable pour les applications de réseau.  |
+| 5. Enable BPF LSM Instrumentation                         | True   | Cela permet d'activer l'instrumentation de sécurité BPF pour améliorer la visibilité et la sécurité du système.                    |
 
 <br />
 
