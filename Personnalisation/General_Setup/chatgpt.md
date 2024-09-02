@@ -212,10 +212,11 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 02. Number of supported utilization clamp buckets : <Boolean>
 ```
 
-| Nom du paramètre                                  | Valeur     | Commentaire                                                                                |
-| -----                                             | -----      | -----                                                                                      |
-| 01. Enable utilization clamping for RT/FAIR tasks |
-| 02. Number of supported utilization clamp buckets |
+
+| Option                                            | Valeur recommandée |
+| ---                                               | --- |
+| 01. Enable utilization clamping for RT/FAIR tasks | Oui |
+| 02. Number of supported utilization clamp buckets | 5   |
 
 <br />
 
@@ -241,22 +242,26 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 | Nom du paramètre                                            | Valeur | Commentaire                   |
 | -----                                                       | -----  | -----                         |
-| 01. Favor dynamic modification latency reduction by default |
-| 02. Memory controller                                       |
-| 03. IO controller                                           |
-| 04. Utilization clamping per group of tasks                 |
-| 05. PIDs controller                                         |
-| 06. RDMA controller                                         |
-| 07. Freezer controller                                      |
-| 08. HugeTLB controller                                      |
-| 09. Cpuset controller                                       |
-| 10. Include legacy /proc/pid/cpuset file                    |
-| 11. Device controller                                       |
-| 12. Simple CPU accounting controller                        |
-| 13. Perf controller                                         |
-| 14. Support for eBPF programs attached to cgroups           |
-| 15. Misc resource controller                                |
-| 16. Debug controller                                        |
+| 01. Favor dynamic modification latency reduction by default | True   |
+| 02. Memory controller                                       | True   |
+| 03. IO controller                                           | True   |
+| 04. Utilization clamping per group of tasks                 | True   |
+| 05. PIDs controller                                         | True   |
+| 06. RDMA controller                                         | False  |
+| 07. Freezer controller                                      | True   |
+| 08. HugeTLB controller                                      | True   |
+| 09. Cpuset controller                                       | True   |
+| 10. Include legacy /proc/pid/cpuset file                    | False  |
+| 11. Device controller                                       | True   |
+| 12. Simple CPU accounting controller                        | True   |
+| 13. Perf controller                                         | True   |
+| 14. Support for eBPF programs attached to cgroups           | True   |
+| 15. Misc resource controller                                | True   |
+| 16. Debug controller                                        | False  |
+
+
+
+
 
 <br />
 
@@ -272,12 +277,14 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 | Nom du paramètre      | Valeur | Commentaire |
 | -----                 | -----  | -----       |
-| 01. UTS namespace     |
-| 02. TIME namespace    |
-| 03. IPC namespace     |
-| 04. User namespace    |
-| 05. PID Namespaces    |
-| 06. Network namespace |
+| 01. UTS namespace     | true   |
+| 02. TIME namespace    | true   |
+| 03. IPC namespace     | true   |
+| 04. User namespace    | true   |
+| 05. PID Namespaces    | true   |
+| 06. Network namespace | true   |
+
+
 
 <br />
 
@@ -316,35 +323,35 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 | Nom du paramètre                                               | Valeur | Commentaire |
 | -----                                                          | -----  | -----       |
-| 01. Enable 16-bit UID system calls                             |
-| 02. Multiple users, groups and capabilities support            |
-| 03. sgetmask/ssetmask syscalls support                         |
-| 04. Sysfs syscall support                                      |
-| 05. open by fhandle syscalls                                   |
-| 06. Posix Clocks & timers                                      |
-| 07. Enable support for printk                                  |
-| 08. BUG() support                                              |
-| 09. Enable ELF core dumps                                      |
-| 10. Enable PC-Speaker support                                  |
-| 11. Enable smaller-sized data structures for core (NEW)        |
-| 12. Enable futex support                                       |
-| 13. Enable eventpoll support                                   |
-| 14. Enable signalfd() system call                              |
-| 15. Enable timerfd() system call                               |
-| 16. Enable eventfd() system call                               |
-| 17. Use full shmem filesystem                                  |
-| 18. Enable AIO support                                         |
-| 19. Enable IO uring support                                    |
-| 20. Enable madvise/fadvise syscalls                            |
-| 21. Enable membarrier() system call                            |
-| 22. Enable kcmp() system call                                  |
-| 23. Enable rseq() system call                                  |
-| 24. Enable debugging of rseq() system call                     |
-| 25. Enable cachestat() system call (NEW)                       |
-| 26. PC/104 support                                             |
-| 27. Load all symbols for debugging/ksymoops                    |
-| 28. Test the basic functions and performance of kallsyms (NEW) |
-| 29. Include all symbols in kallsyms                            |
+| 01. Enable 16-bit UID system calls                             | False  |
+| 02. Multiple users, groups and capabilities support            | True   |
+| 03. sgetmask/ssetmask syscalls support                         | False  |
+| 04. Sysfs syscall support                                      | True   |
+| 05. open by fhandle syscalls                                   | True   |
+| 06. Posix Clocks & timers                                      | True   |
+| 07. Enable support for printk                                  | True   |
+| 08. BUG() support                                              | False  |
+| 09. Enable ELF core dumps                                      | True   |
+| 10. Enable PC-Speaker support                                  | False  |
+| 11. Enable smaller-sized data structures for core (NEW)        | True   |
+| 12. Enable futex support                                       | True   |
+| 13. Enable eventpoll support                                   | True   |
+| 14. Enable signalfd() system call                              | True   |
+| 15. Enable timerfd() system call                               | True   |
+| 16. Enable eventfd() system call                               | True   |
+| 17. Use full shmem filesystem                                  | True   |
+| 18. Enable AIO support                                         | True   |
+| 19. Enable IO uring support                                    | True   |
+| 20. Enable madvise/fadvise syscalls                            | True   |
+| 21. Enable membarrier() system call                            | True   |
+| 22. Enable kcmp() system call                                  | True   |
+| 23. Enable rseq() system call                                  | True   |
+| 24. Enable debugging of rseq() system call                     | False  |
+| 25. Enable cachestat() system call (NEW)                       | True   |
+| 26. PC/104 support                                             | False  |
+| 27. Load all symbols for debugging/ksymoops                    | False  |
+| 28. Test the basic functions and performance of kallsyms (NEW) | False  |
+| 29. Include all symbols in kallsyms                            | False  |
 
 <br />
 
@@ -355,7 +362,7 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 | Nom du paramètre                                                                          | Valeur | Commentaire |
 | -----                                                                                     | -----  | -----       |
-| 01. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers |
+| 01. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers | False  |
 
 <br />
 
@@ -375,16 +382,16 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 
 | Nom du paramètre                                                          | Valeur | Commentaire |
 | -----                                                                     | -----  | -----       |
-| 1. Enable kexec system call                                               |
-| 2. Enable kexec file based system call                                    |
-| 3. Verify kernel signature during kexec_file_load() syscall               |
-| 3A. Require a valid signature in kexec_file_load() syscall                |
-| 3B. Enable Image signature verification support (ARM)                     |
-| 3C. Enable bzlmage signature verification support                         |
-| 4. kexec jump                                                             |
-| 5. kernel crash dumps                                                     |
-| 5A. Update the crash elfcorehdr on system configuration changes (NEW)     |
-| 5B. Specify the maximum number of memory regions for the elfcorehdr (NEW) |
+| 1. Enable kexec system call                                               | True   |
+| 2. Enable kexec file based system call                                    | True   |
+| 3. Verify kernel signature during kexec_file_load() syscall               | True   |
+| 3A. Require a valid signature in kexec_file_load() syscall                | True   |
+| 3B. Enable Image signature verification support (ARM)                     | False  |
+| 3C. Enable bzlmage signature verification support                         | False  |
+| 4. kexec jump                                                             | True   |
+| 5. kernel crash dumps                                                     | True   |
+| 5A. Update the crash elfcorehdr on system configuration changes (NEW)     | True   |
+| 5B. Specify the maximum number of memory regions for the elfcorehdr (NEW) | 16
 
 <br />
 
@@ -396,3 +403,10 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | Nom du paramètre | Valeur | Commentaire                   |
 | -----            | -----  | -----                         |
 | 64-bit kernel    | True   | Système d'exploitation en x64 |
+
+
+
+
+
+
+
