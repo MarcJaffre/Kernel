@@ -46,39 +46,39 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                     |
 | ------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
-| Compile also drivers which will not load          | false      | Sauf si vous avez des besoins spécifiques                                       |
-| Compile the kernel with warnings as errors        | false      | Pour éviter les erreurs de compilation inutiles                                 | 
-| Compile test UAPI headers                         | false      | Sauf si vous développez des applications qui utilisent ces headers              |
-| Local Version - append to kernel release          | <Vide>     | Sauf si vous voulez personnaliser la version du noyau                           |
-| Automatically apprend version information ...     | true       | Pour avoir des informations de version précises                                 |
-| Build ID Salt                                     | <vide>     | Sauf si vous voulez personnaliser l'ID de build
-| Kernel compression mode                           | zstd       | Pour une compression efficace
-| Default init path                                 | /sbin/init | Chemin par défaut pour l'initialisation du système
-| Default Hostname                                  | Debian     | Nom d'hôte par défaut, mais vous pouvez le personnaliser
-| System V IPC                                      | true       | Pour supporter les IPC de System V
-| POSIX Message queues                              | true       | Pour supporter les files d'attente de messages POSIX)
-| General notification queue                        | true       | Pour supporter les notifications générales
-| Enable process_vm_readv/writev_syscalls           | true       | Pour supporter les appels système de lecture et d'écriture de processus
-| uselib syscall (for libc5 and earlier)            | false      | Sauf si vous utilisez une version de libc antérieure à la 5
-| Auditing support                                  | true       | Pour supporter l'audit du système
-| Preemption Model                                  | Desktop    | Pour un modèle de préemption adapté aux bureaux
-| Preemption behaviour defined on boot              | true       | Pour définir le comportement de préemption au démarrage
-| Core Scheduling for SMT                           | true       | Pour supporter la planification des cœurs pour SMT
-| CPU Isolation                                     | false*     | Sauf si vous voulez isoler des CPU spécifiques
-| Kernel .config support                            | true       | Pour supporter la configuration du noyau
-| Enable kernel headers through .....               | true       | Pour supporter les headers du noyau
-| Kernel log buffer size                            | 16         | Taille par défaut du tampon de journalisation du noyau
-| CPU Kernel log buffer size contribution           | 8          | Contribution par défaut de la taille du tampon de journalisation du noyau pour chaque CPU
-| Printk indexing debugfs interface                 | true       | Pour supporter l'interface de débogage de printk
-| Memory placement award NUMA scheduler             | true       | Pour supporter la planification NUMA aware
-| Checkpoint/restore support                        | true       | Pour supporter la sauvegarde et la restauration des processus
-| Automatic process group scheduling                | 2          | Planification automatique des groupes de processus
-| Kernel -> user space relay support                | 2          | Pupport de relais entre le noyau et l'espace utilisateur
-| Initial Ram filesystem and RAM disk ....          | initramfs  | Support de l'initramfs
-| Boot config support                               | true       | Pour supporter la configuration du démarrage
-| Preserve cpio archive mtimes in initramfs         | true       | Pour conserver les dates de modification des archives cpio dans l'initramfs
-| Compiler optimisation level                       | -O2        | Niveau d'optimisation du compilateur
-| Profiling support                                 | true       | Pour supporter le profilage du système
+| 01. Compile also drivers which will not load      | false      | Sauf si vous avez des besoins spécifiques                                       |
+| 02. Compile the kernel with warnings as errors    | false      | Pour éviter les erreurs de compilation inutiles                                 | 
+| 03. Compile test UAPI headers                     | false      | Sauf si vous développez des applications qui utilisent ces headers              |
+| 04. Local Version - append to kernel release      | <Vide>     | Sauf si vous voulez personnaliser la version du noyau                           |
+| 05. Automatically apprend version information ... | true       | Pour avoir des informations de version précises                                 |
+| 06. Build ID Salt                                 | <vide>     | Sauf si vous voulez personnaliser l'ID de build
+| 07. Kernel compression mode                       | zstd       | Pour une compression efficace
+| 08. Default init path                             | /sbin/init | Chemin par défaut pour l'initialisation du système
+| 09. Default Hostname                              | Debian     | Nom d'hôte par défaut, mais vous pouvez le personnaliser
+| 10. System V IPC                                  | true       | Pour supporter les IPC de System V
+| 11. POSIX Message queues                          | true       | Pour supporter les files d'attente de messages POSIX)
+| 12. General notification queue                    | true       | Pour supporter les notifications générales
+| 13. Enable process_vm_readv/writev_syscalls       | true       | Pour supporter les appels système de lecture et d'écriture de processus
+| 14. uselib syscall (for libc5 and earlier)        | false      | Sauf si vous utilisez une version de libc antérieure à la 5
+| 15. Auditing support                              | true       | Pour supporter l'audit du système
+| 16. Preemption Model                              | Desktop    | Pour un modèle de préemption adapté aux bureaux
+| 17. Preemption behaviour defined on boot          | true       | Pour définir le comportement de préemption au démarrage
+| 18. Core Scheduling for SMT                       | true       | Pour supporter la planification des cœurs pour SMT
+| 19. CPU Isolation                                 | false*     | Sauf si vous voulez isoler des CPU spécifiques
+| 20. Kernel .config support                        | true       | Pour supporter la configuration du noyau
+| 21. Enable kernel headers through .....           | true       | Pour supporter les headers du noyau
+| 22. Kernel log buffer size                        | 16         | Taille par défaut du tampon de journalisation du noyau
+| 23. CPU Kernel log buffer size contribution       | 8          | Contribution par défaut de la taille du tampon de journalisation du noyau pour chaque CPU
+| 24. Printk indexing debugfs interface             | true       | Pour supporter l'interface de débogage de printk
+| 25. Memory placement award NUMA scheduler         | true       | Pour supporter la planification NUMA aware
+| 26. Checkpoint/restore support                    | true       | Pour supporter la sauvegarde et la restauration des processus
+| 27. Automatic process group scheduling            | 2          | Planification automatique des groupes de processus
+| 28. Kernel -> user space relay support            | 2          | Pupport de relais entre le noyau et l'espace utilisateur
+| 29. Initial Ram filesystem and RAM disk ....      | initramfs  | Support de l'initramfs
+| 30. Boot config support                           | true       | Pour supporter la configuration du démarrage
+| 31. Preserve cpio archive mtimes in initramfs     | true       | Pour conserver les dates de modification des archives cpio dans l'initramfs
+| 32. Compiler optimisation level                   | -O2        | Niveau d'optimisation du compilateur
+| 33. Profiling support                             | true       | Pour supporter le profilage du système
 
 <br />
 
