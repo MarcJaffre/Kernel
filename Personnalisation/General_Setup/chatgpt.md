@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------------------
 
-## 01. 
+## 01. General Setup 
 ```
 Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - Compile also drivers which will not load : <Boolean>
