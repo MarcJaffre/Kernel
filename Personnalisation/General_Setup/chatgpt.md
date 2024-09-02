@@ -133,7 +133,6 @@ Ces paramètres devraient fournir une bonne base pour la gestion des fonctionnal
 
 BPF : Mécanisme de filtrage et de traitement de paquets de réseau pour exécuter des programmes de filtrage et de traitement de paquets à l'intérieur du noyau du système d'exploitation.
 
-
 ```
 1. Enable bpf() system call : <Boolean>
 2. Enable BPF Just In Time compiler : <Boolean>
@@ -141,8 +140,6 @@ BPF : Mécanisme de filtrage et de traitement de paquets de réseau pour exécut
 4. Disable unprivileged BPF by default : <Boolean>
 5. Enable BPF LSM Instrumentation : <Boolean>
 ```
-
-
 
 | Nom du paramètre                                          | Valeur | Commentaire                                                                                                                        |
 | -----                                                     | -----  | -----                                                                                                                              |
@@ -176,6 +173,7 @@ Ces options sont liées à la comptabilité des tâches et des statistiques.
 
 #### 06. RCU Subsystem
 RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux. Ces options permettent un contrôle fin de la comportement de RCU.
+
 ```
 1. Make expert-level adjustments to RCU : <Boolean>
 2. Configuration Force selection of TASKS_RCU : <Boolean>
@@ -206,7 +204,6 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | 8. RCU callback lazy invocation functionality (NEW)              | False  | Fonctionnalité d'invocation lazy des rappels RCU                                                   |
 | 9. RCU callback-batch backup time check                          | False  | Vérification de la sauvegarde du temps de traitement des rappels RCU                               |
 
-
 <br />
 
 #### 07. Scheduler features
@@ -219,7 +216,6 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | -----                                             | -----      | -----                                                                                      |
 | 01. Enable utilization clamping for RT/FAIR tasks |
 | 02. Number of supported utilization clamp buckets |
-
 
 <br />
 
@@ -262,7 +258,6 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | 15. Misc resource controller                                |
 | 16. Debug controller                                        |
 
-
 <br />
 
 #### 09. Namespaces Support
@@ -274,6 +269,7 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 05. PID Namespaces
 06. Network namespace
 ```
+
 | Nom du paramètre      | Valeur | Commentaire |
 | -----                 | -----  | -----       |
 | 01. UTS namespace     |
@@ -282,7 +278,6 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | 04. User namespace    |
 | 05. PID Namespaces    |
 | 06. Network namespace |
-
 
 <br />
 
@@ -351,7 +346,6 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | 28. Test the basic functions and performance of kallsyms (NEW) |
 | 29. Include all symbols in kallsyms                            |
 
-
 <br />
 
 #### 11. Kernel Performance Events And Counters
@@ -402,4 +396,3 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | Nom du paramètre | Valeur | Commentaire |
 | -----            | -----  | -----       |
 | 64-bit kernel    |
-
