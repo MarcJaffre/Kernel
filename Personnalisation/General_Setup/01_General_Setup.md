@@ -17,20 +17,23 @@ Cette option permet de traiter les avertissements de compilation comme des erreu
 <br />
 
 ### 3. Compile test UAPI headers
-Lorsque vous compilez un noyau Linux, vous avez la possibilité de compiler les en-têtes UAPI (User API) pour les tester. Les en-têtes UAPI sont des fichiers d'en-tête qui définissent les interfaces de programmation pour les applications utilisateurs. 
+Lorsque vous compilez un noyau Linux, vous avez la possibilité de compiler les en-têtes UAPI (User API) pour les tester.
+
+Les en-têtes UAPI sont des fichiers d'en-tête qui définissent les interfaces de programmation pour les applications utilisateurs. 
 
 Ils fournissent les déclarations de fonctions, les structures de données et les constantes nécessaires pour utiliser les fonctionnalités du noyau.
 
 L'option "Compile test UAPI headers" permet de compiler ces en-têtes UAPI pour vérifier leur cohérence et leur compatibilité avec le code du noyau. Cette étape est importante pour plusieurs raisons :
 
-Validation des en-têtes UAPI : La compilation des en-têtes UAPI permet de vérifier qu'ils sont corrects et cohérents avec le code du noyau. Cela aide à détecter les erreurs de syntaxe, les incohérences de déclaration et les problèmes de compatibilité.
-Détection des problèmes de compatibilité : La compilation des en-têtes UAPI permet de détecter les problèmes de compatibilité entre les différentes versions du noyau et les applications utilisateurs.
-Amélioration de la qualité du code : La compilation des en-têtes UAPI encourage les développeurs à écrire du code de haute qualité, car ils doivent s'assurer que les en-têtes UAPI sont corrects et cohérents.
-Lorsque vous activez l'option "Compile test UAPI headers", le processus de compilation du noyau effectue les étapes suivantes :
+- Validation des en-têtes UAPI : La compilation des en-têtes UAPI permet de vérifier qu'ils sont corrects et cohérents avec le code du noyau. Cela aide à détecter les erreurs de syntaxe, les incohérences de déclaration et les problèmes de compatibilité.
+- Détection des problèmes de compatibilité : La compilation des en-têtes UAPI permet de détecter les problèmes de compatibilité entre les différentes versions du noyau et les applications utilisateurs.
+- Amélioration de la qualité du code : La compilation des en-têtes UAPI encourage les développeurs à écrire du code de haute qualité, car ils doivent s'assurer que les en-têtes UAPI sont corrects et cohérents.
 
-Il compile les en-têtes UAPI pour les tester.
-Il vérifie la cohérence et la compatibilité des en-têtes UAPI avec le code du noyau.
-Il rapporte les erreurs et les avertissements rencontrés pendant la compilation des en-têtes UAPI.
+
+Lorsque vous activez l'option "Compile test UAPI headers", le processus de compilation du noyau effectue les étapes suivantes :
+- Il compile les en-têtes UAPI pour les tester.
+- Il vérifie la cohérence et la compatibilité des en-têtes UAPI avec le code du noyau.
+- Il rapporte les erreurs et les avertissements rencontrés pendant la compilation des en-têtes UAPI.
 
 <br />
 
