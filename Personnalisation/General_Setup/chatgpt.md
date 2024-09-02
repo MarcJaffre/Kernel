@@ -101,14 +101,13 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 <br />
 
-
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                     |
 | ------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
-| Timer tick handling                               | -----      | XXXXXXXXXXXXXXXXXX|
-| Force user context tracking                       | -----      | XXXXXXXXXXXXXXXXXX|
-| Old Idle dynticks config                          | -----      | XXXXXXXXXXXXXXXXXX|
-| High Resolution Timer Suppor                      | -----      | XXXXXXXXXXXXXXXXXX|
-| ClockSource Watchdog maximum allowable skew       | -----      | XXXXXXXXXXXXXXXXXX|
+| 1. Timer tick handling                            | -----      | XXXXXXXXXXXXXXXXXX|
+| 2. Force user context tracking                    | -----      | XXXXXXXXXXXXXXXXXX|
+| 3. Old Idle dynticks config                       | -----      | XXXXXXXXXXXXXXXXXX|
+| 4. High Resolution Timer Suppor                   | -----      | XXXXXXXXXXXXXXXXXX|
+| 5. ClockSource Watchdog maximum allowable skew    | -----      | XXXXXXXXXXXXXXXXXX|
 
 <br />
 
@@ -122,14 +121,14 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. Enable BPF LSM Instrumentation : <Boolean>
 ```
 
-| Nom du paramètre                                       | Valeur     | Commentaire                                                                     |
-| ------------------------------------------------------ | ---------- | ------------------------------------------------------------------------------- |
-| Enable bpf() system call                               | -----      | XXXXXXXXXXXXXXXXXX|
-| Enable BPF Just In Time compiler                       | -----      | XXXXXXXXXXXXXXXXXX|
-| Old Idle dynticks config                               | -----      | XXXXXXXXXXXXXXXXXX|
-| Permanently enable BPF JIT and remove BPF interpreter  | -----      | XXXXXXXXXXXXXXXXXX|
-| Disable unprivileged BPF by default                    | -----      | XXXXXXXXXXXXXXXXXX|
-| Enable BPF LSM Instrumentation                         | -----      | XXXXXXXXXXXXXXXXXX|
+| Nom du paramètre                                          | Valeur     | Commentaire                                                                     |
+| --------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| 1. Enable bpf() system call                               | -----      | XXXXXXXXXXXXXXXXXX|
+| 2. Enable BPF Just In Time compiler                       | -----      | XXXXXXXXXXXXXXXXXX|
+| 3. Old Idle dynticks config                               | -----      | XXXXXXXXXXXXXXXXXX|
+| 4. Permanently enable BPF JIT and remove BPF interpreter  | -----      | XXXXXXXXXXXXXXXXXX|
+| 5. Disable unprivileged BPF by default                    | -----      | XXXXXXXXXXXXXXXXXX|
+| 6. Enable BPF LSM Instrumentation                         | -----      | XXXXXXXXXXXXXXXXXX|
 
 <br />
 
@@ -144,13 +143,13 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 <br />
 
-| Nom du paramètre                                 | Valeur     | Commentaire                                                                     |
-| ------------------------------------------------ | ---------- | ------------------------------------------------------------------------------- |
-| Cputime accounting                               | -----      | XXXXXXXXXXXXXXXXXX|
-| Fine granularity task level IRQ time accounting  | -----      | XXXXXXXXXXXXXXXXXX|
-| BSD Process Accounting                           | -----      | XXXXXXXXXXXXXXXXXX|
-| Export task/process statistics through netlink   | -----      | XXXXXXXXXXXXXXXXXX|
-| Pressure stall information tracking              | -----      | XXXXXXXXXXXXXXXXXX|
+| Nom du paramètre                                    | Valeur     | Commentaire                                                                     |
+| --------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| 1. Cputime accounting                               | -----      | XXXXXXXXXXXXXXXXXX|
+| 2. Fine granularity task level IRQ time accounting  | -----      | XXXXXXXXXXXXXXXXXX|
+| 3. BSD Process Accounting                           | -----      | XXXXXXXXXXXXXXXXXX|
+| 4. Export task/process statistics through netlink   | -----      | XXXXXXXXXXXXXXXXXX|
+| 5. Pressure stall information tracking              | -----      | XXXXXXXXXXXXXXXXXX|
 
 <br />
 
@@ -169,21 +168,21 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 9. RCU callback-batch backup time check : <Boolean>
 ```
 
-| Nom du paramètre                                              | Valeur     | Commentaire                                                                     |
-| ------------------------------------------------------------- | ---------- | ----- |
-| Make expert-level adjustments to RCU                          | -----      | XXXXXXXXXXXXXXXXXX|
-| Configuration Force selection of TASKS_RCU                    | -----      | XXXXXXXXXXXXXXXXXX|
-| Force selection of Tasks Rude RCU                             | -----      | XXXXXXXXXXXXXXXXXX|
-| ------------------------------------------------------------- | -----      | ----- |
-| Force selection of Tasks Trace RCU                            | -----      | XXXXXXXXXXXXXXXXXX|
-| Tree-based hierarchical RCU fanout value                      | -----      | XXXXXXXXXXXXXXXXXX|
-| Tree-based hierarchical RCU leaf-level fanout value           | -----      | XXXXXXXXXXXXXXXXXX|
-| ------------------------------------------------------------- | -----      | ----- |
-| Enable RCU priority boosting                                  | -----      | XXXXXXXXXXXXXXXXXX|
-| Offload RCU callback processing from boot-selected CPUs       | -----      | XXXXXXXXXXXXXXXXXX|
-| Tasks Trace RCU readers use memory barriers in user and idle  | -----      | XXXXXXXXXXXXXXXXXX|
-| RCU callback lazy invocation functionality (NEW)              | -----      | XXXXXXXXXXXXXXXXXX|
-| RCU callback-batch backup time check                          | -----      | XXXXXXXXXXXXXXXXXX|
+| Nom du paramètre                                                 | Valeur     | Commentaire       |
+| ---------------------------------------------------------------- | ---------- | ----- |
+| 1. Make expert-level adjustments to RCU                          | -----      | XXXXXXXXXXXXXXXXXX|
+| 2. Configuration Force selection of TASKS_RCU                    | -----      | XXXXXXXXXXXXXXXXXX|
+| 3. Force selection of Tasks Rude RCU                             | -----      | XXXXXXXXXXXXXXXXXX|
+| ---------------------------------------------------------------- | -----      | ----- |
+| 4. Force selection of Tasks Trace RCU                            | -----      | XXXXXXXXXXXXXXXXXX|
+| 4A. Tree-based hierarchical RCU fanout value                     | -----      | XXXXXXXXXXXXXXXXXX|
+| 4B. Tree-based hierarchical RCU leaf-level fanout value          | -----      | XXXXXXXXXXXXXXXXXX|
+| ---------------------------------------------------------------- | -----      | ----- |
+| 5. Enable RCU priority boosting                                  | -----      | XXXXXXXXXXXXXXXXXX|
+| 6. Offload RCU callback processing from boot-selected CPUs       | -----      | XXXXXXXXXXXXXXXXXX|
+| 7. Tasks Trace RCU readers use memory barriers in user and idle  | -----      | XXXXXXXXXXXXXXXXXX|
+| 8. RCU callback lazy invocation functionality (NEW)              | -----      | XXXXXXXXXXXXXXXXXX|
+| 9. RCU callback-batch backup time check                          | -----      | XXXXXXXXXXXXXXXXXX|
 
 <br />
 
