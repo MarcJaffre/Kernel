@@ -74,7 +74,7 @@ Le contrôleur de cpuset peut aider à éviter les problèmes de surcharge de pr
 
 <br />
 
-### 10. Include legacy /proc/<pid>/cpuset file []
+### 10. Include legacy /proc/"<pid>"/cpuset file []
 Permet d'inclure le fichier /proc/<pif>/cpuset pour assurer la compatibilité avec les anciennes versions du système d'exploitation.
 
 <br />
