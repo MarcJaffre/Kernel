@@ -30,7 +30,7 @@ L'option **Compile test UAPI headers** permet de compiler ces en-têtes UAPI pou
 - Amélioration de la qualité du code : La compilation des en-têtes UAPI encourage les développeurs à écrire du code de haute qualité, car ils doivent s'assurer que les en-têtes UAPI sont corrects et cohérents.
 
 
-Lorsque vous activez l'option "Compile test UAPI headers", le processus de compilation du noyau effectue les étapes suivantes :
+Lorsque vous activez l'option **Compile test UAPI headers**, le processus de compilation du noyau effectue les étapes suivantes :
 - Il compile les en-têtes UAPI pour les tester.
 - Il vérifie la cohérence et la compatibilité des en-têtes UAPI avec le code du noyau.
 - Il rapporte les erreurs et les avertissements rencontrés pendant la compilation des en-têtes UAPI.
@@ -43,7 +43,7 @@ Cette option permet d'ajouter une chaîne de caractères personnalisée à la ve
 <br />
 
 ### 5. Build ID Salt [???]
-Cette option permet de spécifier une valeur de "salt" pour le Build ID du kernel. Le Build ID est une valeur unique qui identifie une version spécifique du kernel.
+Cette option permet de spécifier une valeur de **salt** pour le Build ID du kernel. Le Build ID est une valeur unique qui identifie une version spécifique du kernel.
 
 <br />
 
