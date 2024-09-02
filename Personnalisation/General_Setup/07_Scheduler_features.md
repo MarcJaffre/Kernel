@@ -25,3 +25,7 @@ Cela permet de réduire la consommation d'énergie et de améliorer les performa
 Le clamping d'utilisation est particulièrement utile pour les systèmes qui exécutent des tâches critiques en temps réel, telles que les systèmes de contrôle de processus, les systèmes de navigation et les systèmes de communication.
 
 Il permet de garantir que les tâches critiques reçoivent les ressources nécessaires pour fonctionner correctement, tout en évitant les problèmes de surcharge et de sous-utilisation.
+
+<br />
+
+### 2. Number of supported utilization clamp buckets
