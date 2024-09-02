@@ -16,7 +16,7 @@ Cette option permet de traiter les avertissements de compilation comme des erreu
 
 <br />
 
-### 3. Compile test UAPI headers
+### 3. Compile test UAPI headers [Y] 
 Lorsque vous compilez un noyau Linux, vous avez la possibilité de compiler les en-têtes UAPI (User API) pour les tester.
 
 Les en-têtes UAPI sont des fichiers d'en-tête qui définissent les interfaces de programmation pour les applications utilisateurs. 
