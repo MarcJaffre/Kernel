@@ -38,6 +38,82 @@ Prompt: Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 
 - Profiling support : <Boolean>
 ```
 
+<br />
+
+#### 02. IRQ Sub-System
+```
+1. Supportsparse irq numbering
+2. Expose irq internals in debugfs 
+```
+
+<br />
+
+#### 03 Timers subsystem
+```
+```
+
+<br />
+
+
+#### 04 BPF subsystem
+```
+```
+
+<br />
+
+#### 05 CPU task time and stats accounting
+```
+```
+
+<br />
+
+#### 06 RCU Subsystem
+```
+```
+
+<br />
+
+#### 07 Scheduler features
+```
+```
+
+<br />
+
+#### 08 Control Group Support
+```
+```
+
+<br />
+
+#### 09 Namespaces Support
+```
+```
+
+<br />
+
+#### 10 Configure standard kernel features
+```
+```
+
+<br />
+
+#### 11 Kernel Performance Events And Counters
+```
+```
+
+<br />
+
+#### 12 Kexec and crash features
+
+
+
+
+
+
+
+
+
+
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                |
 | ------------------------------------------------- | ---------- | ---------------------------------------------------------- |
