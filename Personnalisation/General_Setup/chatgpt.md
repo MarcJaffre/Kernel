@@ -170,11 +170,11 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 | Make expert-level adjustments to RCU                          | -----      | XXXXXXXXXXXXXXXXXX|
 | Configuration Force selection of TASKS_RCU                    | -----      | XXXXXXXXXXXXXXXXXX|
 | Force selection of Tasks Rude RCU                             | -----      | XXXXXXXXXXXXXXXXXX|
-| ------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| ------------------------------------------------------------- | -----      | ------------------------------------------------------------------------------- |
 | Force selection of Tasks Trace RCU                            | -----      | XXXXXXXXXXXXXXXXXX|
 | Tree-based hierarchical RCU fanout value                      | -----      | XXXXXXXXXXXXXXXXXX|
 | Tree-based hierarchical RCU leaf-level fanout value           | -----      | XXXXXXXXXXXXXXXXXX|
-| ------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------- |
+| ------------------------------------------------------------- | -----      | ------------------------------------------------------------------------------- |
 | Enable RCU priority boosting                                  | -----      | XXXXXXXXXXXXXXXXXX|
 | Offload RCU callback processing from boot-selected CPUs       | -----      | XXXXXXXXXXXXXXXXXX|
 | Tasks Trace RCU readers use memory barriers in user and idle  | -----      | XXXXXXXXXXXXXXXXXX|
