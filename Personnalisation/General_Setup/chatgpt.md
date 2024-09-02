@@ -86,11 +86,10 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 2. Expose irq internals in debugfs : <Boolean>
 ```
 
-| Nom du paramètre                    | Valeur | Commentaire       |
-| -----                               | -----  | -----                                                         
-                                    |
-| 1. Supportsparse irq numbering      | True   |  Cela permet d'optimiser la gestion des interruptions (IRQ) et peut améliorer les performances. |
-| 2. Expose irq internals in debugfs  | True  | Cela n'est généralement pas nécessaire pour un usage normal et peut potentiellement créer des problèmes de sécurité. |
+| Nom du paramètre                    | Valeur | Commentaire                                                                                                          |
+| -----                               | -----  | -----                                                                                                                |
+| 1. Supportsparse irq numbering      | True   | Cela permet d'optimiser la gestion des interruptions (IRQ) et peut améliorer les performances.                       |
+| 2. Expose irq internals in debugfs  | False  | Cela n'est généralement pas nécessaire pour un usage normal et peut potentiellement créer des problèmes de sécurité. |
 
 <br />
 
@@ -103,13 +102,13 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 5. ClockSource Watchdog maximum allowable skew (in ms) : <Number>
 ```
 
-| Nom du paramètre                                  | Valeur     | Commentaire        |
-| -----                                             | -----      | -----              |
-| 1. Timer tick handling                            | -----      | XXXXXXXXXXXXXXXXXX |
-| 2. Force user context tracking                    | -----      | XXXXXXXXXXXXXXXXXX |
-| 3. Old Idle dynticks config                       | -----      | XXXXXXXXXXXXXXXXXX |
-| 4. High Resolution Timer Suppor                   | -----      | XXXXXXXXXXXXXXXXXX |
-| 5. ClockSource Watchdog maximum allowable skew    | -----      | XXXXXXXXXXXXXXXXXX |
+| Nom du paramètre                                  | Valeur     | Commentaire                                                                                                      |
+| -----                                             | True       | -----                                                                                                            |
+| 1. Timer tick handling                            | False      | Cela permet de gérer les ticks de l'horloge système de manière plus efficace.                                    |
+| 2. Force user context tracking                    | False      | Cela n'est généralement pas nécessaire pour un usage normal et peut créer des problèmes de performances.         |
+| 3. Old Idle dynticks config                       | False      | Cela est généralement déprécié et non recommandé.                                                                |
+| 4. High Resolution Timer Suppor                   | True       | Cela permet d'améliorer la précision des timers système.                                                         |
+| 5. ClockSource Watchdog maximum allowable skew    | 100        | Cela dépend de vos besoins spécifiques, mais une valeur de 100 ms est généralement considérée comme raisonnable. |
 
 <br />
 
