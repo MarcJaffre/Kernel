@@ -5,6 +5,9 @@
 ## A. Présentation
 Ces options permettent de configurer le noyau pour prendre en charge différents types de processeurs et plateformes, ainsi que des fonctionnalités spécifiques pour améliorer les performances et la fiabilité du système.
 
+Ces options permettent au noyau de prendre en charge divers composants matériels, de gérer les ressources système, et de fournir des fonctionnalités supplémentaires pour les performances et la fiabilité du système.
+
+
 **EN COURS**
 
 <br />
@@ -228,48 +231,90 @@ Cela peut être utile pour les applications qui nécessitent une synchronisation
 
 <br />
 
-
-
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 21. Enable DMI scanning
+Permet au noyau de scanner les tables d'interface de gestion de bureau (DMI), qui contiennent des informations sur les composants matériels du système, tels que la carte mère, le BIOS et les périphériques.
+
+Ces informations peuvent être utilisées par le noyau pour optimiser les performances du système et configurer les appareils matériels.
 
 <br />
 
 ### 22. Old AMD GART IOMMU support
+Active le support pour l'ancienne architecture IOMMU GART (Graphics Aperture Remapping Table) d'AMD.
+
+GART est une technologie utilisée par AMD pour gérer l'accès à la mémoire pour les appareils graphiques.
+
+Cette option est uniquement pertinente pour les anciens systèmes AMD.
 
 <br />
 
 ### 23. Enable Maximum number of SMP Processors and NUMA Nodes
+Permet au noyau de prendre en charge un nombre maximum de processeurs Symmetric Multi-Processing (SMP) et de nœuds Non-Uniform Memory Access (NUMA).
+
+SMP permet à plusieurs processeurs de travailler ensemble pour améliorer les performances du système, tandis que NUMA est une architecture de mémoire qui permet à plusieurs processeurs d'accéder à une mémoire partagée.
 
 <br />
 
 ### 24. Maximum number of CPUs
+Définit le nombre maximum de CPU que le noyau peut prendre en charge.
+
+Cette valeur doit être définie sur le nombre de CPU présents dans le système.
 
 <br />
 
 ### 25. Cluster scheduler support
+Active le support du planificateur de cluster, qui est un algorithme de planification qui groupe les tâches en clusters pour améliorer les performances du système et la scalabilité.
 
 <br />
 
 ### 26. Multi-core scheduler support
+Active le support du planificateur multi-cœur, qui permet au noyau de planifier les tâches sur plusieurs cœurs de CPU pour améliorer les performances du système.
+
 #### A. CPU core priorities scheduler support
+Active le support des priorités de cœur de CPU, qui permet au noyau de prioriser les tâches en fonction de leur importance et de les allouer à des cœurs de CPU spécifiques.
+
+<br />
 
 ### 27. Local APIC support on uniprocessors
+Active le support de l'APIC local (Advanced Programmable Interrupt Controller) sur les systèmes uniprocessor.
+
+L'APIC est un circuit qui gère les interruptions et est utilisé pour gérer les interruptions du système.
+
 #### A. IO-APIC support on uniprocessors
+Active le support de l'IO-APIC (I/O Advanced Programmable Interrupt Controller) sur les systèmes uniprocessor.
+
+L'IO-APIC est un circuit qui gère les interruptions d'entrée/sortie et est utilisé pour gérer les opérations d'entrée/sortie.
+
+<br />
 
 ### 28. Reroute for broken boot IRQs
+Permet au noyau de réacheminer les IRQ de démarrage cassés vers un IRQ fonctionnel. Cela est utile pour les systèmes avec des IRQ cassés ou non fonctionnels.
+
+<br />
 
 ### 29. Machine Check / overheating reporting
+Active le rapport d'erreurs de machine, qui sont des erreurs qui se produisent lorsque le CPU détecte une erreur matérielle.
+
+Cette option active également le rapport de surchauffe, qui permet au noyau de détecter et de signaler la surchauffe du système.
+
 #### A. Support for deprecated /dev/mcelog character device
+Active le support du périphérique de caractère /dev/mcelog obsolète, qui est utilisé pour enregistrer les événements d'erreurs de machine.
+
 #### B. Intel MCE features
+Active le support des fonctionnalités MCE (Machine Check) d'Intel, qui fournissent des informations supplémentaires sur les erreurs de machine.
+
 #### C. AMD MCE features
+Active le support des fonctionnalités MCE d'AMD, qui fournissent des informations supplémentaires sur les erreurs de machine.
+
 #### D. Support for old Pentium 5 / WinChip machine checks
+Active le support des erreurs de machine sur les anciens systèmes Pentium 5 et WinChip.
+
 
 <br />
 
 ### 30. Machine check injector support
+Active le support de l'injecteur d'erreurs de machine, qui est un outil qui simule des erreurs de machine pour les tests et le débogage.
 
 <br />
 
