@@ -6,6 +6,18 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 ```
 
 #### 01. General Setup
+Les paramètres de compilation sont configurés pour une installation standard de Debian 12, avec des options pour améliorer les performances et la sécurité.
+
+Les avertissements ne sont pas considérés comme des erreurs, et les pilotes inutiles ne sont pas compilés.
+
+Les en-têtes de test UAPI et les informations de version personnalisées ne sont pas nécessaires.
+
+Le mode de compression du noyau est configuré pour utiliser zstd, et le chemin d'initialisation par défaut est /sbin/init.
+
+Les options de sécurité et de performances sont activées, notamment l'audit, la planification de cœur pour SMT et l'attribution de placement de mémoire pour le planificateur NUMA.
+
+Les options de débogage et de profilage sont désactivées, sauf pour l'interface de débogage d'indexation printk.
+
 ```
 - 01. Compile also drivers which will not load : <Boolean>
 - 02. Compile the kernel with warnings as errors : <Boolean>
@@ -132,6 +144,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 <br />
 
 #### 05. CPU task time and stats accounting
+Ces options sont liées à la comptabilité des tâches et des statistiques.
 ```
 1. Cputime accounting : <Boolean>
 2. Fine granularity task level IRQ time accounting : <Boolean>
@@ -151,6 +164,8 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 <br />
 
 #### 06. RCU Subsystem
+RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux. Ces options permettent un contrôle fin de la comportement de RCU.
+
 ```
 1. Make expert-level adjustments to RCU : <Boolean>
 2. Configuration Force selection of TASKS_RCU : <Boolean>
