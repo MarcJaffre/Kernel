@@ -43,7 +43,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 ```
 
 | Nom du paramètre                                  | Valeur     | Commentaire                                                                                |
-| ------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------ |
+| -----                                             | -----      | -----                                                                                      |
 | 01. Compile also drivers which will not load      | false      | Sauf si vous avez des besoins spécifiques                                                  |
 | 02. Compile the kernel with warnings as errors    | false      | Pour éviter les erreurs de compilation inutiles                                            | 
 | 03. Compile test UAPI headers                     | false      | Sauf si vous développez des applications qui utilisent ces headers                         |
@@ -87,12 +87,9 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 ```
 
 | Nom du paramètre                    | Valeur     | Commentaire        |
-| ----------------------------------- | ---------- | ------------------ |
+| -----                               | -----      | -----              |
 | 1. Supportsparse irq numbering      | XXXXX      | XXXXXXXXXXXXXXXXXX |
 | 2. Expose irq internals in debugfs  | XXXXX      | XXXXXXXXXXXXXXXXXX |
-
-
-
 
 <br />
 
@@ -106,7 +103,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 ```
 
 | Nom du paramètre                                  | Valeur     | Commentaire        |
-| ------------------------------------------------- | ---------- | ------------------ |
+| -----                                             | -----      | -----              |
 | 1. Timer tick handling                            | -----      | XXXXXXXXXXXXXXXXXX |
 | 2. Force user context tracking                    | -----      | XXXXXXXXXXXXXXXXXX |
 | 3. Old Idle dynticks config                       | -----      | XXXXXXXXXXXXXXXXXX |
@@ -125,7 +122,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 ```
 
 | Nom du paramètre                                          | Valeur     | Commentaire        |
-| --------------------------------------------------------- | ---------- | ------------------ |
+| -----                                                     | -----      | -----              |
 | 1. Enable bpf() system call                               | -----      | XXXXXXXXXXXXXXXXXX |
 | 2. Enable BPF Just In Time compiler                       | -----      | XXXXXXXXXXXXXXXXXX |
 | 3. Old Idle dynticks config                               | -----      | XXXXXXXXXXXXXXXXXX |
@@ -145,7 +142,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 ```
 
 | Nom du paramètre                                    | Valeur     | Commentaire        |
-| --------------------------------------------------- | ---------- | ------------------ |
+| -----                                               | -----      | -----              |
 | 1. Cputime accounting                               | -----      | XXXXXXXXXXXXXXXXXX |
 | 2. Fine granularity task level IRQ time accounting  | -----      | XXXXXXXXXXXXXXXXXX |
 | 3. BSD Process Accounting                           | -----      | XXXXXXXXXXXXXXXXXX |
@@ -170,27 +167,25 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 ```
 
 | Nom du paramètre                                                 | Valeur     | Commentaire        |
-| ---------------------------------------------------------------- | ---------- | -----              |
+| -----                                                            | -----      | -----              |
 | 1. Make expert-level adjustments to RCU                          | -----      | XXXXXXXXXXXXXXXXXX |
 | 2. Configuration Force selection of TASKS_RCU                    | -----      | XXXXXXXXXXXXXXXXXX |
 | 3. Force selection of Tasks Rude RCU                             | -----      | XXXXXXXXXXXXXXXXXX |
-| ---------------------------------------------------------------- | -----      | -----              |
+| -----                                                            | -----      | -----              |
 | 4. Force selection of Tasks Trace RCU                            | -----      | XXXXXXXXXXXXXXXXXX |
 | 4A. Tree-based hierarchical RCU fanout value                     | -----      | XXXXXXXXXXXXXXXXXX |
 | 4B. Tree-based hierarchical RCU leaf-level fanout value          | -----      | XXXXXXXXXXXXXXXXXX |
-| ---------------------------------------------------------------- | -----      | -----              |
+| -----                                                            | -----      | -----              |
 | 5. Enable RCU priority boosting                                  | -----      | XXXXXXXXXXXXXXXXXX |
 | 6. Offload RCU callback processing from boot-selected CPUs       | -----      | XXXXXXXXXXXXXXXXXX |
 | 7. Tasks Trace RCU readers use memory barriers in user and idle  | -----      | XXXXXXXXXXXXXXXXXX |
 | 8. RCU callback lazy invocation functionality (NEW)              | -----      | XXXXXXXXXXXXXXXXXX |
 | 9. RCU callback-batch backup time check                          | -----      | XXXXXXXXXXXXXXXXXX |
 
+
+
+
 <br />
-
-
-
-
-
 
 #### 07 Scheduler features
 ```
