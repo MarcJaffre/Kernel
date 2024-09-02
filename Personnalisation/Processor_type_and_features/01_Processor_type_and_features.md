@@ -433,93 +433,132 @@ Active le support pour la mémoire sécurisée par cryptographie d'AMD, qui perm
 Active le support pour l'allocation de mémoire et la planification de la mémoire non uniforme, qui permettent d'améliorer les performances du système sur les systèmes à plusieurs processeurs.
 
 #### A. old style AMD Opteron NUMA detection
+Méthode de détection héritée pour les processeurs AMD Opteron.
 
 #### B. ACPI NUMA detection
+Méthode de détection utilisant les informations ACPI (Advanced Configuration and Power Interface).
+
 #### C. NUMA emulation
+Émulation de NUMA pour les systèmes qui ne le supportent pas nativement.
 
 <br />
 
-
 ### 46. Maximum NUMA Nodes (as a power of 2)
+Définit le nombre maximum de noeuds NUMA que le noyau peut gérer. La valeur doit être une puissance de 2 (par exemple, 2, 4, 8, etc.).
 
 <br />
 
 ### 47. Enable sysfs memory/probe interface
+Active l'interface sysfs pour la mémoire et la sonde de mémoire.
 
 <br />
 
 ### 48. Support non-standard NVDIMMs and ADR protected memory
+Ajoute le support pour les NVDIMMs (Non-Volatile Dual In-Line Memory Module) non standard et la mémoire protégée par ADR (Address Range Decoder).
 
 <br />
 
 ### 49. Allocate 3rd-level pagetables from highmem
+Alloue les tables de pagination de 3e niveau à partir de la mémoire haute (highmem).
 
 <br />
 
 ### 50. Check for low memory corruption 
+Vérifie la corruption de la mémoire basse.
 
 <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 51. Set the default setting of memory_corruption_check
+Définit la valeur par défaut pour la vérification de la corruption de la mémoire.
 
 <br />
 
 ### 52. Math emulation
+Active l'émulation des opérations mathématiques.
 
 <br />
 
 ### 53. MTRR (Memory Type Range Register) support
+Ajoute le support pour les registres MTRR :
+
 #### A. MTRR cleanup support
+Nettoyage des registres MTRR.
+
 #### B. MTRR cleanup enable value (0-1)
+Valeur d'activation du nettoyage des registres MTRR.
+
 #### C. MTRR cleanup spare reg num (0-7)
+Nombre de registres MTRR de réserve.
+
 #### D. x86 PAT support
+Support pour les tables de pagination PAT (Page Attribute Table).
+
+<br />
 
 ### 54. User Mode Instruction Prevention
+Empêche l'exécution d'instructions en mode utilisateur.
 
 <br />
 
 ### 55. Indirect Branch Tracking
+Suivi des branchements indirects.
 
 <br />
 
 ### 56. Memory Protection Keys
+Clés de protection de la mémoire.
 
 <br />
 
 ### 57. TSX enable mode
-#### A. off
-#### B. on
-#### C. auto
+Mode d'activation de la technologie TSX (Transactional Synchronization Extensions) :
 
 <br />
 
 ### 58. Software Guard extensions (SGX)
+Extensions de sécurité logicielle SGX.
 
 <br />
 
 ### 59. X86 userspace shadow stack (NEW)
+Pile d'ombre utilisateur x86 (nouvelle fonctionnalité).
 
 <br />
 
 ### 60. Intel Trust Domain Extensions (TDX) host support
+Support hôte pour les extensions de domaine de confiance Intel TDX.
 
 <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### 61. EFI runtime service support
+Support pour les services d'exécution EFI :
+
 #### A. EFI stub support
+Support pour les stubs EFI.
+
 #### A1. EFI handover protocol (DEPRECATED)
+Protocole de remise EFI (déprécié).
+
 #### A2. EFI mixed-mode support
+Support pour le mode mixte EFI.
+
 #### B1. Enable EFI fake memory map
+Activation de la carte mémoire EFI factice.
 #### B2. maximum allowable number of ranges in efi_fake_mem boot option
+Nombre maximum de plages autorisées dans l'option de démarrage efi_fake_mem.
+
 #### C1. Export EFI runtime maps to sysfs
+Exportation des cartes d'exécution EFI vers sysfs.
 
 <br />
 
 ### 62. Timer frequency
+Fréquence du timer.
+
 #### A. 100 HZ
 #### B. 250 HZ
 #### C. 300 HZ
@@ -528,33 +567,60 @@ Active le support pour l'allocation de mémoire et la planification de la mémoi
 <br />
 
 ### 63. Build a relocatable kernel
+Construction d'un noyau relocalisable.
+
 #### A. Randomize the address of the kernel image (KASLR)
+Randomisation de l'adresse de l'image du noyau.
 
 <br />
 
 ### 64. Alignment value to which kernel should be aligned
+Valeur d'alignement pour le noyau.
 
 <br />
 
 ### 65. Randomize the kernel memory sections Physical memory mapping padding
+Randomisation des sections de mémoire du noyau et padding de la carte mémoire.
+
+Cette option permet de randomiser les sections de mémoire du noyau et d'ajouter un padding à la carte mémoire pour améliorer la sécurité.
 
 <br />
 
 ### 66. Linear Address Masking support (NEW)
+Support pour le masquage d'adresses linéaires (nouvelle fonctionnalité).
+
+Cette option permet d'activer le masquage d'adresses linéaires, ce qui peut améliorer la sécurité en limitant l'accès à certaines régions de la mémoire.
 
 <br />
 
 ### 67. Disable the 32-bit vDSO (needed for glibc 2.3.3)
+Désactivation de la vDSO 32 bits (requise pour glibc 2.3.3).
 
+Cette option permet de désactiver la vDSO 32 bits, ce qui peut être nécessaire pour certaines versions de la bibliothèque glibc.
+
+<br />
+ 
 ### 68. vsyscall table for legacy applications
+Table de vsyscall pour les applications héritées.
+
+Cette option permet d'activer la table de vsyscall pour les applications héritées, ce qui peut améliorer la compatibilité avec les anciennes applications.
+
 #### A. Emulate execution only
+Émulation de l'exécution uniquement.
+
 #### B. None
+Aucune action
 
 <br />
 
 ### 69. Built-in kernel command line
+Ligne de commande du noyau intégrée. Cette option permet de spécifier une ligne de commande du noyau intégrée, ce qui peut être utile pour les systèmes embarqués ou les systèmes qui ne disposent pas d'un chargeur de démarrage.
+
 #### A. Built-in kernel command string
+Chaîne de commande du noyau intégrée.
+
 #### B. Built-in command line overrides boot loader arguments
+La ligne de commande intégrée remplace les arguments du chargeur de démarrage.
 
 <br />
 
