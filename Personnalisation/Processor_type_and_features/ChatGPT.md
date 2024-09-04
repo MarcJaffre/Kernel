@@ -145,8 +145,4 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - 70. Enable the LDT (local descriptor table)
 - 71. Enforce strict size checking for sigaltstack
 - 72. Kernel Live Patching
--
-- 
-- 
- 
 ```
