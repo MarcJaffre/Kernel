@@ -87,10 +87,7 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - 38. Enforce late microcode loading minimal revision check
 - 38A. /dev/cpu/*/msr - Model-specific register support
 - 38B. /dev/cpu/*/cpuid - CPU information support
-- 39. High Memory Support
-- 39A. off
-- 39B. 4GB
-- 39C. 64GB
+- 39. High Memory Support <OFF, 4GB, 64 GB>
 - 40. Memory split
 - 40A. 3G/1G user/kernel split
 - 40B. 3G/1G user/kernel split (for full 1G low memory)
@@ -122,33 +119,33 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - 56. Memory Protection Keys
 - 57. TSX enable mode
 - 58. Software Guard extensions (SGX)
+- 59. X86 userspace shadow stack (NEW)
+- 60. Intel Trust Domain Extensions (TDX) host support
 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- 61. EFI runtime service support
+- 61A. EFI stub support
+- 61A_1. EFI handover protocol (DEPRECATED)
+- 61A_2. EFI mixed-mode support
+- 61B_1. Enable EFI fake memory map
+- 61B_2. maximum allowable number of ranges in efi_fake_mem boot option
+- 61C1. Export EFI runtime maps to sysfs
+- 62. Timer frequency: <100,250,300,1000> MHz
+- 63. Build a relocatable kernel
+- 63A. Randomize the address of the kernel image (KASLR)
+- 64. Alignment value to which kernel should be aligned
+- 65. Randomize the kernel memory sections Physical memory mapping padding
+- 66. Linear Address Masking support (NEW)
+- 67. Disable the 32-bit vDSO (needed for glibc 2.3.3)
+- 68. vsyscall table for legacy applications
+- 68A. Emulate execution only 
+- 68B. None
+- 69. Built-in kernel command line
+- 69A. Built-in kernel command string
+- 69B. Built-in command line overrides boot loader arguments
+- 70. Enable the LDT (local descriptor table)
+- 71. Enforce strict size checking for sigaltstack
+- 72. Kernel Live Patching
+-
 - 
 - 
  
