@@ -97,7 +97,56 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - 40C. 2G/2G user/kernel split
 - 40D. 2G/2G user/kernel split (for full 2G low memory)
 - 40E. 1G/3G user/kernel split
+- 41. PAE (Physical Address Extension) Support
+- 42. Enable 5-level page tables support
+- 43. Enable statistic for Change Page Attribute
+- 44. AMD Secure Memory Encryption (SME) support
+- 45. NUMA Memory Allocation and Scheduler Support
+- 45A. old style AMD Opteron NUMA detection
+- 45B. ACPI NUMA detection
+- 45C. NUMA emulation
+- 46. Maximum NUMA Nodes (as a power of 2)
+- 47. Enable sysfs memory/probe interface
+- 48. Support non-standard NVDIMMs and ADR protected memory
+- 49. Allocate 3rd-level pagetables from highmem
+- 50. Check for low memory corruption
+- 51. Set the default setting of memory_corruption_check
+- 52. Math emulation
+- 53. MTRR (Memory Type Range Register) support
+- 53A. MTRR cleanup support
+- 53B. MTRR cleanup enable value (0-1)
+- 53C. MTRR cleanup spare reg num (0-7)
+- 53D. x86 PAT support
+- 54. User Mode Instruction Prevention
+- 55. Indirect Branch Tracking
+- 56. Memory Protection Keys
+- 57. TSX enable mode
+- 58. Software Guard extensions (SGX)
 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 - 
 - 
 - 
