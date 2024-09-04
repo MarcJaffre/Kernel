@@ -80,14 +80,27 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - 31. Legacy VM86 support
 - 32. Enable support for 16-bit segments
 - 33. Enable vsyscall emulation
+- 34. IOPERM and IOPL Emulation
+- 35. Toshiba Laptop support
+- 36. Enable X86 board specific fixups for reboot
+- 37. Late microcode loading (DANGEROUS)
+- 38. Enforce late microcode loading minimal revision check
+- 38A. /dev/cpu/*/msr - Model-specific register support
+- 38B. /dev/cpu/*/cpuid - CPU information support
+- 39. High Memory Support
+- 39A. off
+- 39B. 4GB
+- 39C. 64GB
+- 40. Memory split
+- 40A. 3G/1G user/kernel split
+- 40B. 3G/1G user/kernel split (for full 1G low memory)
+- 40C. 2G/2G user/kernel split
+- 40D. 2G/2G user/kernel split (for full 2G low memory)
+- 40E. 1G/3G user/kernel split
 
 - 
 - 
 - 
 - 
-- 
-- 
-- 
-
  
 ```
