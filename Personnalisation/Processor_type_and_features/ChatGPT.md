@@ -59,6 +59,35 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 - 18X. Intel P4 / older Netburst based Xeon
 - 18Y. Core 2/newer Xeon
 - 18Z. Intel Atom
+- 19. Generic x86 support
+- 20. HPET Timer Support
+- 21. Enable DMI scanning
+- 22. Old AMD GART IOMMU support
+- 23. Enable Maximum number of SMP Processors and NUMA Nodes
+- 24. Maximum number of CPUs
+- 25. Cluster scheduler support
+- 26. Multi-core scheduler support
+- 26A. CPU core priorities scheduler support
+- 27. Local APIC support on uniprocessors
+- 27A. IO-APIC support on uniprocessors
+- 28. Reroute for broken boot IRQs
+- 29. Machine Check / overheating reporting
+- 29A. Support for deprecated /dev/mcelog character device
+- 29B. Intel MCE features
+- 29C. AMD MCE features
+- 29D. Support for old Pentium 5 / WinChip machine checks
+- 30. Machine check injector support
+- 31. Legacy VM86 support
+- 32. Enable support for 16-bit segments
+- 33. Enable vsyscall emulation
 
 - 
+- 
+- 
+- 
+- 
+- 
+- 
+
+ 
 ```
