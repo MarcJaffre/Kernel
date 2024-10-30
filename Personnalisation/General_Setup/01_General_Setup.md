@@ -267,34 +267,34 @@ sched.sched_migration_cost_ns=500000
 ```
 
 | Parametre                          | Valeur              | Description                                                                                |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 | cpu.max_cstate                     | 0                   | Désactive la mise en veille                                                                |
 | cpu.max_cstate                     | 1                   | Niveau de mise en veille léger (C1)                                                        |
 | cpu.max_cstate                     | 2                   | Niveau de mise en veille moyen (C2)                                                        |
 | cpu.max_cstate                     | 3                   | Niveau de mise en veille profond (C3)                                                      |
 | cpu.max_cstate                     | 4                   | Niveau de mise en veille très profond (C4)                                                 |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 | cpu.min_cstate                     | 0                   | niveau minimal de mise en veille du CPU                                                    |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 | cpu.governor                       | performance         | Priorise les performances et maintient la fréquence d'horloge la plus élevée possible      |
 | cpu.governor                       | powersave           | Priorise la consommation d'énergie et réduit la fréquence d'horloge                        |
 | cpu.governor                       | ondemand            | Ajuste la fréquence d'horloge en fonction de la charge du système                          |
 | cpu.governor                       | conservative        | Ajuste la fréquence d'horloge en fonction de la charge du système. (Meilleur cons.)        |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 | cpu.energy_performance_preference  | balance_performance | Equilibre entre les performances et la consommation d'énergie                              |
 | cpu.energy_performance_preference  | performance         | Priorise les performances                                                                  |
 | cpu.energy_performance_preference  | power               | Priorise la consommation d'énergie                                                         |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 | power.management.enabled           | 0                   | Désactive la gestion de l'énergie                                                          |
 | power.management.enabled           | 1                   | Active la gestion de l'énergie                                                             |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 | power.management.policy            | balance_performance | Equilibre entre les performances et la consommation d'énergie                              |
 | power.management.policy            | performance         | Priorise les performances                                                                  |
 | power.management.policy            | power               | Priorise la consommation d'énergie                                                         |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 | sched.sched_latency_ns             | 100000              | Définit la latence de planification des tâches en nanosecondes.                            |
 | sched.sched_migration_cost_ns      | 500000              | Définit le coût de migration des tâches en nanosecondes.                                   |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| ---------------------------------- | ------------------- | ---------------------------------------------------------------------------------          |
 
 <br />
 
