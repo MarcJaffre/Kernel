@@ -263,20 +263,18 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 | 16. Debug controller                                        | False  |
 
 
-
-
-
 <br />
 
 #### 09. Namespaces Support
 ```
-01. UTS namespace : <Boolean>
-02. TIME namespace : <Boolean>
-03. IPC namespace : <Boolean>
-04. User namespace : <Boolean>
-05. PID Namespaces : <Boolean>
+01. UTS namespace     : <Boolean>
+02. TIME namespace    : <Boolean>
+03. IPC namespace     : <Boolean>
+04. User namespace    : <Boolean>
+05. PID Namespaces    : <Boolean>
 06. Network namespace : <Boolean>
 ```
+
 
 | Nom du paramètre      | Valeur | Commentaire |
 | -----                 | -----  | -----       |
