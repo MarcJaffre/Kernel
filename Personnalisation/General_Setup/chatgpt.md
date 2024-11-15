@@ -34,7 +34,7 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 - 13. Enable process_vm_readv/writev_syscalls : <Boolean>
 - 14. uselib syscall (for libc5 and earlier) : <Boolean>
 - 15. Auditing support : <Boolean>
-- 16. KUnit test for kernel/time functions: <Boolean>
+- 16. KUnit test for kernel/time functions: <Boolean> <======================================
 - 17. Preemption Model : <Boolean>
 - 18. Preemption behaviour defined on boot : <Boolean>
 - 19. Core Scheduling for SMT : <Boolean>
@@ -72,7 +72,7 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 | 13. Enable process_vm_readv/writev_syscalls       | True       | Pour supporter les appels système de lecture et d'écriture de processus                    |
 | 14. uselib syscall (for libc5 and earlier)        | False      | Sauf si vous utilisez une version de libc antérieure à la 5                                |
 | 15. Auditing support                              | True       | Pour supporter l'audit du système                                                          |
-| 16. KUnit test for kernel/time functions          | True       |
+| 16. KUnit test for kernel/time functions          | True       | INCOMPLET !!!!
 | 17. Preemption Model                              | Desktop    | Pour un modèle de préemption adapté aux bureaux                                            |
 | 18. Preemption behaviour defined on boot          | True       | Pour définir le comportement de préemption au démarrage                                    |
 | 19. Core Scheduling for SMT                       | True       | Pour supporter la planification des cœurs pour SMT                                         |
