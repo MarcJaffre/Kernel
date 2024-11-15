@@ -7,12 +7,12 @@ Quel est le meilleur paramètre pour un PC Ryzen 7 3700x sous Debian 12 :
 
 #### 01. Processor type and features
 ```
-- 01. Symmetric multi-processing support
+- 01. Symmetric multi-processing support : <boolean>
 - 02. Support x2apic
-- 03. Enable MSI and MSI-x delivery by posted interrupts (NEW)
-- 04. Enable MPS table
-- 05. x86 CPU resource control support
-- 06. Flexible Return and Event Delivery (NEW)
+- 03. Enable MSI and MSI-x delivery by posted interrupts (NEW) : <boolean>
+- 04. Enable MPS table : <boolean>
+- 05. x86 CPU resource control support : <boolean>
+- 06. Flexible Return and Event Delivery (NEW) : <boolean>
 - 07. Support for big SMP systems with more than 8 CPUs
 - 08. Support for extended (non-PC) x86 platforms
 - 8A. Numascale NumaChip
