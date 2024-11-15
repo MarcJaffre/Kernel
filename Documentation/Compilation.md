@@ -3,7 +3,7 @@
 
 --------------------------------------------------------------------------------------
 ## I. Construction du Noyau
-Il est nécessaire d'avoir 25 Go.
+Il est nécessaire d'avoir 25 Go d'espace libre.
 
 ### A. Preparation Environnement du Noyau 6.10.7
 ``` bash
