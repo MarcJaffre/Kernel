@@ -5,7 +5,7 @@
 ## I. Construction du Noyau
 Il est nécessaire d'avoir 25 Go.
 
-### A. Preparation Environnement du Noyau
+### A. Preparation Environnement du Noyau 6.10.7
 ``` bash
 clear;
 BRANCHE="6"
