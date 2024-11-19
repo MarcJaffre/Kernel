@@ -350,11 +350,11 @@ Ils activent les fonctionnalités importantes pour les performances et la stabil
 | 22. Enable kcmp() system call                                  | True   | Permet de comparer des processus, utile pour certains outils système
 | 23. Enable rseq() system call                                  | True   | Permet des opérations atomiques plus rapides, bon pour les performances
 | 24. Enable debugging of rseq() system call                     | False  | Ajoute du code de débogage pour rseq, pas nécessaire sauf pour le développement
-| 25. Enable cachestat() system call (NEW)                       | True   | 
-| 26. PC/104 support                                             | False  | 
-| 27. Load all symbols for debugging/ksymoops                    | False  | 
-| 28. Test the basic functions and performance of kallsyms (NEW) | False  | 
-| 29. Include all symbols in kallsyms                            | False  | 
+| 25. Enable cachestat() system call (NEW)                       | True   | Fournit des statistiques sur l'utilisation du cache, utile pour l'optimisation
+| 26. PC/104 support                                             | False  | Support pour un type de matériel spécifique, inutile pour la plupart des PC de bureau
+| 27. Load all symbols for debugging/ksymoops                    | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement 
+| 28. Test the basic functions and performance of kallsyms (NEW) | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement 
+| 29. Include all symbols in kallsyms                            | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement 
 
 <br />
 
