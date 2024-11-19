@@ -261,7 +261,7 @@ Ces options permettent un contrôle fin de la comportement de RCU.
 | 12. Simple CPU accounting controller                        | True   | Fournit des statistiques basiques sur l'utilisation du CPU par groupe de contrôle       |
 | 13. Perf controller                                         | True   | Permet une meilleure gestion des événements de performance                              |
 | 14. Support for eBPF programs attached to cgroups           | True   | Offre des capacités avancées de traçage et de manipulation du noyau                     |
-| 15. Misc resource controller                                | True   | Incomplet                                                                               |
+| 15. Misc resource controller                                | No     | Incomplet                                                                               |
 | 16. Debug controller                                        | False  | Eviter toute surcharge inutile en production                                            |
 
 <br />
@@ -276,17 +276,14 @@ Ces options permettent un contrôle fin de la comportement de RCU.
 06. Network namespace : <Boolean>
 ```
 
-
 | Nom du paramètre      | Valeur | Commentaire |
 | -----                 | -----  | -----       |
-| 01. UTS namespace     | True   |
-| 02. TIME namespace    | True   |
-| 03. IPC namespace     | True   |
-| 04. User namespace    | True   |
-| 05. PID Namespaces    | True   |
-| 06. Network namespace | True   |
-
-
+| 01. UTS namespace     | True   | Permet d'isoler les identifiants du système comme le nom d'hôte |
+| 02. TIME namespace    | True   | Isole la vue du temps système |
+| 03. IPC namespace     | True   | Isole les ressources de communication inter-processus |
+| 04. User namespace    | True   | Permet de mapper les utilisateurs et groupes entre l'hôte et le conteneur |
+| 05. PID Namespaces    | True   | Isole l'espace des identifiants de processus |
+| 06. Network namespace | False  | Désactivé pour permettre au conteneur d'utiliser directement la pile réseau de l'hôte, ce qui est souvent préférable sur un PC de bureau |
 
 <br />
 
