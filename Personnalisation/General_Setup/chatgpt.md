@@ -339,9 +339,9 @@ Ils activent les fonctionnalités importantes pour les performances et la stabil
 | 11. Enable smaller-sized data structures for core (NEW)        | False  | Peut économiser de la mémoire mais peut aussi réduire les performances
 | 12. Enable futex support                                       | True   | Mécanisme de synchronisation rapide, améliore les performances des applications multi-threads
 | 13. Enable eventpoll support                                   | True   | Améliore la gestion des événements d'entrée/sortie, bon pour les performances
-| 14. Enable signalfd() system call                              | True   | Améliorent la gestion des signaux, timers et événements, bons pour les performances
-| 15. Enable timerfd() system call                               | True   | Idem
-| 16. Enable eventfd() system call                               | True   | Idem
+| 14. Enable signalfd() system call                              | True   | Améliorent la gestion des signaux, bons pour les performances
+| 15. Enable timerfd() system call                               | True   | Améliorent la gestion des timers, bons pour les performances
+| 16. Enable eventfd() system call                               | True   | Améliorent la gestion des événements, bons pour les performances
 | 17. Use full shmem filesystem                                  | True   | Système de fichiers en mémoire partagée complet, utile pour diverses applications
 | 18. Enable AIO support                                         | True   | Entrées/sorties asynchrones, peut améliorer les performances pour certaines applications
 | 19. Enable IO uring support                                    | True   | Nouvelle interface d'E/S asynchrone, peut grandement améliorer les performances
