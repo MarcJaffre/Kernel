@@ -326,35 +326,35 @@ Ils activent les fonctionnalités importantes pour les performances et la stabil
 
 | Nom du paramètre                                               | Valeur | Commentaire |
 | -----                                                          | -----  | -----       |
-| 01. Enable 16-bit UID system calls                             | False  | Système de gestion d'utilisateurs obsolète, inutile sur les PC modernes
-| 02. Multiple users, groups and capabilities support            | True   | Permet d'avoir plusieurs comptes sur le même PC, essentiel pour la plupart des systèmes
-| 03. sgetmask/ssetmask syscalls support                         | False  | Anciennes commandes pour gérer les signaux, remplacées par de meilleures options
-| 04. Sysfs syscall support                                      | True   | Système de fichiers virtuel qui donne des infos sur le matériel, très utile pour la gestion du système
-| 05. open by fhandle syscalls                                   | True   | Permet d'ouvrir des fichiers de manière plus efficace dans certains cas
-| 06. Posix Clocks & timers                                      | True   | Gestion du temps standardisée, importante pour la compatibilité et la précision
-| 07. Enable support for printk                                  | True   | Permet au noyau d'afficher des messages, crucial pour le débogage et les logs système
-| 08. BUG() support                                              | False  | Aide à détecter et signaler les problèmes dans le noyau, important pour la stabilité
-| 09. Enable ELF core dumps                                      | True   | Crée des fichiers de diagnostic quand un programme plante, utile pour le débogage
-| 10. Enable PC-Speaker support                                  | False  | Support pour le petit haut-parleur interne, rarement utilisé de nos jours
-| 11. Enable smaller-sized data structures for core (NEW)        | False  | Peut économiser de la mémoire mais peut aussi réduire les performances
-| 12. Enable futex support                                       | True   | Mécanisme de synchronisation rapide, améliore les performances des applications multi-threads
-| 13. Enable eventpoll support                                   | True   | Améliore la gestion des événements d'entrée/sortie, bon pour les performances
-| 14. Enable signalfd() system call                              | True   | Améliorent la gestion des signaux, bons pour les performances
-| 15. Enable timerfd() system call                               | True   | Améliorent la gestion des timers, bons pour les performances
-| 16. Enable eventfd() system call                               | True   | Améliorent la gestion des événements, bons pour les performances
-| 17. Use full shmem filesystem                                  | True   | Système de fichiers en mémoire partagée complet, utile pour diverses applications
-| 18. Enable AIO support                                         | True   | Entrées/sorties asynchrones, peut améliorer les performances pour certaines applications
-| 19. Enable IO uring support                                    | True   | Nouvelle interface d'E/S asynchrone, peut grandement améliorer les performances
-| 20. Enable madvise/fadvise syscalls                            | True   | Permet d'optimiser l'utilisation de la mémoire et des fichiers
-| 21. Enable membarrier() system call                            | True   | Utile pour la synchronisation sur les systèmes multi-cœurs comme votre Ryzen
-| 22. Enable kcmp() system call                                  | True   | Permet de comparer des processus, utile pour certains outils système
-| 23. Enable rseq() system call                                  | True   | Permet des opérations atomiques plus rapides, bon pour les performances
-| 24. Enable debugging of rseq() system call                     | False  | Ajoute du code de débogage pour rseq, pas nécessaire sauf pour le développement
-| 25. Enable cachestat() system call (NEW)                       | True   | Fournit des statistiques sur l'utilisation du cache, utile pour l'optimisation
-| 26. PC/104 support                                             | False  | Support pour un type de matériel spécifique, inutile pour la plupart des PC de bureau
-| 27. Load all symbols for debugging/ksymoops                    | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement 
-| 28. Test the basic functions and performance of kallsyms (NEW) | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement 
-| 29. Include all symbols in kallsyms                            | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement 
+| 01. Enable 16-bit UID system calls                             | False  | Système de gestion d'utilisateurs obsolète, inutile sur les PC modernes |
+| 02. Multiple users, groups and capabilities support            | True   | Permet d'avoir plusieurs comptes sur le même PC, essentiel pour la plupart des systèmes |
+| 03. sgetmask/ssetmask syscalls support                         | False  | Anciennes commandes pour gérer les signaux, remplacées par de meilleures options |
+| 04. Sysfs syscall support                                      | True   | Système de fichiers virtuel qui donne des infos sur le matériel, très utile pour la gestion du système |
+| 05. open by fhandle syscalls                                   | True   | Permet d'ouvrir des fichiers de manière plus efficace dans certains cas |
+| 06. Posix Clocks & timers                                      | True   | Gestion du temps standardisée, importante pour la compatibilité et la précision |
+| 07. Enable support for printk                                  | True   | Permet au noyau d'afficher des messages, crucial pour le débogage et les logs système |
+| 08. BUG() support                                              | False  | Aide à détecter et signaler les problèmes dans le noyau, important pour la stabilité |
+| 09. Enable ELF core dumps                                      | True   | Crée des fichiers de diagnostic quand un programme plante, utile pour le débogage |
+| 10. Enable PC-Speaker support                                  | False  | Support pour le petit haut-parleur interne, rarement utilisé de nos jours |
+| 11. Enable smaller-sized data structures for core (NEW)        | False  | Peut économiser de la mémoire mais peut aussi réduire les performances |
+| 12. Enable futex support                                       | True   | Mécanisme de synchronisation rapide, améliore les performances des applications multi-threads |
+| 13. Enable eventpoll support                                   | True   | Améliore la gestion des événements d'entrée/sortie, bon pour les performances |
+| 14. Enable signalfd() system call                              | True   | Améliorent la gestion des signaux, bons pour les performances |
+| 15. Enable timerfd() system call                               | True   | Améliorent la gestion des timers, bons pour les performances |
+| 16. Enable eventfd() system call                               | True   | Améliorent la gestion des événements, bons pour les performances |
+| 17. Use full shmem filesystem                                  | True   | Système de fichiers en mémoire partagée complet, utile pour diverses applications |
+| 18. Enable AIO support                                         | True   | Entrées/sorties asynchrones, peut améliorer les performances pour certaines applications |
+| 19. Enable IO uring support                                    | True   | Nouvelle interface d'E/S asynchrone, peut grandement améliorer les performances |
+| 20. Enable madvise/fadvise syscalls                            | True   | Permet d'optimiser l'utilisation de la mémoire et des fichiers |
+| 21. Enable membarrier() system call                            | True   | Utile pour la synchronisation sur les systèmes multi-cœurs comme votre Ryzen |
+| 22. Enable kcmp() system call                                  | True   | Permet de comparer des processus, utile pour certains outils système |
+| 23. Enable rseq() system call                                  | True   | Permet des opérations atomiques plus rapides, bon pour les performances |
+| 24. Enable debugging of rseq() system call                     | False  | Ajoute du code de débogage pour rseq, pas nécessaire sauf pour le développement |
+| 25. Enable cachestat() system call (NEW)                       | True   | Fournit des statistiques sur l'utilisation du cache, utile pour l'optimisation |
+| 26. PC/104 support                                             | False  | Support pour un type de matériel spécifique, inutile pour la plupart des PC de bureau |
+| 27. Load all symbols for debugging/ksymoops                    | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement |
+| 28. Test the basic functions and performance of kallsyms (NEW) | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement |
+| 29. Include all symbols in kallsyms                            | False  | Ajoutent des informations de débogage au noyau, utiles pour le développement |
 
 <br />
 
@@ -365,7 +365,7 @@ Ils activent les fonctionnalités importantes pour les performances et la stabil
 
 | Nom du paramètre                                                                          | Valeur | Commentaire |
 | -----                                                                                     | -----  | -----       |
-| 01. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers | False  |
+| 01. Kernel performance events and counters Debug: use vmalloc to back perf mmap() buffers | False  | Le noyau utilise une méthode d'allocation mémoire différente, potentiellement plus rapide mais moins flexible |
 
 <br />
 
