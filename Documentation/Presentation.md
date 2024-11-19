@@ -10,15 +10,17 @@ Voici une explication détaillée de la configuration du noyau :
 
 <br />
 
-### B. make menuconfig
+### B1. make xconfig
+
+- L'outil `make xconfig` est un utilitaire qui permet de configurer les options de compilation du noyau Linux.
+- Il présente une interface **Graphique** de menu qui permet de sélectionner les options de compilation.
+
+### B2. make menuconfig
 
 - L'outil `make menuconfig` est un utilitaire qui permet de configurer les options de compilation du noyau Linux.
 - Il présente une interface de menu qui permet de sélectionner les options de compilation.
 
-### B. make xconfig
 
-- L'outil `make xconfig` est un utilitaire qui permet de configurer les options de compilation du noyau Linux.
-- Il présente une interface **Graphique** de menu qui permet de sélectionner les options de compilation.
 
 
 <br />
