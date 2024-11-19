@@ -255,15 +255,14 @@ Ces options permettent un contrôle fin de la comportement de RCU.
 | 06. RDMA controller                                         | False  | Généralement non nécessaire pour un usage standard                                      |
 | 07. Freezer controller                                      | True   | Permet de suspendre et de reprendre l'exécution de groupes de processus                 |
 | 08. HugeTLB controller                                      | True   | Permettre l'utilisation de grandes pages mémoire                                        |
-| 09. Cpuset controller                                       | True   | 
-| 10. Include legacy /proc/pid/cpuset file                    | False  | 
-| 11. Device controller                                       | True   | 
-| 12. Simple CPU accounting controller                        | True   | 
-| 13. Perf controller                                         | True   | Permet une meilleure gestion des événements de performance
-| 14. Support for eBPF programs attached to cgroups           | True   | Offre des capacités avancées de traçage et de manipulation du noyau
-| 15. Misc resource controller                                | True   | 
-| 16. Debug controller                                        | False  | Eviter toute surcharge inutile en production         |
-
+| 09. Cpuset controller                                       | True   | Permettre une meilleure affectation des tâches aux cœurs du processeur                  |
+| 10. Include legacy /proc/pid/cpuset file                    | False  | Incomplet                                                                               |
+| 11. Device controller                                       | True   | Permet de gérer l'accès aux périphériques pour différents groupes de contrôle           |
+| 12. Simple CPU accounting controller                        | True   | Fournit des statistiques basiques sur l'utilisation du CPU par groupe de contrôle       |
+| 13. Perf controller                                         | True   | Permet une meilleure gestion des événements de performance                              |
+| 14. Support for eBPF programs attached to cgroups           | True   | Offre des capacités avancées de traçage et de manipulation du noyau                     |
+| 15. Misc resource controller                                | True   | Incomplet                                                                               |
+| 16. Debug controller                                        | False  | Eviter toute surcharge inutile en production                                            |
 
 <br />
 
