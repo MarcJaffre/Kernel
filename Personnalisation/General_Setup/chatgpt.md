@@ -79,7 +79,7 @@ Les options de débogage et de profilage sont désactivées, sauf pour l'interfa
 | 20. CPU Isolation                                 | ------     | Sauf si vous voulez isoler des CPU spécifiques                                             |
 | 21. Kernel .config support                        | True       | Pour supporter la configuration du noyau                                                   |
 | 22. Enable kernel headers through .....           | True       | Pour supporter les headers du noyau                                                        |
-| 23. Kernel log buffer size                        | 16         | Taille par défaut du tampon de journalisation du noyau (2^16)/1024 = 64 KB                 |
+| 23. Kernel log buffer size                        | 16         | Taille par défaut du tampon de journalisation du noyau . Calcul : (2^16)/1024 = 64 KB      |
 | 24. CPU Kernel log buffer size contribution       | 8          | Contribution par défaut de la taille du tampon de journalisation du noyau pour chaque CPU  |
 | 25. Printk indexing debugfs interface             | True       | Pour supporter l'interface de débogage de printk                                           |
 | 26. Memory placement award NUMA scheduler         | True       | Pour supporter la planification NUMA aware                                                 |
