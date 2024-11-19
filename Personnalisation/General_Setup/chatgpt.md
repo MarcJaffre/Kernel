@@ -174,7 +174,9 @@ Ces options sont liées à la comptabilité des tâches et des statistiques.
 <br />
 
 #### 06. RCU Subsystem
-RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux. Ces options permettent un contrôle fin de la comportement de RCU.
+RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux. 
+
+Ces options permettent un contrôle fin de la comportement de RCU.
 
 ```
 1. Make expert-level adjustments to RCU : <Boolean>
@@ -243,24 +245,24 @@ RCU (Read-Copy Update) est un mécanisme de synchronisation dans le noyau Linux.
 16. Debug controller : <Boolean>
 ```
 
-| Nom du paramètre                                            | Valeur | Commentaire                   |
-| -----                                                       | -----  | -----                         |
-| 01. Favor dynamic modification latency reduction by default | True   |
-| 02. Memory controller                                       | True   |
-| 03. IO controller                                           | True   |
-| 04. Utilization clamping per group of tasks                 | True   |
-| 05. PIDs controller                                         | True   |
-| 06. RDMA controller                                         | False  |
-| 07. Freezer controller                                      | True   |
-| 08. HugeTLB controller                                      | True   |
-| 09. Cpuset controller                                       | True   |
-| 10. Include legacy /proc/pid/cpuset file                    | False  |
-| 11. Device controller                                       | True   |
-| 12. Simple CPU accounting controller                        | True   |
-| 13. Perf controller                                         | True   |
-| 14. Support for eBPF programs attached to cgroups           | True   |
-| 15. Misc resource controller                                | True   |
-| 16. Debug controller                                        | False  |
+| Nom du paramètre                                            | Valeur | Commentaire                                                                             |
+| -----                                                       | -----  | -----                                                                                   |
+| 01. Favor dynamic modification latency reduction by default | True   | Réduire la latence                                                                      |
+| 02. Memory controller                                       | True   | Meilleure gestion de la mémoire                                                         |
+| 03. IO controller                                           | True   | Optimiser les opérations d'entrée/sortie                                                |
+| 04. Utilization clamping per group of tasks                 | True   | Permet de définir des limites d'utilisation CPU pour des groupes de tâches spécifiques  |
+| 05. PIDs controller                                         | True   | Limiter le nombre de processus et de threads qu'un groupe de contrôle peut créer        |
+| 06. RDMA controller                                         | False  | Généralement non nécessaire pour un usage standard                                      |
+| 07. Freezer controller                                      | True   | Permet de suspendre et de reprendre l'exécution de groupes de processus                 |
+| 08. HugeTLB controller                                      | True   | Permettre l'utilisation de grandes pages mémoire                                        |
+| 09. Cpuset controller                                       | True   | 
+| 10. Include legacy /proc/pid/cpuset file                    | False  | 
+| 11. Device controller                                       | True   | 
+| 12. Simple CPU accounting controller                        | True   | 
+| 13. Perf controller                                         | True   | Permet une meilleure gestion des événements de performance
+| 14. Support for eBPF programs attached to cgroups           | True   | Offre des capacités avancées de traçage et de manipulation du noyau
+| 15. Misc resource controller                                | True   | 
+| 16. Debug controller                                        | False  | Eviter toute surcharge inutile en production         |
 
 
 <br />
