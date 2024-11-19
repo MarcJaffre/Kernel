@@ -33,6 +33,7 @@ Pour Debian 12 (Bookworm), voici la liste de paquets mise à jour pour compiler 
 - **fakeroot**    : fournit un environnement de compilation avec des droits d'accès élevés
 - **ncurses-dev** : fournit les bibliothèques de développement pour les interfaces utilisateur en mode texte
 - **libqt4-dev**  : fournit les fichiers d'en-tête et les bibliothèques statiques nécessaires pour compiler des applications qui utilisent la bibliothèque Qt 4. (Paquet retiré)
+- **qtbase5-dev** : Remplace le paquet libqt4-dev
 
 <br />
 
