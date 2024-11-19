@@ -32,7 +32,7 @@ Pour Debian 12 (Bookworm), voici la liste de paquets mise à jour pour compiler 
 - **git**         : fournit le système de gestion de version Git
 - **fakeroot**    : fournit un environnement de compilation avec des droits d'accès élevés
 - **ncurses-dev** : fournit les bibliothèques de développement pour les interfaces utilisateur en mode texte
-- **libqt4-dev**  : fournit les fichiers d'en-tête et les bibliothèques statiques nécessaires pour compiler des applications qui utilisent la bibliothèque Qt 4.
+- **libqt4-dev**  : fournit les fichiers d'en-tête et les bibliothèques statiques nécessaires pour compiler des applications qui utilisent la bibliothèque Qt 4. (Paquet retiré)
 
 <br />
 
@@ -66,7 +66,7 @@ apt install -y libieee1284-3-dev 1>/dev/null;
 apt install -y liblz4-dev        1>/dev/null;
 apt install -y liblzma-dev       1>/dev/null;
 apt install -y libncurses-dev    1>/dev/null;
-apt install -y libqt4-dev        1>/dev/null;
+#apt install -y libqt4-dev        1>/dev/null;
 apt install -y libpci-dev        1>/dev/null;
 apt install -y libssl-dev        1>/dev/null;
 apt install -y libusb-dev        1>/dev/null;
