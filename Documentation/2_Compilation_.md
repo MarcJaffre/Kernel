@@ -17,28 +17,16 @@ mkdir kernel 2>/dev/null;
 cd kernel;
 #
 ##############################################################################################################################
-# Telechargement du Kernel #
-############################
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz  2>/dev/null;
-#
-##############################################################################################################################
-# Telechargement des Patchs #
-#############################
-#
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.1.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.2.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.3.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.4.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.5.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.6.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.7.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.8.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.9.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.10.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.11.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.12.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.13.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.14.xz   2>/dev/null;
+# TELECHARGEMENTS #
+###################
+KERNEL_MAJOR="6"
+KERNEL_MINOR="10"
+URL="https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_MAJOR}.x/"
+URL_KERNEL="$URL/linux-${KERNEL_MAJOR}.${KERNEL_MINOR}.tar.xz"
+wget $URL_KERNEL   2>/dev/null;
+
+wget $URL/patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1.xz    2>/dev/null;
+
 #
 ##############################################################################################################################
 # Decompression #
