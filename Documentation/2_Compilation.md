@@ -35,19 +35,22 @@ PATCH_14="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 
 ### B. Téléchargement du Noyaux
 ```bash
-clear;
+#############################################################################################################
 cd $HOME;
 rm -r linux-${VERSION}* 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
 tar -xf linux-${KERNEL_RELEASE}.tar.xz;
 cd linux-${KERNEL_RELEASE};
+#############################################################################################################
 ```
 
 <br />
 
 ### C. Vérifier Release
 ```bash
+#############################################################################################################
 head Makefile -n 4;
+#############################################################################################################
 ```
 
 ```
@@ -64,6 +67,7 @@ Il faut partir de la partie Release 6.10.X du noyau. (6.10.1)
 #### 1. Telechargement
 ```bash
 clear;
+#############################################################################################################
 rm patch-* 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz 2>/dev/null;
@@ -80,10 +84,13 @@ wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_13}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_14}.xz 2>/dev/null;
 for i in $(ls *.xz); do unxz $i; done
 ls patch-* | wc -l
+#############################################################################################################
 ```
-#### 2. Application
+#### 2. Application du Patch
+La commande permet de voir la version du dernier patch appliqué `grep "SUBLEVEL =" Makefile;`.
 ```bash
 clear;
+#############################################################################################################
 patch -p1 --batch < ./patch-${PATCH_1} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_2} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_3} 2>/dev/null;
@@ -91,7 +98,7 @@ patch -p1 --batch < ./patch-${PATCH_4} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_5} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_6} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
-grep "SUBLEVEL =" Makefile;
+#############################################################################################################
 ```
 
 
