@@ -80,7 +80,6 @@ grep -E "^CONFIG_ANDROID_BINDER_IPC|^CONFIG_BASE_SMALL|^CONFIG_FSCACHE|^CONFIG_V
 
 ### C. Configurer Noyau
 ```bash
-```bash
 ##############################################################################################################################
 # Nettoyage console #
 #####################
