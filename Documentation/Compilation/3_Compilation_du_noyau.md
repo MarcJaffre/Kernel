@@ -131,3 +131,8 @@ tail -f Compilation;
 ##############################################################################################################################
 ```
 
+### Afficher le temps de compilation
+```bash
+clear;
+watch -n 5 'ps -eo pid,comm,etime | grep make | head -n 1'
+```
