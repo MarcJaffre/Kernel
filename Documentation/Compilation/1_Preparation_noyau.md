@@ -59,7 +59,6 @@ for i in $(ls *.xz.[0-9]); do
 done;
 # --------------------------------------------- #
 
-
 ##############################################################################################################################
 # Dossier de Travail #
 ######################
@@ -67,3 +66,15 @@ cd linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 
 ##############################################################################################################################
 ```
+
+### Patch 6.10.1
+```bash
+clear;
+
+# Bash
+clear; grep -E  "^ # SPDX-License|^ VERSION|^ PATCHLEVEL|^ EXTRAVERSION|^ NAME" patch-6.10.1;
+
+# Diff
+clear; grep -vE "^ # SPDX-License|^ VERSION|^ PATCHLEVEL|^ EXTRAVERSION|^ NAME" patch-6.10.1;
+```
+
