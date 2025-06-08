@@ -67,18 +67,3 @@ cd linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 
 ##############################################################################################################################
 ```
-
-### Patch 6.10.1
-```bash
-clear;
-
-# Bash
-clear; grep -E  "^ # SPDX-License|^ VERSION|^ PATCHLEVEL|^ EXTRAVERSION|^ NAME" patch-6.10.1;
-
-# Diff
-clear; grep -vE "^ # SPDX-License|^ VERSION|^ PATCHLEVEL|^ EXTRAVERSION|^ NAME" patch-6.10.1;
-
-# Simuler
-claer; patch --dry-run -p1 < ../patch-6.10.1.diff
-```
-
