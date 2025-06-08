@@ -154,7 +154,7 @@ La commande suivant permet de mettre à jour la configuration. (Si nouvelle opti
 ```bash
 #############################################################################################################
 clear;
-yes "" | make oldconfig ARCH=$(arch)
+yes "" | make oldconfig
 #############################################################################################################
 ```
 
