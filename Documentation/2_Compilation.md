@@ -25,11 +25,10 @@ PATCH_7="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 ```bash
 cd $HOME
 rm -r linux-${VERSION}* 2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
 tar -xf linux-${KERNEL_RELEASE}.tar.xz;
 cd linux-${KERNEL_RELEASE};
-cp /boot/config-$(uname -r) .config;
-head Makefile -n 4;
+
 ```
 
 ### C. Générer la configuration
@@ -39,8 +38,11 @@ clear;
 cp /boot/config-$(uname -r) .config;
 ```
 
-
-### D. Patch
+### D. Vérifier Release
+```bash
+head Makefile -n 4;
+```
+### E. Patch
 ```bash
 clear;
 wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz;
@@ -51,20 +53,32 @@ wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_
 wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz;
 wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz;
 unxz patch-*.xz
-patch -p1 < ./patch-${PATCH_1}
-patch -p1 < ./patch-${PATCH_2}
-patch -p1 < ./patch-${PATCH_3}
-patch -p1 < ./patch-${PATCH_4}
-patch -p1 < ./patch-${PATCH_5}
-patch -p1 < ./patch-${PATCH_6}
-patch -p1 < ./patch-${PATCH_7}
-
+patch -p1 --batch < ./patch-${PATCH_1};
+patch -p1 --batch < ./patch-${PATCH_2};
+patch -p1 --batch < ./patch-${PATCH_3};
+patch -p1 --batch < ./patch-${PATCH_4};
+patch -p1 --batch < ./patch-${PATCH_5};
+patch -p1 --batch < ./patch-${PATCH_6};
+patch -p1 --batch < ./patch-${PATCH_7};
 ```
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br />
 
-### E. Menu de configuration
+
+
+### X. Menu de configuration
 Touche Z permet d'afficher le menu caché
 ```bash
 clear;
@@ -73,7 +87,7 @@ make menuconfig;
 
 <br />
 
-### F. Compilation en Multi-Core
+### X. Compilation en Multi-Core
 #### 1. Sans CheckPoint
 Si on souhaite `X` Core, il suffit de remplacer `$(nproc)` par le nombre de core qui compilerons.
 ```
@@ -98,14 +112,14 @@ make -j$(nproc) -O3 -march=native -mtune=native > build.log 2>&1 checkpoint-rest
 
 <br />
 
-### G. Installer les modules
+### X. Installer les modules
 ```bash
 make modules_install;
 ```
 
 <br />
 
-### H. Déployer le Noyau
+### X. Déployer le Noyau
 ```bash
 clear;
 SOURCE="/Data/linux-*/arch/x86_64/boot"
@@ -113,7 +127,7 @@ KERNEL_NAME="vmlinuz-marc"
 cp $SOURCE/bzImage /boot/$KERNEL_NAME;
 ```
 
-### I. Mettre à jour grub
+### X. Mettre à jour grub
 ```bash
 clear;
 update-grub;
