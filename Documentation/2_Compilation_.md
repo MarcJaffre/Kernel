@@ -8,33 +8,70 @@ Il est nécessaire d'avoir 25 Go d'espace libre. ()
 ### A. Selection du Noyau ( [6.10.0](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tag/?h=v6.10) )
 ``` bash
 ##############################################################################################################################
-# Dossier de Travail #
-######################
+# Nettoyage console #
+#####################
 clear;
-cd $HOME;
-rm -r kernel 2>/dev/null;
-mkdir kernel 2>/dev/null;
-cd kernel;
-#
+
 ##############################################################################################################################
-# TELECHARGEMENTS #
-###################
+# Variables d-environnement #
+#############################
 KERNEL_MAJOR="6"
 KERNEL_MINOR="10"
 URL="https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_MAJOR}.x/"
 URL_KERNEL="$URL/linux-${KERNEL_MAJOR}.${KERNEL_MINOR}.tar.xz"
-wget $URL_KERNEL   2>/dev/null;
 
-wget $URL/patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1.xz    2>/dev/null;
+##############################################################################################################################
+# Dossier de Travail #
+######################
+cd $HOME;
+rm -r kernel 2>/dev/null;
+mkdir kernel 2>/dev/null;
+cd kernel;
 
+##############################################################################################################################
+# Telechargement du Kernel #
+############################
+# 
+wget ${URL_KERNEL} 2>/dev/null;
+
+##############################################################################################################################
+# Telechargement des Patchs #
+#############################
+for i in $(curl -s "$URL" | grep -oP "patch-${KERNEL_MAJOR}\.${KERNEL_MINOR}\.\d+\.xz" | grep -v '\.xz\.1$'); do
+  wget "${URL}${i}" 2>/dev/null;
+done
 #
+
 ##############################################################################################################################
 # Decompression #
 #################
-for i in $(ls *.xz); do unxz   $i 2>/dev/null; done;
-for i in $(ls *.tar);do tar xf $i 2>/dev/null; done;
-cd /root/kernel/linux-6.10;
-#
+for i in $(ls *.xz | grep -v '\.xz\.1$'); do unxz $i 2>/dev/null;   done;
+for i in $(ls *.tar);                     do tar xf $i 2>/dev/null; done;
+for i in $(ls *.xz.1);                    do rm $i;                 done;
+
+##############################################################################################################################
+# Patchage #
+############
+cd ./linux-$[KERNEL_MAJOR}.{KERNEL_MINOR};
+
+clear;
+for i in $(ls ../patch-6.10.* | sort -V | cut -d "." -f 3-5); do
+ patch -p1 --batch --ignore-whitespace < ..$i
+  sleep 15
+done
+
+ls ../patch-6.10.* | sort -V | cut -c 13-20 | cut -d "." -f 2
+
+
+
+
+
+
+
+
+
+
+
 ##############################################################################################################################
 # Message #
 ###########
@@ -44,10 +81,13 @@ echo "#################################";
 echo "#                               #";
 echo "# Kernel d'Originel : $(make kernelversion)    #";
 echo "#                               #";
+for i in $(ls patch*); do
+echo $i
+done
+
 ##############################################################################################################################
 # Patch 6.10.1 #
 ################
-
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.1 1>/dev/null; 
 echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
