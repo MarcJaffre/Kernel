@@ -38,8 +38,9 @@ cp /boot/config-$(uname -r) .config;
 clear;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-${KERNEL_RELEASE}.xz
 unxz patch-${KERNEL_RELEASE}.xz
-patch -p1 < ../patch-${KERNEL_RELEASE}
+patch -p1 < ./patch-${KERNEL_RELEASE}
 ```
+
 
 <br />
 
