@@ -15,7 +15,7 @@ KERNEL_VERSION="6"
 KERNEL_PATCHLEVEL="10"
 KERNEL_SUBLEVEL="1"
 KERNEL_RELEASE="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.${KERNEL_SUBLEVEL}"
-
+PATCH_1="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.1"
 PATCH_2="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.2"
 PATCH_3="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.3"
 PATCH_4="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.4"
@@ -73,6 +73,7 @@ clear;
 #############################################################################################################
 clear;
 rm patch-* 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz  2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz  2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz  2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz  2>/dev/null;
@@ -95,6 +96,7 @@ La commande permet de voir la version du dernier patch appliqué `grep "SUBLEVEL
 ```bash
 #############################################################################################################
 clear;
+patch -p1 --batch < ./patch-${PATCH_1}  2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_2}  2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_3}  2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_4}  2>/dev/null;
