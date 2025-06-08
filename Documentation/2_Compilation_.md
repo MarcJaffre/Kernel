@@ -52,10 +52,10 @@ cd /root/kernel/linux-6.10;
 ###########
 echo "#################################";
 echo "#       Patchage du Kernel      #";
+echo "#################################";
 echo "#                               #";
 echo "# Kernel d'Originel : $(make kernelversion)    #";
-
-
+echo "#                               #";
 ##############################################################################################################################
 # Patch 6.10.1 #
 ################
@@ -152,6 +152,7 @@ sed -i -e "s/SUBLEVEL \= 13/SUBLEVEL \= 0/g" Makefile;
 # Patch 6.10.14 #
 #################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.14 1>/dev/null;
+echo "#                               #";
 echo "# Final : $(make kernelversion)               #";
 echo "#                               #";
 echo "#################################";
