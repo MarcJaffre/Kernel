@@ -76,13 +76,18 @@ for i in $(ls ../patch-6.10.* | sort -V | xargs -n1 basename); do
   # --------------------------------------------------------
 done
 
-# Definir le SUBLEVEL sur le dernier patch (Visuel)
-LAST_PATCH=$(ls ../patch-6.10.* | sort -V | xargs -n1 basename | tail -n 1 | cut -d "." -f 3)
-sed -i -e "s/SUBLEVEL = 0/SUBLEVEL = $LAST_PATCH/g" Makefile
 
 ##############################################################################################################################
+# Definir le SUBLEVEL sur le dernier patch #
+# LAST_PATCH=$(ls ../patch-6.10.* | sort -V | xargs -n1 basename | tail -n 1 | cut -d "." -f 3)
+# sed -i -e "s/SUBLEVEL = 0/SUBLEVEL = $LAST_PATCH/g" Makefile
+##############################################################################################################################
+```
 
 
+
+
+```bash
 ##############################################################################################################################
 # Message #
 ###########
@@ -195,7 +200,6 @@ echo "#                               #";
 echo "# Final : $(make kernelversion)               #";
 echo "#                               #";
 echo "#################################";
-
 ```
 
 ```
