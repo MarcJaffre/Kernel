@@ -50,7 +50,7 @@ clear;
 # Patch 6.10.1 #
 ################
 # Erreurs de compilation avec certains modules
-patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;  make kernelversion;
 #sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
