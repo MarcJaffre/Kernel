@@ -26,7 +26,7 @@ cd /Data/kernel/linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 <br />
 
 ### Patch 6.0.1 (Problématique)
-Le fichier contient du bash et du diff. Il faut séparer en deux fichiers. ( grep -E '^[0-9]+[acd][0-9]+|^< |^> |^---' patch-6.10.1)
+Le fichier contient du bash et du diff. Il faut séparer en deux fichiers.
 
 
 ```bash
@@ -34,6 +34,7 @@ Le fichier contient du bash et du diff. Il faut séparer en deux fichiers. ( gre
 # Patch 6.10.1 #
 ################
 clear;
+# `grep -E '^[0-9]+[acd][0-9]+|^< |^> |^---' ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
 patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 #
