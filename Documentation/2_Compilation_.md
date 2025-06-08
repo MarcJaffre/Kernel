@@ -1,18 +1,21 @@
 --------------------------------------------------------------------------------------
-# <p align='center'> Compilation du Noyau 6.10.7 (Release: Juillet 2024) </p>
+# <p align='center'> Compilation du Noyau 6.10.X (Release: Juillet 2024) </p>
 
 --------------------------------------------------------------------------------------
-## I. Construction du Noyau
+## I. Construction du Noyau 
 Il est nécessaire d'avoir 25 Go d'espace libre. ()
 
 ### A. Selection du Noyau ( [6.10.0](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tag/?h=v6.10) )
 ``` bash
 ##############################################################################################################################
+# Dossier de Travail #
+######################
 clear;
-cd $HOME;
-rm -r kernel 2>/dev/null;
-mkdir kernel;
-cd kernel;
+cd $HOME; rm -r kernel 2>/dev/null; mkdir kernel; cd kernel;
+
+##############################################################################################################################
+# Telechargements #
+###################
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz  2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.1.xz    2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.2.xz    2>/dev/null;
@@ -28,6 +31,10 @@ wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.11.xz   2>/dev/null
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.12.xz   2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.13.xz   2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.14.xz   2>/dev/null;
+
+##############################################################################################################################
+# Decompression #
+#################
 for i in $(ls *.xz); do unxz   $i 2>/dev/null; done;
 for i in $(ls *.tar);do tar xf $i 2>/dev/null; done;
 cd /root/kernel/linux-6.10;
@@ -113,95 +120,25 @@ sed -i -e "s/SUBLEVEL \= 13/SUBLEVEL \= 0/g" Makefile;
 ##############################################################################################################################
 # Patch 6.10.14 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.14 1>/dev/null; make kernelversion;
-# sed -i -e "s/SUBLEVEL \= 14/SUBLEVEL \= 0/g" Makefile;
-```
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.14 1>/dev/null;
+sleep 5;
 
-<br />
-
-### B. Téléchargement du Noyaux
-```bash
-#############################################################################################################
-clear;
-cd $HOME;
-rm -r linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}* 2>/dev/null;
-wget $KERNEL_SITE/linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.tar.gz 2>/dev/null;
-tar -xf linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.tar.gz;
-cd linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL};
-#############################################################################################################
-```
-
-<br />
-
-### C. Vérifier Release
-```bash
-#############################################################################################################
+##############################################################################################################################
+# Verification de la version #
+##############################
 clear;
 head Makefile -n 4 | grep -v "SPDX";
-#############################################################################################################
 ```
 
 ```
 VERSION = 6
 PATCHLEVEL = 10
-SUBLEVEL = 0
+SUBLEVEL = 14
 ```
 
 <br />
 
-
-### D. Patchs
-Il est nécessaire de partir sur un kernel 6.X.0 puis de patché à une version supérieur.
-#### 1. Telechargement
-```bash
-clear;
-#############################################################################################################
-clear;
-rm patch-* 2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_8}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_9}.xz  2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_10}.xz 2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_11}.xz 2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_12}.xz 2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_13}.xz 2>/dev/null;
-wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_14}.xz 2>/dev/null;
-for i in $(ls *.xz); do unxz $i; done
-ls patch-* | wc -l
-#############################################################################################################
-```
-#### 2. Application du Patch
-La commande permet de voir la version du dernier patch appliqué `grep "SUBLEVEL =" Makefile;`.
-```bash
-#############################################################################################################
-clear;
-patch -p1 --batch < ./patch-${PATCH_1}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_2}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_3}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_4}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_5}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_6}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_7}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_8}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_9}  2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_10} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_11} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_12} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_13} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_14} 2>/dev/null;
-#############################################################################################################
-```
-
-
-<br />
-
-### E. Récupérer sa configuration du Noyau
+### B. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
 ```bash
 #############################################################################################################
