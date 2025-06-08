@@ -14,7 +14,15 @@ rm -r linux-${VERSION}* 2>/dev/null
 wget https://cdn.kernel.org/pub/linux/kernel/v${BRANCHE}.x/linux-${VERSION}.tar.xz 2>/dev/null;
 tar -xf linux-${VERSION}.tar.xz;
 cd linux-${VERSION};
+```
 
+### C. Patch
+```bash
+clear;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.7.xz
+unxz patch-6.10.7.xz
+cd linux-6.10.7
+patch -p1 < ../patch-6.10.7
 ```
 
 <br />
@@ -68,7 +76,6 @@ SOURCE="/Data/linux-*/arch/x86_64/boot"
 KERNEL_NAME="vmlinuz-marc"
 cp $SOURCE/bzImage /boot/$KERNEL_NAME;
 ```
-
 
 ### E. Mettre à jour grub
 ```bash
