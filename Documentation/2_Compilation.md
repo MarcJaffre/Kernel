@@ -72,6 +72,7 @@ patch -p1 --batch < ./patch-${PATCH_4} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_5} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_6} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
+grep "SUBLEVEL =" Makefile
 ```
 
 <br />
