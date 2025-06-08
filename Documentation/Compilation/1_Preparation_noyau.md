@@ -77,5 +77,8 @@ clear; grep -E  "^ # SPDX-License|^ VERSION|^ PATCHLEVEL|^ EXTRAVERSION|^ NAME" 
 
 # Diff
 clear; grep -vE "^ # SPDX-License|^ VERSION|^ PATCHLEVEL|^ EXTRAVERSION|^ NAME" patch-6.10.1;
+
+# Simuler
+claer; patch --dry-run -p1 < ../patch-6.10.1.diff
 ```
 
