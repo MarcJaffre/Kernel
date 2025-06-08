@@ -231,9 +231,6 @@ clear;
 yes "" | make oldconfig 1>/dev/null;
 #############################################################################################################
 ```
-
-
-
 <br />
 
 ### X. Menu de configuration
@@ -244,13 +241,18 @@ clear;
 make menuconfig;
 #############################################################################################################
 ```
-#### 3. Afficher le menu caché
-Taper sur la touche `Z`
-#### 4. Rechercher
+
+#### 3. Rechercher (Fix erreur)
 Pour trouver un paramètre dans l'interface Menuconfig, faire la touche `MAJ+/` et rechercher le termes ou la variables.
+
+Puis éditer le fichier de configuration pour corriger l'erreur.
 
 ![image](https://github.com/user-attachments/assets/90fef997-10c6-4592-8987-c75c931f82f6)
 
+
+
+#### 3. Afficher le menu caché
+Taper sur la touche `Z`
 
 
 <br />
