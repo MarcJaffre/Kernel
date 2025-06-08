@@ -154,7 +154,7 @@ La commande suivant permet de mettre à jour la configuration. (Si nouvelle opti
 ```bash
 #############################################################################################################
 clear;
-yes "" | make oldconfig
+yes "" | make oldconfig | 1>/dev/null;
 #############################################################################################################
 ```
 
