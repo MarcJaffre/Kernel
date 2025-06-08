@@ -109,6 +109,7 @@ SUBLEVEL   = XX
 
 <br />
 
+### D. Compilation du Noyau
 ```bash
 ##############################################################################################################################
 # Compilation Journalisé #
@@ -130,8 +131,9 @@ tail -f Compilation;
 ##############################################################################################################################
 ```
 
-### Afficher le temps de compilation
+### Afficher les informations
 ```bash
 clear;
 watch -n 5 'ps -eo pid,comm,etime | grep make | head -n 1'
+watch -n 1 df -h /Data/
 ```
