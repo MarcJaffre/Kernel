@@ -61,7 +61,7 @@ echo "# Kernel d'Originel : $(make kernelversion)    #";
 ################
 
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.1 1>/dev/null; 
-echo "# Kernel : $(make kernelversion)";
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
