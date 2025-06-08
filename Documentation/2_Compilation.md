@@ -7,8 +7,9 @@ Il est nécessaire d'avoir 25 Go d'espace libre.
 
 ### A. Selection du Noyau (6.10.1)
 ``` bash
-clear;
 #############################################################################################################
+clear;
+
 KERNEL_SITE="https://cdn.kernel.org/pub/linux/kernel"
 KERNEL_VERSION="6"
 KERNEL_PATCHLEVEL="10"
