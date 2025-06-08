@@ -137,6 +137,7 @@ Si on souhaite `X` Core, il suffit de remplacer `$(nproc)` par le nombre de core
 ```
 
 ```bash
+clear;
 make -j$(nproc) ARCH=$(arch);
 #make -j$(nproc) -O3 -march=native -mtune=native > build.log 2>&1;
 ```
