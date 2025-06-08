@@ -29,7 +29,8 @@ PATCH_7="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 
 ### B. Téléchargement du Noyaux
 ```bash
-cd $HOME
+clear;
+cd $HOME;
 rm -r linux-${VERSION}* 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
 tar -xf linux-${KERNEL_RELEASE}.tar.xz;
