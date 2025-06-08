@@ -7,31 +7,114 @@ Il est nécessaire d'avoir 25 Go d'espace libre. ()
 
 ### A. Selection du Noyau ( [6.10.0](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tag/?h=v6.10) )
 ``` bash
-#############################################################################################################
+##############################################################################################################################
 clear;
-KERNEL_VERSION="6"
-KERNEL_PATCHLEVEL="10"
-KERNEL_SUBLEVEL="1"
+cd $HOME;
+rm -r kernel 2>/dev/null;
+mkdir kernel;
+cd kernel;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz  2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.1.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.2.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.3.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.4.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.5.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.6.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.7.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.8.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.9.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.10.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.11.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.12.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.13.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.14.xz   2>/dev/null;
+for i in $(ls *.xz); do unxz   $i 2>/dev/null; done;
+for i in $(ls *.tar);do tar xf $i 2>/dev/null; done;
+cd /root/kernel/linux-6.10;
 
-KERNEL_SITE="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/"
-KERNEL_PATCH="https://cdn.kernel.org/pub/linux/kernel"
+##############################################################################################################################
+# Patch 6.10.1 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.1 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 
-KERNEL_RELEASE="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.${KERNEL_SUBLEVEL}"
-PATCH_1="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.1"
-PATCH_2="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.2"
-PATCH_3="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.3"
-PATCH_4="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.4"
-PATCH_5="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.5"
-PATCH_6="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.6"
-PATCH_7="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.7"
-PATCH_8="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.8"
-PATCH_9="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.9"
-PATCH_10="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.10"
-PATCH_11="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.11"
-PATCH_12="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.12"
-PATCH_13="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.13"
-PATCH_14="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
-#############################################################################################################
+##############################################################################################################################
+# Patch 6.10.2 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.2 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 2/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.3 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.3 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 3/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.4 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.4 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 4/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.5 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.5 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 5/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.6 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.6 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 6/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.7 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.7 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 7/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.8 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.8 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 8/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.9 #
+################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.9 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 9/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.10 #
+#################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.10 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 10/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.11 #
+#################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.11 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 11/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.12 #
+#################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.12 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 12/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.13 #
+#################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.13 1>/dev/null; make kernelversion;
+sed -i -e "s/SUBLEVEL \= 13/SUBLEVEL \= 0/g" Makefile;
+
+##############################################################################################################################
+# Patch 6.10.14 #
+#################
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.14 1>/dev/null; make kernelversion;
+# sed -i -e "s/SUBLEVEL \= 14/SUBLEVEL \= 0/g" Makefile;
 ```
 
 <br />
