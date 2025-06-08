@@ -9,11 +9,13 @@ Il est nécessaire d'avoir 25 Go d'espace libre. ()
 ``` bash
 #############################################################################################################
 clear;
-
-KERNEL_SITE="https://cdn.kernel.org/pub/linux/kernel"
 KERNEL_VERSION="6"
 KERNEL_PATCHLEVEL="10"
 KERNEL_SUBLEVEL="1"
+
+KERNEL_SITE="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/snapshot/"
+KERNEL_PATCH="https://cdn.kernel.org/pub/linux/kernel"
+
 KERNEL_RELEASE="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.${KERNEL_SUBLEVEL}"
 PATCH_1="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.1"
 PATCH_2="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.2"
@@ -39,10 +41,10 @@ PATCH_14="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 #############################################################################################################
 clear;
 cd $HOME;
-rm -r linux-${KERNEL_VERSION}* 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
-tar -xf linux-${KERNEL_RELEASE}.tar.xz;
-cd linux-${KERNEL_RELEASE};
+rm -r linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}* 2>/dev/null;
+wget $KERNEL_SITE/linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.tar.gz 2>/dev/null;
+tar -xf linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.tar.gz;
+cd linux-${KERNEL_VERSION}.${KERNEL_PATCHLEVEL};
 #############################################################################################################
 ```
 
@@ -73,20 +75,20 @@ clear;
 #############################################################################################################
 clear;
 rm patch-* 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_8}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_9}.xz  2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_10}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_11}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_12}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_13}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_14}.xz 2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_8}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_9}.xz  2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_10}.xz 2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_11}.xz 2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_12}.xz 2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_13}.xz 2>/dev/null;
+wget $KERNEL_PATCH/v${KERNEL_VERSION}.x/patch-${PATCH_14}.xz 2>/dev/null;
 for i in $(ls *.xz); do unxz $i; done
 ls patch-* | wc -l
 #############################################################################################################
