@@ -110,10 +110,10 @@ SUBLEVEL   = XX
 
 <br />
 
-```
+```bash
 ##############################################################################################################################
-#
-# 8 Go + Multithreading
+# Compilation Journalisé #
+##########################
 echo "# ------------------------------------------------------"   > Compilation;
 echo "# Début de la compilation: $(date +'%d/%m/%y %H:%M')"      >> Compilation;
 echo "# Kernel: $(make kernelversion) "                          >> Compilation;
