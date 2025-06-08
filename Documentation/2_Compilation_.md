@@ -72,7 +72,7 @@ for i in $(ls ../patch-6.10.* | sort -V | xargs -n1 basename); do
   fi
   # --------------------------------------------------------
   echo "La valeur SUBLEVEL est sur $(make kernelversion)";
-  sleep 15;
+  sleep 1;
   # --------------------------------------------------------
 done
 
