@@ -116,6 +116,7 @@ SUBLEVEL   = XX
 # 8 Go + Multithreading
 echo "# ------------------------------------------------------"   > Compilation;
 echo "# Début de la compilation: $(date +'%d/%m/%y %H:%M')"      >> Compilation;
+echo "# Kernel: $(make kernelversion) "                          >> Compilation;
 echo "# ------------------------------------------------------"  >> Compilation;
 echo ""                                                          >> Compilation;
 echo ""                                                          >> Compilation;
