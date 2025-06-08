@@ -25,23 +25,32 @@ cd /Data/kernel/linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 
 ### Patch 6.0.1 (Problématique)
 ```bash
-
 ##############################################################################################################################
 # Patch 6.10.1 #
 ################
-#patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
-
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br />
 <br />
 
 ```bash
-
-
-
-#
 ##############################################################################################################################
 # Patch 6.10.2 #
 ################
