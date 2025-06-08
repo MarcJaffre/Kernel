@@ -98,8 +98,7 @@ yes "" | make oldconfig ARCH=$(arch)
 Touche Z permet d'afficher le menu caché.
 ```bash
 clear;
-
-# make menuconfig;
+make menuconfig;
 ```
 
 <br />
