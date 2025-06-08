@@ -45,6 +45,8 @@ head Makefile -n 4;
 
 <br />
 
+
+
 ### D. Patchs
 #### 1. Telechargement
 ```bash
@@ -57,7 +59,7 @@ wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz 2>/dev/null;
-unxz path-*.xz
+for i in $(ls *.xz); do unxz $i; done
 ```
 #### 2. Application
 ```bash
@@ -72,6 +74,10 @@ patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
 ```
 
 <br />
+
+
+
+
 
 ### E. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
