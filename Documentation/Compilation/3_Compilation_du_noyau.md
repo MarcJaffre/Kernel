@@ -131,9 +131,17 @@ tail -f Compilation;
 ##############################################################################################################################
 ```
 
-### Afficher les informations
+<br />
+
+### E. Afficher les informations
 ```bash
 clear;
 watch -n 5 'ps -eo pid,comm,etime | grep make | head -n 1'
 watch -n 1 df -h /Data/
 ```
+
+<br />
+
+### F. Temps de compilation
+45 minutes / 1 Heure
+
