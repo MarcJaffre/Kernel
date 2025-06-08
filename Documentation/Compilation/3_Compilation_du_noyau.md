@@ -2,8 +2,9 @@
 # <p align='center'> Compilation du noyaux </p>
 ------------------------------------------------------------------------------------------------------------------------------
 
-Aucun espace disponible sur le périphérique
-
+<p align='center'> 
+  Aucun espace disponible sur le périphérique ==> Stockage inférieur à 25 Go
+</p>
 
 ### A. Swap
 ```bash
