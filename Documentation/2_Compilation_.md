@@ -11,12 +11,20 @@ Il est nécessaire d'avoir 25 Go d'espace libre. ()
 # Dossier de Travail #
 ######################
 clear;
-cd $HOME; rm -r kernel 2>/dev/null; mkdir kernel; cd kernel;
-
+cd $HOME;
+rm -r kernel 2>/dev/null;
+mkdir kernel 2>/dev/null;
+cd kernel;
+#
 ##############################################################################################################################
-# Telechargements #
-###################
+# Telechargement du Kernel #
+############################
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz  2>/dev/null;
+#
+##############################################################################################################################
+# Telechargement des Patchs #
+#############################
+#
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.1.xz    2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.2.xz    2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.3.xz    2>/dev/null;
@@ -31,103 +39,123 @@ wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.11.xz   2>/dev/null
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.12.xz   2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.13.xz   2>/dev/null;
 wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.14.xz   2>/dev/null;
-
+#
 ##############################################################################################################################
 # Decompression #
 #################
 for i in $(ls *.xz); do unxz   $i 2>/dev/null; done;
 for i in $(ls *.tar);do tar xf $i 2>/dev/null; done;
 cd /root/kernel/linux-6.10;
+#
+##############################################################################################################################
+# Message #
+###########
+echo "#################################";
+echo "#       Patchage du Kernel      #";
+echo "#                               #";
+echo "# Kernel d'Originel : $(make kernelversion)    #";
+
 
 ##############################################################################################################################
 # Patch 6.10.1 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.1 1>/dev/null; make kernelversion;
-sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.1 1>/dev/null; 
+echo "# Kernel : $(make kernelversion)";
+sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
+#
 ##############################################################################################################################
 # Patch 6.10.2 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.2 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.2 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 2/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.3 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.3 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.3 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 3/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.4 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.4 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.4 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 4/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.5 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.5 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.5 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 5/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.6 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.6 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.6 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 6/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.7 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.7 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.7 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 7/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.8 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.8 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.8 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 8/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.9 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.9 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.9 1>/dev/null;
+echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 9/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.10 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.10 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.10 1>/dev/null;
+echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 10/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.11 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.11 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.11 1>/dev/null;
+echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 11/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.12 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.12 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.12 1>/dev/null;
+echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 12/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.13 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-6.10.13 1>/dev/null; make kernelversion;
+patch -p1 --batch --ignore-whitespace < ../patch-6.10.13 1>/dev/null;
+echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 13/SUBLEVEL \= 0/g" Makefile;
 
 ##############################################################################################################################
 # Patch 6.10.14 #
 #################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.14 1>/dev/null;
-sleep 5;
+echo "# Final : $(make kernelversion)               #";
+echo "#                               #";
+echo "#################################";
 
-##############################################################################################################################
-# Verification de la version #
-##############################
-clear;
-head Makefile -n 4 | grep -v "SPDX";
 ```
 
 ```
