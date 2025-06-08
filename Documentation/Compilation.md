@@ -14,6 +14,7 @@ rm -r linux-${VERSION}* 2>/dev/null
 wget https://cdn.kernel.org/pub/linux/kernel/v${BRANCHE}.x/linux-${VERSION}.tar.xz 2>/dev/null;
 tar -xf linux-${VERSION}.tar.xz;
 cd linux-${VERSION};
+
 ```
 
 <br />
@@ -22,6 +23,7 @@ cd linux-${VERSION};
 Touche Z permet d'afficher le menu caché
 ```bash
 clear;
+head Makefile -n 4;
 make menuconfig;
 ```
 
