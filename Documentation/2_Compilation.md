@@ -68,7 +68,7 @@ SUBLEVEL = 0
 
 
 ### D. Patchs
-Il faut partir de la partie Release 6.10.X du noyau. (6.10.1)
+Il est nécessaire de partir sur un kernel 6.X.0 puis de patché à une version supérieur.
 #### 1. Telechargement
 ```bash
 clear;
