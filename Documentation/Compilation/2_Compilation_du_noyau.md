@@ -58,6 +58,22 @@ grep -E "^CONFIG_ANDROID_BINDER_IPC|^CONFIG_BASE_SMALL|^CONFIG_FSCACHE|^CONFIG_V
 ###############
 # Nettoyage du noyaux
 make clean;
+prlimit --as=1073741824 make -j$(( $(nproc) - 2 )) 
+```
+
+<br />
+
+```
+VERSION    = 6
+PATCHLEVEL = 10
+SUBLEVEL   = XX
+```
+
+
+<br />
+
+```
+##############################################################################################################################
 #
 # 8 Go + Multithreading
 echo "# ------------------------------------------------------"   > Compilation;
@@ -76,8 +92,3 @@ tail -f Compilation;
 ##############################################################################################################################
 ```
 
-```
-VERSION = 6
-PATCHLEVEL = 10
-SUBLEVEL = 14
-```
