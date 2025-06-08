@@ -26,6 +26,9 @@ cd /Data/kernel/linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 <br />
 
 ### Patch 6.0.1 (Problématique)
+Le fichier contient du bash et du diff. Il faut séparer en deux fichiers. ( grep -E '^[0-9]+[acd][0-9]+|^< |^> |^---' patch-6.10.1)
+
+
 ```bash
 ##############################################################################################################################
 # Patch 6.10.1 #
