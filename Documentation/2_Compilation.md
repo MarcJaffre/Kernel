@@ -3,7 +3,7 @@
 
 --------------------------------------------------------------------------------------
 ## I. Construction du Noyau
-Il est nécessaire d'avoir 25 Go d'espace libre.
+Il est nécessaire d'avoir 25 Go d'espace libre. ([ici](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/refs/tags))
 
 ### A. Selection du Noyau (6.10.1)
 ``` bash
