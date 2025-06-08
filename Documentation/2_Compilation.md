@@ -36,6 +36,7 @@ PATCH_14="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 ### B. Téléchargement du Noyaux
 ```bash
 #############################################################################################################
+clear;
 cd $HOME;
 rm -r linux-${KERNEL_VERSION}* 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
@@ -69,14 +70,14 @@ Il faut partir de la partie Release 6.10.X du noyau. (6.10.1)
 clear;
 #############################################################################################################
 rm patch-* 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_8}.xz 2>/dev/null;
-wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_9}.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz  2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz  2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz  2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz  2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz  2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz  2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_8}.xz  2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_9}.xz  2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_10}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_11}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_12}.xz 2>/dev/null;
@@ -91,13 +92,14 @@ La commande permet de voir la version du dernier patch appliqué `grep "SUBLEVEL
 ```bash
 clear;
 #############################################################################################################
-patch -p1 --batch < ./patch-${PATCH_3} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_4} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_5} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_6} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_8} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_9} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_2}  2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_3}  2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_4}  2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_5}  2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_6}  2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_7}  2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_8}  2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_9}  2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_10} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_11} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_12} 2>/dev/null;
@@ -105,8 +107,6 @@ patch -p1 --batch < ./patch-${PATCH_13} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_14} 2>/dev/null;
 #############################################################################################################
 ```
-
-
 
 
 <br />
