@@ -62,7 +62,7 @@ cd linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 # Patchage #
 ############
 clear;
-for i in $(ls ../patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.* | sort -V | xargs -n1 basename); do
+for i in $(ls ../patch-{KERNEL_MAJOR}.${KERNEL_MINOR}.* | sort -V | xargs -n1 basename); do
   # --------------------------------------------------------
   echo "$i"
   patch -p1 --batch --ignore-whitespace < ../$i 1>/dev/null
@@ -80,46 +80,69 @@ done
 
 ##############################################################################################################################
 # Definir le SUBLEVEL sur le dernier patch #
-# LAST_PATCH=$(ls ../patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.* | sort -V | xargs -n1 basename | tail -n 1 | cut -d "." -f 3)
+# LAST_PATCH=$(ls ../patch-{KERNEL_MAJOR}.${KERNEL_MINOR}.* | sort -V | xargs -n1 basename | tail -n 1 | cut -d "." -f 3)
 # sed -i -e "s/SUBLEVEL = 0/SUBLEVEL = $LAST_PATCH/g" Makefile
 ##############################################################################################################################
 ```
 
+
+
+
+
+
+
+
 ```bash
 ##############################################################################################################################
-# Nettouage de la console #
-###########################
+# Nettoyage console #
+#####################
 clear;
-
-##############################################################################################################################
-# Telechargement #
-##################
-cd /Data;
-rm -r kernel 2>/dev/null;
-mkdir kernel;
-cd kernel;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz  2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.1.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.2.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.3.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.4.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.5.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.6.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.7.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.8.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.9.xz    2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.10.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.11.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.12.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.13.xz   2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.14.xz   2>/dev/null;
 #
 ##############################################################################################################################
-# Extraction #
-##############
-for i in $(ls *.xz); do unxz   $i 2>/dev/null; done;
-for i in $(ls *.tar);do tar xf $i 2>/dev/null; done;
-cd /Data/kernel/linux-{KERNEL_MAJOR}.{KERNEL_MINOR};
+# Variables d-environnement #
+#############################
+KERNEL_MAJOR="6"
+KERNEL_MINOR="10"
+URL="https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_MAJOR}.x/"
+URL_KERNEL="$URL/linux-${KERNEL_MAJOR}.${KERNEL_MINOR}.tar.xz"
+#
+##############################################################################################################################
+# Dossier de Travail #
+######################
+cd /Data;
+rm -r kernel 2>/dev/null;
+mkdir kernel 2>/dev/null;
+cd kernel;
+#
+##############################################################################################################################
+# Telechargement du Kernel #
+############################
+wget ${URL_KERNEL} 2>/dev/null;
+#
+##############################################################################################################################
+# Telechargement des Patchs #
+#############################
+for i in $(curl -s "$URL" | grep -oP "patch-${KERNEL_MAJOR}\.${KERNEL_MINOR}\.\d+\.xz" | grep -v '\.xz\.1$'); do
+  wget "${URL}${i}" 2>/dev/null;
+done
+#
+##############################################################################################################################
+# Decompression #
+#################
+# --------------------------------------------- #
+for i in $(ls *.xz | grep -v '\.xz\.1$'); do
+  unxz $i 2>/dev/null;
+done;
+# --------------------------------------------- #
+for i in $(ls *.tar); do
+  tar xf $i 2>/dev/null;
+done;
+# --------------------------------------------- #
+for i in $(ls *.xz.1); do
+  rm $i;
+done;
+# --------------------------------------------- #
+cd linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 #
 ##############################################################################################################################
 # Message #
@@ -132,7 +155,7 @@ echo "# Kernel d'Originel : $(make kernelversion)    #";
 echo "#                               #";
 echo "# Patch : $(make kernelversion)                #";
 echo "#                               #";
-echo "# Final : $(make kernelversion)               #";
+echo "# Final : $(make kernelversion)                #";
 echo "#                               #";
 echo "#################################";
 #
@@ -140,88 +163,92 @@ echo "#################################";
 ##############################################################################################################################
 # Patch 6.10.1 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.1 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.2 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.2 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.2 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 2/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.3 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.3 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.3 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 3/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.4 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.4 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.4 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 4/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.5 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.5 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.5 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 5/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.6 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.6 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.6 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 6/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.7 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.7 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.7 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 7/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.8 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.8 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.8 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 8/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.9 #
 ################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.9 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.9 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 9/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.10 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.10 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.10 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 10/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.11 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.11 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.11 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 11/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.12 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.12 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.12 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 12/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.13 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.13 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.13 1>/dev/null;
 sed -i -e "s/SUBLEVEL \= 13/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.14 #
 #################
-patch -p1 --batch --ignore-whitespace < ../patch-patch-{KERNEL_MAJOR}.{KERNEL_MINOR}.14 1>/dev/null; 
+patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.14 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 14/SUBLEVEL \= 0/g" Makefile;
-#
-#
+##############################################################################################################################
+
+
+
+
+
 ##############################################################################################################################
 # Configuration du Noyau #
 ##########################
