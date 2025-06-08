@@ -8,10 +8,13 @@ Il est nécessaire d'avoir 25 Go d'espace libre.
 ### A. Selection du Noyau (6.10.7)
 ``` bash
 clear;
+#############################################################################################################
+KERNEL_SITE="https://cdn.kernel.org/pub/linux/kernel"
 KERNEL_VERSION="6"
 KERNEL_PATCHLEVEL="10"
 KERNEL_SUBLEVEL="7"
 KERNEL_RELEASE="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.${KERNEL_SUBLEVEL}"
+
 PATCH_1="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.8"
 PATCH_2="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.9"
 PATCH_3="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.10"
@@ -19,40 +22,40 @@ PATCH_4="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.11"
 PATCH_5="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.12"
 PATCH_6="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.13"
 PATCH_7="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
+#############################################################################################################
 ```
 
 ### B. Téléchargement du Noyaux
 ```bash
 cd $HOME
 rm -r linux-${VERSION}* 2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
 tar -xf linux-${KERNEL_RELEASE}.tar.xz;
 cd linux-${KERNEL_RELEASE};
-
 ```
 
-### C. Générer la configuration
-La commande suivante permet de récupérer la configuration de son noyau
-```bash
-clear;
-cp /boot/config-$(uname -r) .config;
-```
-
-### D. Vérifier Release
+### C. Vérifier Release
 ```bash
 head Makefile -n 4;
 ```
-### E. Patch
+
+### D. Patchs
+#### 1. Telechargement
 ```bash
 clear;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz;
+rm patch-* 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz 2>/dev/null;
+wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz 2>/dev/null;
 unxz patch-*.xz
+```
+#### 2. Application
+```bash
+clear;
 patch -p1 --batch < ./patch-${PATCH_1};
 patch -p1 --batch < ./patch-${PATCH_2};
 patch -p1 --batch < ./patch-${PATCH_3};
@@ -62,10 +65,12 @@ patch -p1 --batch < ./patch-${PATCH_6};
 patch -p1 --batch < ./patch-${PATCH_7};
 ```
 
-
-
-
-
+### E. Récupérer sa configuration du Noyau
+La commande suivante permet de récupérer la configuration de son noyau
+```bash
+clear;
+cp /boot/config-$(uname -r) .config;
+```
 
 
 
