@@ -213,7 +213,7 @@ SUBLEVEL = 14
 <br />
 
 ### B. Récupérer sa configuration du Noyau
-La commande suivante permet de récupérer la configuration de son noyau
+La commande suivante permet de récupérer la configuration de son noyau.
 ```bash
 #############################################################################################################
 clear;
@@ -229,28 +229,27 @@ La commande suivant permet de mettre à jour la configuration. (Si nouvelle opti
 #############################################################################################################
 clear;
 yes "" | make oldconfig 1>/dev/null;
-nano .config;
 #############################################################################################################
 ```
 
-```
-CONFIG_BASE_SMALL=y
-VFIO_VIRQFD=y
-CONFIG_ANDROID_BINDER_IPC=n
-CONFIG_FSCACHE_DEBUG=n
-```
 
 
 <br />
 
 ### X. Menu de configuration
-Touche Z permet d'afficher le menu caché.
+#### 1. Ouvrir le menu
 ```bash
 #############################################################################################################
 clear;
 make menuconfig;
 #############################################################################################################
 ```
+#### 3. Afficher le menu caché
+Taper sur la touche `Z`
+#### 4. Rechercher
+Pour trouver un paramètre dans l'interface Menuconfig, faire la touche `MAJ+/` et rechercher le termes ou la variables.
+
+![image](https://github.com/user-attachments/assets/90fef997-10c6-4592-8987-c75c931f82f6)
 
 
 
