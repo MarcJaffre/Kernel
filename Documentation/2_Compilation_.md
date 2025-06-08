@@ -56,28 +56,31 @@ for i in $(ls *.xz.1); do
   rm $i;
 done;
 # --------------------------------------------- #
-#
+cd linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
+
 ##############################################################################################################################
 # Patchage #
 ############
-cd ./linux-$[KERNEL_MAJOR}.{KERNEL_MINOR};
-
-clear;
-for i in $(ls ../patch-6.10.* | sort -V | cut -d "." -f 3-5); do
- patch -p1 --batch --ignore-whitespace < ..$i
-  sleep 15
+for i in $(ls ../patch-6.10.* | sort -V | xargs -n1 basename); do
+  # --------------------------------------------------------
+  echo "$i"
+  patch -p1 --batch --ignore-whitespace < ../$i 1>/dev/null
+  # --------------------------------------------------------
+  PATCH=$(echo "$i" | cut -d "." -f 3)
+  if [ -n "$PATCH" ]; then
+    sed -i -e "s/SUBLEVEL = $PATCH/SUBLEVEL = 0/g" Makefile;
+  fi
+  # --------------------------------------------------------
+  echo "La valeur SUBLEVEL est sur $(make kernelversion)";
+  sleep 15;
+  # --------------------------------------------------------
 done
 
-ls ../patch-6.10.* | sort -V | cut -c 13-20 | cut -d "." -f 2
+# Definir le SUBLEVEL sur le dernier patch (Visuel)
+LAST_PATCH=$(ls ../patch-6.10.* | sort -V | xargs -n1 basename | tail -n 1 | cut -d "." -f 3)
+sed -i -e "s/SUBLEVEL = 0/SUBLEVEL = $LAST_PATCH/g" Makefile
 
-
-
-
-
-
-
-
-
+##############################################################################################################################
 
 
 ##############################################################################################################################
