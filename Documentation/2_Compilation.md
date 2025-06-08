@@ -50,6 +50,7 @@ cd linux-${KERNEL_RELEASE};
 ### C. Vérifier Release
 ```bash
 #############################################################################################################
+clear;
 head Makefile -n 4;
 #############################################################################################################
 ```
@@ -69,6 +70,7 @@ Il faut partir de la partie Release 6.10.X du noyau. (6.10.1)
 ```bash
 clear;
 #############################################################################################################
+clear;
 rm patch-* 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz  2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz  2>/dev/null;
@@ -90,8 +92,8 @@ ls patch-* | wc -l
 #### 2. Application du Patch
 La commande permet de voir la version du dernier patch appliqué `grep "SUBLEVEL =" Makefile;`.
 ```bash
-clear;
 #############################################################################################################
+clear;
 patch -p1 --batch < ./patch-${PATCH_2}  2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_3}  2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_4}  2>/dev/null;
@@ -114,8 +116,10 @@ patch -p1 --batch < ./patch-${PATCH_14} 2>/dev/null;
 ### E. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
 ```bash
+#############################################################################################################
 clear;
 cp /boot/config-$(uname -r) .config;
+#############################################################################################################
 ```
 
 <br />
@@ -123,6 +127,7 @@ cp /boot/config-$(uname -r) .config;
 ### F. Mise à jour de la configuration
 La commande suivant permet de mettre à jour la configuration. (Si nouvelle option, question)
 ```bash
+#############################################################################################################
 clear;
 yes "" | make oldconfig ARCH=$(arch)
 ```
@@ -132,6 +137,7 @@ yes "" | make oldconfig ARCH=$(arch)
 ### X. Menu de configuration
 Touche Z permet d'afficher le menu caché.
 ```bash
+#############################################################################################################
 clear;
 make menuconfig;
 ```
@@ -149,40 +155,51 @@ Si on souhaite `X` Core, il suffit de remplacer `$(nproc)` par le nombre de core
 ```
 
 ```bash
+#############################################################################################################
 clear;
 make -j$(nproc) ARCH=$(arch);
 #make -j$(nproc) -O3 -march=native -mtune=native > build.log 2>&1;
+#############################################################################################################
 ```
 
 #### 2. CheckPoint
 Permet la reprise de la compilation
 ```bash
+#############################################################################################################
 clear;
 make -j$(nproc) -O3 -march=native -mtune=native > build.log 2>&1 checkpoint;
 make -j$(nproc) -O3 -march=native -mtune=native > build.log 2>&1 checkpoint-restore;
+#############################################################################################################
 ``` 
 
 <br />
 
 ### X. Installer les modules
 ```bash
+#############################################################################################################
+clear;
 make modules_install;
+#############################################################################################################
 ```
 
 <br />
 
 ### X. Déployer le Noyau
 ```bash
+#############################################################################################################
 clear;
 SOURCE="/Data/linux-*/arch/x86_64/boot"
 KERNEL_NAME="vmlinuz-marc"
 cp $SOURCE/bzImage /boot/$KERNEL_NAME;
+#############################################################################################################
 ```
 
 ### X. Mettre à jour grub
 ```bash
+#############################################################################################################
 clear;
 update-grub;
+#############################################################################################################
 ```
 
 
