@@ -12,16 +12,23 @@ KERNEL_VERSION="6"
 KERNEL_PATCHLEVEL="10"
 KERNEL_SUBLEVEL="7"
 KERNEL_RELEASE="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.${KERNEL_SUBLEVEL}"
+PATCH_1="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.8"
+PATCH_2="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.9"
+PATCH_3="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.10"
+PATCH_4="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.11"
+PATCH_5="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.12"
+PATCH_6="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.13"
+PATCH_7="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 ```
 
 ### B. Téléchargement du Noyaux
 ```bash
-clear;
 cd $HOME
 rm -r linux-${VERSION}* 2>/dev/null;
-wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz;
 tar -xf linux-${KERNEL_RELEASE}.tar.xz;
 cd linux-${KERNEL_RELEASE};
+cp /boot/config-$(uname -r) .config;
 head Makefile -n 4;
 ```
 
@@ -36,9 +43,22 @@ cp /boot/config-$(uname -r) .config;
 ### D. Patch
 ```bash
 clear;
-wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-${KERNEL_RELEASE}.xz
-unxz patch-${KERNEL_RELEASE}.xz
-patch -p1 < ./patch-${KERNEL_RELEASE}
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_1}.xz;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_2}.xz;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_3}.xz;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz;
+wget https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz;
+unxz patch-*.xz
+patch -p1 < ./patch-${PATCH_1}
+patch -p1 < ./patch-${PATCH_2}
+patch -p1 < ./patch-${PATCH_3}
+patch -p1 < ./patch-${PATCH_4}
+patch -p1 < ./patch-${PATCH_5}
+patch -p1 < ./patch-${PATCH_6}
+patch -p1 < ./patch-${PATCH_7}
+
 ```
 
 
