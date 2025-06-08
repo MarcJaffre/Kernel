@@ -81,9 +81,8 @@ patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
 ### E. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
 ```bash
-clear;
-yes "" | make oldconfig ARCH=$(arch)
-cp /boot/config-$(uname -r) .config;
+#clear;
+#cp /boot/config-$(uname -r) .config;
 ```
 
 <br />
@@ -94,7 +93,8 @@ cp /boot/config-$(uname -r) .config;
 Touche Z permet d'afficher le menu caché
 ```bash
 clear;
-make menuconfig;
+yes "" | make oldconfig ARCH=$(arch)
+#make menuconfig;
 ```
 
 <br />
@@ -110,8 +110,8 @@ Si on souhaite `X` Core, il suffit de remplacer `$(nproc)` par le nombre de core
 ```
 
 ```bash
-#make -j$(nproc) ARCH=$(arch);
-make -j$(nproc) -O3 -march=native -mtune=native > build.log 2>&1;
+make -j$(nproc) ARCH=$(arch);
+#make -j$(nproc) -O3 -march=native -mtune=native > build.log 2>&1;
 ```
 
 #### 2. CheckPoint
