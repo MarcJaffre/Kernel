@@ -34,10 +34,16 @@ tar -xf linux-${KERNEL_RELEASE}.tar.xz;
 cd linux-${KERNEL_RELEASE};
 ```
 
+<br />
+
+
+
 ### C. Vérifier Release
 ```bash
 head Makefile -n 4;
 ```
+
+<br />
 
 ### D. Patchs
 #### 1. Telechargement
@@ -56,14 +62,17 @@ unxz patch-*.xz
 #### 2. Application
 ```bash
 clear;
-patch -p1 --batch < ./patch-${PATCH_1};
-patch -p1 --batch < ./patch-${PATCH_2};
-patch -p1 --batch < ./patch-${PATCH_3};
-patch -p1 --batch < ./patch-${PATCH_4};
-patch -p1 --batch < ./patch-${PATCH_5};
-patch -p1 --batch < ./patch-${PATCH_6};
-patch -p1 --batch < ./patch-${PATCH_7};
+patch -p1 --batch < ./patch-${PATCH_1} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_2} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_3} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_4} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_5} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_6} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
 ```
+
+<br />
+
 
 ### E. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
@@ -71,13 +80,6 @@ La commande suivante permet de récupérer la configuration de son noyau
 clear;
 cp /boot/config-$(uname -r) .config;
 ```
-
-
-
-
-
-
-
 
 <br />
 
