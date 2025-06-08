@@ -3,9 +3,9 @@
 
 --------------------------------------------------------------------------------------
 ## I. Construction du Noyau
-Il est nécessaire d'avoir 25 Go d'espace libre. ([ici](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/refs/tags))
+Il est nécessaire d'avoir 25 Go d'espace libre. ()
 
-### A. Selection du Noyau (6.10.1)
+### A. Selection du Noyau ( [.10.1](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tag/?h=v6.10) )
 ``` bash
 #############################################################################################################
 clear;
