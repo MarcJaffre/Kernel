@@ -226,6 +226,14 @@ yes "" | make oldconfig 1>/dev/null;
 #############################################################################################################
 ```
 
+```
+CONFIG_BASE_SMALL=y
+VFIO_VIRQFD=y
+CONFIG_ANDROID_BINDER_IPC=n
+CONFIG_FSCACHE_DEBUG=n
+```
+
+
 <br />
 
 ### X. Menu de configuration
@@ -236,6 +244,8 @@ clear;
 make menuconfig;
 #############################################################################################################
 ```
+
+
 
 <br />
 
