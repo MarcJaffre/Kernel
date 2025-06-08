@@ -91,13 +91,18 @@ La commande permet de voir la version du dernier patch appliqué `grep "SUBLEVEL
 ```bash
 clear;
 #############################################################################################################
-patch -p1 --batch < ./patch-${PATCH_1} 2>/dev/null;
-patch -p1 --batch < ./patch-${PATCH_2} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_3} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_4} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_5} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_6} 2>/dev/null;
 patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_8} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_9} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_10} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_11} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_12} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_13} 2>/dev/null;
+patch -p1 --batch < ./patch-${PATCH_14} 2>/dev/null;
 #############################################################################################################
 ```
 
