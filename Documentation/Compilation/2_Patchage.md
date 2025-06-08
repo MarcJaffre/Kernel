@@ -28,6 +28,7 @@ cd /Data/kernel/linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 ##############################################################################################################################
 # Patch 6.10.1 #
 ################
+clear;
 patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 ```
@@ -133,20 +134,19 @@ patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}
 ##############################################################################################################################
 # Message #
 ###########
-echo "#################################";
-echo "#       Patchage du Kernel      #";
-echo "#################################";
-echo "#                               #";
-echo "# Kernel d'Originel : $(make kernelversion)    #";
-echo "#                               #";
-#echo "# Patch : $(make kernelversion)                #";
-echo "#                               #";
-echo "# Final : $(make kernelversion)               #";
-echo "#                               #";
-echo "#################################";
-echo "";
+#echo "#################################";
+#echo "#       Patchage du Kernel      #";
+#echo "#################################";
+#echo "#                               #";
+#echo "# Kernel d'Originel : $(make kernelversion)    #";
+#echo "#                               #";
+##echo "# Patch : $(make kernelversion)                #";
+#echo "#                               #";
+#echo "# Final : $(make kernelversion)               #";
+#echo "#                               #";
+#echo "#################################";
+#echo "";
 ##############################################################################################################################
-
 
 ##############################################################################################################################
 # Amelioration
