@@ -27,8 +27,6 @@ PATCH_7="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 
 <br />
 
-
-
 ### B. Téléchargement du Noyaux
 ```bash
 cd $HOME
@@ -39,8 +37,6 @@ cd linux-${KERNEL_RELEASE};
 ```
 
 <br />
-
-
 
 ### C. Vérifier Release
 ```bash
@@ -61,7 +57,7 @@ wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_4}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_5}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_6}.xz 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/patch-${PATCH_7}.xz 2>/dev/null;
-unxz patch-*.xz
+unxz path-*.xz
 ```
 #### 2. Application
 ```bash
@@ -76,7 +72,6 @@ patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
 ```
 
 <br />
-
 
 ### E. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
