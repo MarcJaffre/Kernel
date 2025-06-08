@@ -75,26 +75,30 @@ patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
 
 <br />
 
-
-
-
 ### E. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
 ```bash
-#clear;
-#cp /boot/config-$(uname -r) .config;
+clear;
+cp /boot/config-$(uname -r) .config;
 ```
 
 <br />
 
-
-
-### X. Menu de configuration
-Touche Z permet d'afficher le menu caché
+### F. Mise à jour de la configuration
+La commande suivant permet de mettre à jour la configuration. (Si nouvelle option, question)
 ```bash
 clear;
 yes "" | make oldconfig ARCH=$(arch)
-#make menuconfig;
+```
+
+<br />
+
+### X. Menu de configuration
+Touche Z permet d'afficher le menu caché.
+```bash
+clear;
+
+# make menuconfig;
 ```
 
 <br />
@@ -144,3 +148,5 @@ cp $SOURCE/bzImage /boot/$KERNEL_NAME;
 clear;
 update-grub;
 ```
+
+
