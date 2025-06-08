@@ -78,7 +78,6 @@ for i in $(ls ../patch-6.10.* | sort -V | xargs -n1 basename); do
   # --------------------------------------------------------
 done
 
-
 ##############################################################################################################################
 # Definir le SUBLEVEL sur le dernier patch #
 # LAST_PATCH=$(ls ../patch-6.10.* | sort -V | xargs -n1 basename | tail -n 1 | cut -d "." -f 3)
@@ -86,10 +85,42 @@ done
 ##############################################################################################################################
 ```
 
-
-
-
 ```bash
+##############################################################################################################################
+# Nettouage de la console #
+###########################
+clear;
+
+##############################################################################################################################
+# Telechargement #
+##################
+cd /Data;
+rm -r kernel 2>/dev/null;
+mkdir kernel;
+cd kernel;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz  2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.1.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.2.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.3.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.4.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.5.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.6.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.7.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.8.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.9.xz    2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.10.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.11.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.12.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.13.xz   2>/dev/null;
+wget https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.10.14.xz   2>/dev/null;
+#
+##############################################################################################################################
+# Extraction #
+##############
+for i in $(ls *.xz); do unxz   $i 2>/dev/null; done;
+for i in $(ls *.tar);do tar xf $i 2>/dev/null; done;
+cd /Data/kernel/linux-6.10;
+#
 ##############################################################################################################################
 # Message #
 ###########
@@ -99,109 +130,141 @@ echo "#################################";
 echo "#                               #";
 echo "# Kernel d'Originel : $(make kernelversion)    #";
 echo "#                               #";
-for i in $(ls patch*); do
-echo $i
-done
-
+echo "# Patch : $(make kernelversion)                #";
+echo "#                               #";
+echo "# Final : $(make kernelversion)               #";
+echo "#                               #";
+echo "#################################";
+#
+#
 ##############################################################################################################################
 # Patch 6.10.1 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.1 1>/dev/null; 
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.2 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.2 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 2/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.3 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.3 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 3/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.4 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.4 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 4/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.5 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.5 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 5/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.6 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.6 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 6/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.7 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.7 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 7/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.8 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.8 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 8/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.9 #
 ################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.9 1>/dev/null;
-echo "# Patch : $(make kernelversion)                #";
 sed -i -e "s/SUBLEVEL \= 9/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.10 #
 #################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.10 1>/dev/null;
-echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 10/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.11 #
 #################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.11 1>/dev/null;
-echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 11/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.12 #
 #################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.12 1>/dev/null;
-echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 12/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.13 #
 #################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.13 1>/dev/null;
-echo "# Patch : $(make kernelversion)               #";
 sed -i -e "s/SUBLEVEL \= 13/SUBLEVEL \= 0/g" Makefile;
-
+#
 ##############################################################################################################################
 # Patch 6.10.14 #
 #################
 patch -p1 --batch --ignore-whitespace < ../patch-6.10.14 1>/dev/null;
-echo "#                               #";
-echo "# Final : $(make kernelversion)               #";
-echo "#                               #";
-echo "#################################";
+#sed -i -e "s/SUBLEVEL \= 14/SUBLEVEL \= 0/g" Makefile;
+#
+#
+##############################################################################################################################
+# Configuration du Noyau #
+##########################
+# Configuration actuelle du Noyau
+rm .config 2>/dev/null; cp /boot/config-$(uname -r) .config;
+#
+# Fix Erreur
+sed -i -e "s/^CONFIG_ANDROID_BINDER_IPC\=m/CONFIG_ANDROID_BINDER_IPC\=n/g" .config;
+sed -i -e "s/^CONFIG_BASE_SMALL\=0/CONFIG_BASE_SMALL\=n/g"                 .config;
+sed -i -e "s/^CONFIG_FSCACHE\=m/CONFIG_FSCACHE\=y/g"                       .config;
+sed -i -e "s/^CONFIG_VFIO_VIRQFD\=m/CONFIG_VFIO_VIRQFD\=y/g"               .config;
+#
+##############################################################################################################################
+# Mettre à jour la configuration avec oldconfig #
+#################################################
+#
+# Pour intégrer les nouvelles options du noyau tout en conservant tes choix précédents.
+yes "" | make oldconfig 1>/dev/null;
+#
+# Verification
+grep -E "^CONFIG_ANDROID_BINDER_IPC|^CONFIG_BASE_SMALL|^CONFIG_FSCACHE|^CONFIG_VFIO_VIRQFD" .config |sort -V
+#
+##############################################################################################################################
+# Compilation #
+###############
+# Nettoyage du noyaux
+make clean;
+#
+# 8 Go + Multithreading
+echo "# ------------------------------------------------------"   > Compilation;
+echo "# Début de la compilation: $(date +'%d/%m/%y %H:%M')"      >> Compilation;
+echo "# ------------------------------------------------------"  >> Compilation;
+echo ""                                                          >> Compilation;
+echo ""                                                          >> Compilation;
+prlimit --as=1073741824 make -j$(( $(nproc) - 2 ))               >> Compilation;
+echo ""                                                          >> Compilation;
+echo ""                                                          >> Compilation;
+echo "# ------------------------------------------------------"  >> Compilation;
+echo "# Fin de la compilation: $(date +'%d/%m/%y %H:%M')"        >> Compilation;
+echo "# ------------------------------------------------------"  >> Compilation;
+tail -f Compilation;
+
+##############################################################################################################################
 ```
 
 ```
