@@ -37,7 +37,7 @@ PATCH_14="${KERNEL_VERSION}.${KERNEL_PATCHLEVEL}.14"
 ```bash
 #############################################################################################################
 cd $HOME;
-rm -r linux-${VERSION}* 2>/dev/null;
+rm -r linux-${KERNEL_VERSION}* 2>/dev/null;
 wget $KERNEL_SITE/v${KERNEL_VERSION}.x/linux-${KERNEL_RELEASE}.tar.xz 2>/dev/null;
 tar -xf linux-${KERNEL_RELEASE}.tar.xz;
 cd linux-${KERNEL_RELEASE};
