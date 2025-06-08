@@ -37,26 +37,32 @@ done
 
 <br />
 
+
 ### Appliquer Patch
 ```bash
 ##############################################################################################################################
+# Nettoyage console #
+#####################
+clear;
+#
+##############################################################################################################################
 # Patch 6.10.1 #
 ################
-clear;
-# 
+# Erreurs de compilation avec certains modules
 patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 #
-
 ##############################################################################################################################
 # Patch 6.10.2 #
 ################
+# 	Problèmes de performance et de compilation persistants
 #patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.2 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 2/SUBLEVEL \= 0/g" Makefile;
 #
 ##############################################################################################################################
 # Patch 6.10.3 #
 ################
+# Pas de résolution des bugs de compilation/performance signalés
 #patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.3 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 3/SUBLEVEL \= 0/g" Makefile;
 #
