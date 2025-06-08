@@ -51,6 +51,7 @@ Pour Debian 12 (Bookworm), voici la liste de paquets mise à jour pour compiler 
 clear;
 apt-get update                  1>/dev/null;
 apt install -y build-essential  1>/dev/null;
+apt install -y curl             1>/dev/null;
 apt install -y fakeroot         1>/dev/null;
 apt install -y git              1>/dev/null;
 
@@ -67,7 +68,7 @@ apt install -y libieee1284-3-dev 1>/dev/null;
 apt install -y liblz4-dev        1>/dev/null;
 apt install -y liblzma-dev       1>/dev/null;
 apt install -y libncurses-dev    1>/dev/null;
-#apt install -y libqt4-dev        1>/dev/null;
+#apt install -y libqt4-dev       1>/dev/null;
 apt install -y libpci-dev        1>/dev/null;
 apt install -y libssl-dev        1>/dev/null;
 apt install -y libusb-dev        1>/dev/null;
