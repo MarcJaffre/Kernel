@@ -78,11 +78,11 @@ patch -p1 --batch < ./patch-${PATCH_7} 2>/dev/null;
 
 
 
-
 ### E. Récupérer sa configuration du Noyau
 La commande suivante permet de récupérer la configuration de son noyau
 ```bash
 clear;
+yes "" | make oldconfig ARCH=$(arch)
 cp /boot/config-$(uname -r) .config;
 ```
 
