@@ -25,10 +25,19 @@ cd /Data/kernel/linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 
 <br />
 
-### Patch 6.0.1 (Problématique)
-Le fichier contient du bash et du diff. Il faut séparer en deux fichiers. `grep -E '^[0-9]+[acd][0-9]+|^< |^> |^---' ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1` 
+### Simuler le patch
+```bash
+ clear;
+for i in $(ls ../patch-* | xargs -n 1 basename | grep -E "^patch-${KERNEL_MAJOR}+\.${KERNEL_MINOR}+\.[0-9]+$" | sort -V); do
+  clear;
+  patch --dry-run -p1 --batch --ignore-whitespace < ../$i
+  sleep 30;
+done
+```
 
+<br />
 
+### Appliquer Patch
 ```bash
 ##############################################################################################################################
 # Patch 6.10.1 #
@@ -38,14 +47,7 @@ clear;
 patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.1 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 1/SUBLEVEL \= 0/g" Makefile;
 #
-##############################################################################################################################```
-``` 
 
-
-<br />
-
-
-```bash
 ##############################################################################################################################
 # Patch 6.10.2 #
 ################
