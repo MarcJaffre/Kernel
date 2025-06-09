@@ -74,6 +74,8 @@ sed -i -e "s/^CONFIG_VFIO_VIRQFD\=m/CONFIG_VFIO_VIRQFD\=y/g"               .conf
 # Pour intégrer les nouvelles options du noyau tout en conservant tes choix précédents.
 yes "" | make oldconfig 1>/dev/null;
 #
+# make defconfig
+#
 # Verification
 grep -E "^CONFIG_ANDROID_BINDER_IPC|^CONFIG_BASE_SMALL|^CONFIG_FSCACHE|^CONFIG_VFIO_VIRQFD" .config |sort -V
 #
