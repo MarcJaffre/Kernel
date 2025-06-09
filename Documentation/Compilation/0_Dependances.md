@@ -2,16 +2,16 @@
 ### A. Installer les paquets
 ```bash
 clear;
-apt-get update                  1>/dev/null;
-apt install -y build-essential  1>/dev/null;
-apt install -y curl             1>/dev/null;
-apt install -y fakeroot         1>/dev/null;
-apt install -y git              1>/dev/null;
+apt-get update                   1>/dev/null;
+apt install -y build-essential   1>/dev/null;
+apt install -y curl              1>/dev/null;
+apt install -y fakeroot          1>/dev/null;
+apt install -y git               1>/dev/null;
 
-apt install -y libbpf-dev       1>/dev/null;
-apt install -y libelf-dev       1>/dev/null;
-apt install -y libcrypto++-dev  1>/dev/null;
-apt install -y libdevmapper-dev 1>/dev/null;
+apt install -y libbpf-dev        1>/dev/null;
+apt install -y libelf-dev        1>/dev/null;
+apt install -y libcrypto++-dev   1>/dev/null;
+apt install -y libdevmapper-dev  1>/dev/null;
 apt install -y libgcc-$(gcc -v 2>&1 | grep '^gcc version' | cut -d' ' -f3 | cut -d "." -f 1)-dev 1>/dev/null;
 
 apt install -y libglade2-dev     1>/dev/null;
