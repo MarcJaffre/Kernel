@@ -156,7 +156,7 @@ patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}
 #echo "#                               #";
 #echo "# Kernel d'Originel : $(make kernelversion)    #";
 #echo "#                               #";
-##echo "# Patch : $(make kernelversion)                #";
+#echo "# Patch : $(make kernelversion)                #";
 #echo "#                               #";
 #echo "# Final : $(make kernelversion)               #";
 #echo "#                               #";
