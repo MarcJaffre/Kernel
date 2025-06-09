@@ -80,4 +80,7 @@ cd linux-source-*
 ```
 https://www.siberoloji.com/how-to-compile-the-linux-kernel-from-source-on-debian-12-bookworm/
 https://j.hommet.net/debian-compiler-kernel/
+
+
+https://www.perplexity.ai/search/j-aimerai-un-tutorial-pour-la-JbVROZTdRumhtB74E3pqYw
 ```
