@@ -67,3 +67,11 @@ cd linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 
 ##############################################################################################################################
 ```
+
+### Depuis le Dépôt Debian
+```bash
+apt install linux-source
+cd /usr/src
+tar xvf linux-source-*.tar.xz
+cd linux-source-*
+```
