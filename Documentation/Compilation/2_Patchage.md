@@ -28,8 +28,7 @@ cd /Data/kernel/linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 ### Simuler le patch
 Permet de déceler des erreurs car il n'affiche que les erreurs.
 ```bash
- clear;
- clear;
+clear;
 for i in $(ls ../patch-* | xargs -n 1 basename | grep -E "^patch-${KERNEL_MAJOR}+\.${KERNEL_MINOR}+\.[0-9]+$" | sort -V); do
   echo $i
   patch --dry-run -p1 --batch --ignore-whitespace < ../$i 1>/dev/null;
