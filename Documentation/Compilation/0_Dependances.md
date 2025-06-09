@@ -36,7 +36,7 @@ apt install -y ncurses-dev       1>/dev/null;
 <br />
 
 ### B. Dépendance
-Si la variable `DEBUG_INFO_BTF = Y` dans le fichier de configuration, le paquet sera requis.
+Si la variable `DEBUG_INFO_BTF = Y` dans la configuration du Kernel. (.config)
 ```bash
 apt install -y pahole;
 ```
