@@ -36,7 +36,7 @@ apt install -y ncurses-dev       1>/dev/null;
 <br />
 
 ### B. Dépendance
-Si la variable `DEBUG_INFO_BTF = Y` dans la configuration du Kernel. (.config)
+L'erreur est liée au fichier de configuration a la valeur `CONFIG_DEBUG_INFO_BTF=Y`.
 ```bash
 apt install -y pahole;
 ```
