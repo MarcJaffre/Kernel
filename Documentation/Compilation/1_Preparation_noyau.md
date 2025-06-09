@@ -75,3 +75,9 @@ cd /usr/src
 tar xvf linux-source-*.tar.xz
 cd linux-source-*
 ```
+
+
+```
+https://www.siberoloji.com/how-to-compile-the-linux-kernel-from-source-on-debian-12-bookworm/
+https://j.hommet.net/debian-compiler-kernel/
+```
