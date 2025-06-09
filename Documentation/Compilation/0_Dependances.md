@@ -36,7 +36,9 @@ apt install -y ncurses-dev       1>/dev/null;
 <br />
 
 ### B. Dépendance
+Si la variable `DEBUG_INFO_BTF = Y` dans le fichier de configuration, le paquet sera requis.
 ```bash
-# Requis si variable DEBUG_INFO_BTF = Y
 apt install -y pahole;
 ```
+
+![image](https://github.com/user-attachments/assets/86e78908-a35f-4d10-8b0e-c7e148dfd619)
