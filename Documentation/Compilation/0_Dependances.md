@@ -38,6 +38,7 @@ apt install -y ncurses-dev       1>/dev/null;
 ### B. Dépendance
 L'erreur est liée au fichier de configuration a la valeur `CONFIG_DEBUG_INFO_BTF=Y`.
 ```bash
+apt install dwarves
 apt install -y pahole;
 ```
 
