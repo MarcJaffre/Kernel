@@ -55,7 +55,7 @@ patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}
 ##############################################################################################################################
 # Patch 6.10.2 #
 ################
-# 	Problèmes de performance et de compilation persistants
+# Problèmes de performance et de compilation persistants
 #patch -p1 --batch --ignore-whitespace < ../patch-${KERNEL_MAJOR}.${KERNEL_MINOR}.2 1>/dev/null;
 #sed -i -e "s/SUBLEVEL \= 2/SUBLEVEL \= 0/g" Makefile;
 #
