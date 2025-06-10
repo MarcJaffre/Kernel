@@ -58,23 +58,28 @@ cd /Data/kernel/linux-${KERNEL_MAJOR}.${KERNEL_MINOR};
 ##############################################################################################################################
 # Configuration du Noyau #
 ##########################
-# Configuration actuelle du Noyau
-rm .config 2>/dev/null; cp /boot/config-$(uname -r) .config;
 #
-# Fix Erreur
-sed -i -e "s/^CONFIG_ANDROID_BINDER_IPC\=m/CONFIG_ANDROID_BINDER_IPC\=n/g" .config;
-sed -i -e "s/^CONFIG_BASE_SMALL\=0/CONFIG_BASE_SMALL\=n/g"                 .config;
-sed -i -e "s/^CONFIG_FSCACHE\=m/CONFIG_FSCACHE\=y/g"                       .config;
-sed -i -e "s/^CONFIG_VFIO_VIRQFD\=m/CONFIG_VFIO_VIRQFD\=y/g"               .config;
+# make defconfig
 #
 ##############################################################################################################################
 # Mettre à jour la configuration avec oldconfig #
 #################################################
 #
+# Configuration actuelle du Noyau
+rm .config 2>/dev/null; cp /boot/config-$(uname -r) .config;
+
 # Pour intégrer les nouvelles options du noyau tout en conservant tes choix précédents.
 yes "" | make oldconfig 1>/dev/null;
 #
-# make defconfig
+
+#
+##############################################################################################################################
+# Fix Erreur #
+##############
+sed -i -e "s/^CONFIG_ANDROID_BINDER_IPC\=m/CONFIG_ANDROID_BINDER_IPC\=n/g" .config;
+sed -i -e "s/^CONFIG_BASE_SMALL\=0/CONFIG_BASE_SMALL\=n/g"                 .config;
+sed -i -e "s/^CONFIG_FSCACHE\=m/CONFIG_FSCACHE\=y/g"                       .config;
+sed -i -e "s/^CONFIG_VFIO_VIRQFD\=m/CONFIG_VFIO_VIRQFD\=y/g"               .config;
 #
 # Verification
 grep -E "^CONFIG_ANDROID_BINDER_IPC|^CONFIG_BASE_SMALL|^CONFIG_FSCACHE|^CONFIG_VFIO_VIRQFD" .config |sort -V
