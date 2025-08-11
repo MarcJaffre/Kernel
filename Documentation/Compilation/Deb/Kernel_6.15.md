@@ -1,38 +1,71 @@
 ### A. Download
 ```bash
 clear;
+#############################################################################################
+# VARIABLES #
+#############
 WORKDIR=/mnt/data/kernel
 KERNEL=6.15
-
-cd $HOME;
+#############################################################################################
+# WORKDIR #
+###########
+cd       $HOME;
+rm -r    $WORKDIR 2>/dev/null;
 mkdir -p $WORKDIR;
-cd $WORKDIR;
+cd       $WORKDIR;
 
+#############################################################################################
+# Download #
+############
 wget https://www.kernel.org/pub/linux/kernel/v6.x/linux-$KERNEL.tar.xz  2>/dev/null;
-unxz patch-$KERNEL.xz;
-# for i in $(ls *.xz);do echo unxz $i; done
+
+#############################################################################################
+# EXTRACT #
+###########
+unxz linux-$KERNEL.tar.xz;
+#############################################################################################
 ```
 
+<br />
 
 ### B. Compilation
 ```bash
 clear;
+#############################################################################################
+cd linux-$KERNEL;
 
-cd $WORKDIR;
-rm -r linux-$KERNEL 2>/dev/null;
-tar xf ./linux-$KERNEL.tar.xz;
-cd ./linux-$KERNEL;
-patch -p1 -t < ../patch-$KERNEL.1;
-# patch -p1 -R < ../patch-$KERNEL.1 | grep -v "patching file";
-make kernelversion;
+#############################################################################################
+# Configuration #
+#################
+make mrproper;
+#cp /boot/config-$(uname -r) .config;
+make oldconfig;
+make menuconfig;
+make oldconfig;
+make prepare;
+
+#############################################################################################
+# Compilation #
+###############
+make -j11 bzImage;
+make -j11 modules;
+
+#############################################################################################
+# Installation #
+################
+sudo make modules_install
+sudo make install
+
+#############################################################################################
+# Demarrage #
+#############
+clear;
+sudo update-initramfs -c -k 6.15;
+sudo update-grub;
+#############################################################################################
+#############################################################################################
+#############################################################################################
 ```
-
-
-
-
-
-
-
 
 
 
@@ -69,4 +102,5 @@ make kernelversion;
 # unxz patch-$KERNEL.7.xz;
 # unxz patch-$KERNEL.8.xz;
 # unxz patch-$KERNEL.9.xz;
+# for i in $(ls *.xz);do unxz $i; done;
 ```
