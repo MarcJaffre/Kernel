@@ -423,7 +423,7 @@ make defconfig;
 make clean;
 prlimit --as=21474836480 make -j$(( $(nproc) - 3 ));
 
-make modules install;
-make install;
-update-grub;
+sudo make modules install;
+sudo make install;
+sudo update-grub;
 ```
