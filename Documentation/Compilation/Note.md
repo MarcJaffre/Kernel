@@ -40,6 +40,7 @@ unxz patch-$KERNEL.9.xz;
 # Patch 1
 ```bash
 clear;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
@@ -99,6 +100,7 @@ patching file net/sched/sch_hfsc.c
 Le patch 2 inclus le patch 1
 ```bash
 clear;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
@@ -209,6 +211,7 @@ patching file tools/power/acpi/tools/acpidump/apfiles.c
 # Patch 3
 ```bash
 clear;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
@@ -222,8 +225,9 @@ make kernelversion;
 # Patch 4
 ```bash
 clear;
-cd $WORKDIR;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
+cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
@@ -235,8 +239,9 @@ make kernelversion;
 # Patch 5
 ```bash
 clear;
-cd $WORKDIR;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
+cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
@@ -248,8 +253,9 @@ make kernelversion;
 # Patch 6
 ```bash
 clear;
-cd $WORKDIR;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
+cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
@@ -261,8 +267,9 @@ make kernelversion;
 # Patch 7
 ```bash
 clear;
-cd $WORKDIR;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
+cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
@@ -274,8 +281,9 @@ make kernelversion;
 # Patch 8
 ```bash
 clear;
-cd $WORKDIR;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
+cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
@@ -287,6 +295,7 @@ make kernelversion;
 # Patch 9
 ```bash
 clear;
+KERNEL=6.15
 cd $WORKDIR;
 WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
@@ -299,12 +308,10 @@ make kernelversion;
 
 
 
-
-
-
 # General
 ```bash
 clear;
+KERNEL=6.15
 cd $WORKDIR;
 WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
@@ -378,6 +385,7 @@ make kernelversion;
 
 ```bash
 clear;
+KERNEL=6.15
 WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
@@ -389,6 +397,9 @@ rm .config 2>/dev/null;
 make defconfig;
 make clean;
 prlimit --as=21474836480 make -j$(( $(nproc) - 3 ));
+
+
+
 make modules Install;
 make install;
 update-grub;
@@ -415,7 +426,4 @@ patch -p1 -t < ../patch-$KERNEL.6; make kernelversion;
 patch -p1 -t < ../patch-$KERNEL.7; make kernelversion;
 patch -p1 -t < ../patch-$KERNEL.8; make kernelversion;
 patch -p1 -t < ../patch-$KERNEL.9; make kernelversion;
-
-
-
 ```
