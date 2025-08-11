@@ -400,9 +400,12 @@ prlimit --as=21474836480 make -j$(( $(nproc) - 3 ));
 
 
 
-make modules Install;
+make modules install;
 make install;
 update-grub;
+
+
+
 
 clear;
 patch -p1 -R < ../patch-$KERNEL.1;
