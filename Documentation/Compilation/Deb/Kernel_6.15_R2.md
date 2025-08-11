@@ -87,6 +87,8 @@ tar xf ./linux-$KERNEL.tar.xz;
 <br />
 
 ### C. Compilation (KO)
+
+
 ```bash
 clear;
 #############################################################################################
@@ -123,3 +125,50 @@ sudo update-initramfs -c -k 6.15;
 sudo update-grub;
 #############################################################################################
 ```
+
+
+
+<br />
+
+------------------------------------------------------------------
+
+Pour que la compilation et l'installation d'un noyau Linux fonctionnent correctement, il faut s'assurer que la configuration du kernel soit adaptée à votre matériel et aux modules que vous souhaitez utiliser. Voici des points clés à vérifier ou configurer dans votre kernel pour qu'il marche bien, notamment dans le contexte du kernel 6.12 et supérieur (vous utilisez la 6.12.38, et compilez la 6.15) :
+
+- **Configuration de base :**  
+  Faites un `make oldconfig` à partir de votre configuration actuelle (`/boot/config-$(uname -r)`) pour garder les options compatibles avec votre système actuel. Puis lancez `make menuconfig` pour ajuster manuellement si besoin.
+
+- **Modules spécifiques :**  
+  Si vous utilisez des modules tiers ou DKMS (comme amdgpu, rtl88x2bu, nvidia), assurez-vous que la configuration du kernel les supporte (ex. options PCI, DRM, crypto, etc.) et que les en-têtes (`linux-headers`) soient bien installés. Sur certains kernel 6.12, des incompatibilités DKMS ont été reportées, notamment le message d'erreur `dma_resv->seq is missing` dans les builds amdgpu. Il faut alors :
+  
+  - Soit utiliser un kernel stable reconnu compatible (comme 6.11 ou 6.14).
+  - Soit patcher ou attendre la mise à jour des modules tiers.
+  
+- **Options importantes à activer dans le kernel config :**  
+  - Sous-menu `Processor type and features` :  
+    - Votre architecture AMD64 doit être bien sélectionnée.  
+    - Activer `Preemption Model` si vous cherchez de la faible latence ou temps réel (par exemple `Preemptible Kernel (Low-Latency Desktop)` ou `Fully Preemptible Kernel (RT)` si besoin).[9]
+  - Sous-menu `Device Drivers` :  
+    - Activer les pilotes nécessaires à vos composants (ex. `SCSI`, `PCI`, `USB`, `AHCI` pour disque, `Sound` pour audio).  
+    - Activer `CONFIG_MODULES` pour le support des modules.  
+  - Sous-menu `Cryptographic API` si vous avez des modules liés à la crypto (ex. AES-NI).  
+  - Réseau, filesystem (ext4, vfat, etc.) selon usages.
+
+- **Avant compilation :**  
+  - Faites un `make mrproper` pour nettoyer.  
+  - Puis `make oldconfig` pour réutiliser la config existante.  
+  - Enfin `make menuconfig` pour ajuster.
+
+- **Compilation et installation :**  
+  Votre procédure est correcte : compilation du `bzImage`, des `modules`, puis `modules_install` et `install`, mise à jour de l’`initramfs` et de grub.
+
+- **Problèmes fréquents et solutions :**  
+  - Certains modules DKMS ne se compilent pas avec le kernel 6.12.x sur Debian, notamment amdgpu et d'autres modules tiers, ce qui peut nécessiter de rester sur un kernel supporté (6.11 ou 6.14) ou de patcher les modules.[2][1]
+  - Veillez à ce que `/usr/src/linux-headers-$(uname -r)` soit bien installé et synchronisé avec le kernel compilé.  
+  - Si vous avez un problème avec les modules DKMS, vérifiez avec `dkms status` et supprimez ou réinstallez les modules problématiques.
+
+En résumé, la configuration du kernel dépend grandement des modules que vous souhaitez utiliser, mais pour un fonctionnement basique :  
+- Activez l’architecture amd64, modules, préemption si besoin, pilotes matériels courants, système de fichiers.  
+- Assurez-vous de la compatibilité avec les modules DKMS que vous utilisez (éviter les kernel versions où ils posent problème).  
+- Synchronisez correctement headers et config pour éviter les erreurs lors de la compilation.
+
+Si vous rencontrez des erreurs spécifiques à un module ou à la compilation, elles peuvent guider les options précises à modifier dans le menuconfig.
