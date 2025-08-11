@@ -116,6 +116,7 @@ make -j11 modules;
 #############################################################################################
 # Installation #
 ################
+sudo make headers_install;
 sudo make modules_install;
 sudo make install;
 
@@ -128,18 +129,18 @@ sudo update-grub;
 #############################################################################################
 ```
 
-
-
+<br />
 <br />
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## II.
+## II. Recommandation
+### A. Configuration de base
+Faites un `make oldconfig` à partir de votre configuration actuelle (`/boot/config-$(uname -r)`) pour garder les options compatibles avec votre système actuel. Puis lancez `make menuconfig` pour ajuster manuellement si besoin.
 
-- **Configuration de base :**  
-  Faites un `make oldconfig` à partir de votre configuration actuelle (`/boot/config-$(uname -r)`) pour garder les options compatibles avec votre système actuel. Puis lancez `make menuconfig` pour ajuster manuellement si besoin.
+### B.Modules
+Si vous utilisez des modules tiers ou DKMS (comme amdgpu, rtl88x2bu, nvidia), assurez-vous que la configuration du kernel les supporte (ex. options PCI, DRM, crypto, etc.) et que les en-têtes (`linux-headers`) soient bien installés.
 
-- **Modules spécifiques :**  
-  Si vous utilisez des modules tiers ou DKMS (comme amdgpu, rtl88x2bu, nvidia), assurez-vous que la configuration du kernel les supporte (ex. options PCI, DRM, crypto, etc.) et que les en-têtes (`linux-headers`) soient bien installés. Sur certains kernel 6.12, des incompatibilités DKMS ont été reportées, notamment le message d'erreur `dma_resv->seq is missing` dans les builds amdgpu. Il faut alors :
+Sur certains kernel 6.12, des incompatibilités DKMS ont été reportées, notamment le message d'erreur `dma_resv->seq is missing` dans les builds amdgpu. Il faut alors :
   
   - Soit utiliser un kernel stable reconnu compatible (comme 6.11 ou 6.14).
   - Soit patcher ou attendre la mise à jour des modules tiers.
