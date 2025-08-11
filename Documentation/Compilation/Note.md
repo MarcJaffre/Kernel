@@ -428,8 +428,9 @@ tail -f compilation.log;
 # Les options marquées [ M ] seront compilées en modules.
 # Les options désactivées ne sont pas incluses.
 
-sudo make modules install;
 sudo make modules_install;
 sudo make install;
 sudo update-grub;
+
+# sudo make modules install;
 ```
