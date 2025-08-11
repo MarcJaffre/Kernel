@@ -116,7 +116,7 @@ make -j11 modules;
 #############################################################################################
 # Installation #
 ################
-sudo make headers_install;
+#sudo make headers_install; # Optionnel
 sudo make modules_install;
 sudo make install;
 
