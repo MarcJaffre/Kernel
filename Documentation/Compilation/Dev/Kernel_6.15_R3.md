@@ -56,7 +56,7 @@ usb_common             16384  3 usbcore,ehci_hcd,uhci_hcd
 ```
 
 
-### B. Téléchargement
+### B. Téléchargement (Sans patch)
 Télécharge le Kernel 6.15.
 ```bash
 clear;
@@ -94,9 +94,7 @@ tar xf ./linux-$KERNEL.tar.xz;
 
 <br />
 
-### C. Compilation (KO)
-
-
+### C. Compilation (Sans Patch)
 ```bash
 clear;
 #############################################################################################
