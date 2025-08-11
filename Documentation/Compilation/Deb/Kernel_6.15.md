@@ -22,7 +22,8 @@ wget https://www.kernel.org/pub/linux/kernel/v6.x/linux-$KERNEL.tar.xz  2>/dev/n
 #############################################################################################
 # EXTRACT #
 ###########
-unxz linux-$KERNEL.tar.xz;
+tar xf ./linux-$KERNEL.tar.xz;
+
 #############################################################################################
 ```
 
@@ -32,13 +33,14 @@ unxz linux-$KERNEL.tar.xz;
 ```bash
 clear;
 #############################################################################################
-cd linux-$KERNEL;
+# WORKDIR #
+###########
+cd $WORKDIR/linux-$KERNEL;
 
 #############################################################################################
 # Configuration #
 #################
 make mrproper;
-#cp /boot/config-$(uname -r) .config;
 make oldconfig;
 make menuconfig;
 make oldconfig;
@@ -103,4 +105,6 @@ sudo update-grub;
 # unxz patch-$KERNEL.8.xz;
 # unxz patch-$KERNEL.9.xz;
 # for i in $(ls *.xz);do unxz $i; done;
+
+#cp /boot/config-$(uname -r) .config;
 ```
