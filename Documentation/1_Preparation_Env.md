@@ -11,6 +11,10 @@ Pour Debian 12 (Bookworm), voici la liste de paquets mise à jour pour compiler 
 - **libssl-dev**      : fournit les bibliothèques de développement pour les fonctionnalités de sécurité SSL/TLS
 - **libelf-dev**      : fournit les bibliothèques de développement pour les fichiers ELF (Executable and Linkable Format)
 
+```bash
+apt install build-essential libncurses6-dev libssl-dev libelf-dev
+```
+
 <br />
 
 ### B. Paquets pour la compilation du noyau
