@@ -2,22 +2,6 @@
 Un logiciel Diff pour comparer le contenue ! (kdiff3, meld)
 
 
-
-
-# Patch 1
-```bash
-clear;
-KERNEL=6.15
-WORKDIR=/mnt/data/kernel;
-cd $WORKDIR;
-rm -r linux-$KERNEL 2>/dev/null;
-tar xf ./linux-$KERNEL.tar.xz;
-cd ./linux-$KERNEL;
-patch -p1 -t < ../patch-$KERNEL.1;
-# patch -p1 -R < ../patch-$KERNEL.1 | grep -v "patching file";
-make kernelversion;
-```
-
 ```log
 patching file Makefile
 
