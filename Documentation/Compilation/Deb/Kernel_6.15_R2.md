@@ -5,112 +5,71 @@
 # uname -r
 6.12.38+deb13-amd64
 
-# lsmod | awk '{print $1}' | sort -n
-aesni_intel
-ahci
-autofs4
-binfmt_misc
-bochs
-button
-ccp
-cdrom
-configfs
-crc16
-crc32c_generic
-crc32c_intel
-crc32_pclmul
-crct10dif_pclmul
-cryptd
-crypto_simd
-dm_mod
-drm
-drm_kms_helper
-drm_ttm_helper
-drm_vram_helper
-e1000
-efi_pstore
-efivarfs
-ehci_hcd
-ehci_pci
-evdev
-ext4
-fat
-gf128mul
-ghash_clmulni_intel
-i2c_i801
-i2c_smbus
-inet_diag
-intel_pmc_bxt
-intel_rapl_common
-intel_rapl_msr
-ip_tables
-irqbypass
-iTCO_vendor_support
-iTCO_wdt
-jbd2
-joydev
-kvm
-kvm_amd
-libahci
-libata
-lp
-lpc_ich
-mbcache
-Module
-mptcp_diag
-msr
-nfnetlink
-nls_ascii
-nls_cp437
-parport
-parport_pc
-pcspkr
-ppdev
-psmouse
-qemu_fw_cfg
-qrtr
-raw_diag
-rfkill
-scsi_common
-scsi_mod
-sd_mod
-serio_raw
-sg
-sha1_ssse3
-sha256_ssse3
-sha512_ssse3
-snd
-snd_hda_codec
-snd_hda_core
-snd_hda_intel
-snd_hrtimer
-snd_hwdep
-snd_intel_dspcfg
-snd_intel_sdw_acpi
-snd_pcm
-snd_seq
-snd_seq_device
-snd_seq_dummy
-snd_timer
-soundcore
-sr_mod
-tcp_diag
-tls
-ttm
-udp_diag
-uhci_hcd
-unix_diag
-usb_common
-usbcore
-vfat
-vmw_vmci
-vmw_vsock_virtio_transport_common
-vmw_vsock_vmci_transport
-vsock
-vsock_diag
-vsock_loopback
-watchdog
-x_tables
+# ls | xargs -n 1 | sort -n
+build
+kernel
+modules.alias
+modules.alias.bin
+modules.builtin
+modules.builtin.alias.bin
+modules.builtin.bin
+modules.builtin.modinfo
+modules.dep
+modules.dep.bin
+modules.devname
+modules.order
+modules.softdep
+modules.symbols
+modules.symbols.bin
+modules.weakdep
+source
+
+
+
+# lsmod | grep -v 0
+Module                  Size  Used by
+inet_diag              28672  4 tcp_diag,mptcp_diag,raw_diag,udp_diag
+snd_hrtimer            12288  1
+snd_seq_device         16384  1 snd_seq
+qrtr                   57344  2
+binfmt_misc            28672  1
+nls_ascii              12288  1
+nls_cp437              16384  1
+vfat                   24576  1
+intel_rapl_common      53248  1 intel_rapl_msr
+kvm                  1396736  1 kvm_amd
+snd_intel_sdw_acpi     16384  1 snd_intel_dspcfg
+irqbypass              12288  1 kvm
+snd_pcm               188416  3 snd_hda_intel,snd_hda_codec,snd_hda_core
+gf128mul               16384  1 aesni_intel
+snd_timer              53248  3 snd_seq,snd_hrtimer,snd_pcm
+snd                   151552  9 snd_seq,snd_seq_device,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_timer,snd_pcm
+crypto_simd            16384  1 aesni_intel
+cryptd                 28672  2 crypto_simd,ghash_clmulni_intel
+soundcore              16384  1 snd
+evdev                  28672  6
+configfs               69632  1
+efivarfs               28672  1
+x_tables               53248  1 ip_tables
+autofs4                57344  2
+ext4                 1142784  4
+crc16                  12288  1 ext4
+mbcache                16384  1 ext4
+dm_mod                221184  9
+bochs                  16384  1
+drm_vram_helper        28672  1 bochs
+drm_ttm_helper         16384  3 bochs,drm_vram_helper
+drm_kms_helper        253952  3 bochs,drm_vram_helper,drm_ttm_helper
+ahci                   49152  6
+libata                462848  2 libahci,ahci
+iTCO_wdt               16384  1
+drm                   774144  7 drm_kms_helper,bochs,drm_vram_helper,drm_ttm_helper,ttm
+intel_pmc_bxt          16384  1 iTCO_wdt
+iTCO_vendor_support    12288  1 iTCO_wdt
+watchdog               49152  1 iTCO_wdt
+crc32c_intel           16384  8
+scsi_common            16384  5 scsi_mod,sd_mod,libata,sg,sr_mod
+usb_common             16384  3 usbcore,ehci_hcd,uhci_hcd
 ```
 
 
