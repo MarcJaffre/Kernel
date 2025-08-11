@@ -424,6 +424,7 @@ make clean;
 prlimit --as=21474836480 make -j$(( $(nproc) - 3 ));
 
 sudo make modules install;
+sudo make modules_install;
 sudo make install;
 sudo update-grub;
 ```
