@@ -376,7 +376,7 @@ make kernelversion;
 ```
 
 
-```
+```bash
 clear;
 WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
@@ -385,6 +385,13 @@ tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
 rm .config 2>/dev/null;
 
+
+make defconfig;
+make clean;
+prlimit --as=21474836480 make -j$(( $(nproc) - 3 ));
+make modules Install;
+make install;
+update-grub;
 
 clear;
 patch -p1 -R < ../patch-$KERNEL.1;
@@ -411,10 +418,4 @@ patch -p1 -t < ../patch-$KERNEL.9; make kernelversion;
 
 
 
-make defconfig;
-make clean;
-prlimit --as=21474836480 make -j$(( $(nproc) - 3 ));
-make modules Install;
-make install;
-update-grub;
 ```
