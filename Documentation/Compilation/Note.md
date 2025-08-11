@@ -33,7 +33,6 @@ unxz patch-$KERNEL.9.xz;
 ```
 
 
-
 # Patch 1
 ```bash
 clear;
@@ -147,4 +146,28 @@ cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.9;
 # patch -p1 -R < ../patch-$KERNEL.9 | grep -v "patching file";
 make kernelversion;
+```
+
+
+
+
+
+
+# General
+```bash
+clear;
+cd $WORKDIR;
+WORKDIR=/mnt/data/kernel;
+rm -r linux-$KERNEL 2>/dev/null;
+tar xf ./linux-$KERNEL.tar.xz;
+cd ./linux-$KERNEL;
+patch -p1 --dry-run < ../patch-$KERNEL.1;
+patch -p1 --dry-run < ../patch-$KERNEL.2;
+patch -p1 --dry-run < ../patch-$KERNEL.3;
+patch -p1 --dry-run < ../patch-$KERNEL.4;
+patch -p1 --dry-run < ../patch-$KERNEL.5;
+patch -p1 --dry-run < ../patch-$KERNEL.6;
+patch -p1 --dry-run < ../patch-$KERNEL.7;
+patch -p1 --dry-run < ../patch-$KERNEL.8;
+patch -p1 --dry-run < ../patch-$KERNEL.9;
 ```
