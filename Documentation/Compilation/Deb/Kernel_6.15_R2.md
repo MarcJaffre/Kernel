@@ -5,26 +5,7 @@
 # uname -r
 6.12.38+deb13-amd64
 
-# ls | xargs -n 1 | sort -n
-build
-kernel
-modules.alias
-modules.alias.bin
-modules.builtin
-modules.builtin.alias.bin
-modules.builtin.bin
-modules.builtin.modinfo
-modules.dep
-modules.dep.bin
-modules.devname
-modules.order
-modules.softdep
-modules.symbols
-modules.symbols.bin
-modules.weakdep
-source
-
-
+# ls /lib/modules/$(uname -r)
 
 # lsmod | grep -v 0
 Module                  Size  Used by
