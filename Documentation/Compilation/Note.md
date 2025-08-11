@@ -395,15 +395,15 @@ rm .config 2>/dev/null;
 
 
 clear;
-patch -p1 -R < ../patch-$KERNEL.1;
-patch -p1 -R < ../patch-$KERNEL.2;
-patch -p1 -R < ../patch-$KERNEL.3;
-patch -p1 -R < ../patch-$KERNEL.4;
-patch -p1 -R < ../patch-$KERNEL.5;
-patch -p1 -R < ../patch-$KERNEL.6;
-patch -p1 -R < ../patch-$KERNEL.7;
-patch -p1 -R < ../patch-$KERNEL.8;
-patch -p1 -R < ../patch-$KERNEL.9;
+patch -p1 -R < ../patch-$KERNEL.1; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.2; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.3; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.4; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.5; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.6; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.7; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.8; make kernelversion;
+patch -p1 -R < ../patch-$KERNEL.9; make kernelversion;
 
 
 clear;
