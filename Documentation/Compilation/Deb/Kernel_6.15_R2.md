@@ -1,7 +1,8 @@
 # <p align='center'> NON FONCTIONNEL </p>
 
 
-### A. Download
+### A. Téléchargement
+Télécharge le Kernel 6.15.
 ```bash
 clear;
 #############################################################################################
@@ -32,7 +33,7 @@ tar xf ./linux-$KERNEL.tar.xz;
 
 <br />
 
-### B. Compilation
+### B. Compilation (KO)
 ```bash
 clear;
 #############################################################################################
