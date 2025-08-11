@@ -2,18 +2,43 @@
 
 Un logiciel Diff pour comparer le contenue ! (kdiff3, meld)
 
-```
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.xz      2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.1.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.2.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.3.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.4.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.5.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.6.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.7.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.8.xz    2>/dev/null;
-# wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.9.xz    2>/dev/null;
+```bash
+clear;
+#############################################################################################
+# VARIABLES #
+#############
+WORKDIR=/mnt/data/kernel
+KERNEL=6.15
 
+#############################################################################################
+# WORKDIR #
+###########
+cd       $HOME;
+rm -r    $WORKDIR 2>/dev/null;
+mkdir -p $WORKDIR;
+cd       $WORKDIR;
+
+#############################################################################################
+# Download #
+############
+wget https://www.kernel.org/pub/linux/kernel/v6.x/linux-$KERNEL.tar.xz  2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.xz      2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.1.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.2.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.3.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.4.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.5.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.6.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.7.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.8.xz    2>/dev/null;
+wget https://www.kernel.org/pub/linux/kernel/v6.x/patch-$KERNEL.9.xz    2>/dev/null;
+
+#############################################################################################
+# EXTRACT #
+###########
+for i in $(ls *.xz);do unxz $i; done;
+
+# tar xf ./linux-$KERNEL.tar.xz;
 # unxz patch-$KERNEL.1.xz;
 # unxz patch-$KERNEL.2.xz;
 # unxz patch-$KERNEL.3.xz;
@@ -23,7 +48,6 @@ Un logiciel Diff pour comparer le contenue ! (kdiff3, meld)
 # unxz patch-$KERNEL.7.xz;
 # unxz patch-$KERNEL.8.xz;
 # unxz patch-$KERNEL.9.xz;
-# for i in $(ls *.xz);do unxz $i; done;
 
 #cp /boot/config-$(uname -r) .config;
 ```
