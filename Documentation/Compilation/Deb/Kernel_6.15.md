@@ -55,8 +55,8 @@ make -j11 modules;
 #############################################################################################
 # Installation #
 ################
-sudo make modules_install
-sudo make install
+sudo make modules_install;
+sudo make install;
 
 #############################################################################################
 # Demarrage #
