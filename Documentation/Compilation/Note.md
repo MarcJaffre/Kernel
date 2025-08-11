@@ -431,6 +431,7 @@ tail -f compilation.log;
 sudo make modules_install;
 sudo make install;
 sudo update-grub;
-
+pkill gnome-session-b:
+sudo reboot;
 # sudo make modules install;
 ```
