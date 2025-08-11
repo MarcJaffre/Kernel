@@ -1,5 +1,6 @@
 
-Un logiciel Diff pour comparer le contenue !
+Un logiciel Diff pour comparer le contenue ! (kdiff3, meld)
+
 
 ```bash
 clear;
@@ -95,6 +96,7 @@ patching file net/sched/sch_hfsc.c
 
 
 # Patch 2
+Le patch 2 inclus le patch 1
 ```bash
 clear;
 WORKDIR=/mnt/data/kernel;
