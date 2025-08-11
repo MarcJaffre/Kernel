@@ -1,3 +1,4 @@
+```bash
 clear;
 
 WORKDIR=/mnt/data/kernel
@@ -29,11 +30,14 @@ unxz patch-$KERNEL.6.xz;
 unxz patch-$KERNEL.7.xz;
 unxz patch-$KERNEL.8.xz;
 unxz patch-$KERNEL.9.xz;
+```
 
 
-# ---------------------------------------------------------------------------- #
+
 # Patch 1
+```bash
 clear;
+WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
@@ -41,13 +45,11 @@ cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.1;
 # patch -p1 -R < ../patch-$KERNEL.1 | grep -v "patching file";
 make kernelversion;
-
-
-
-
-# ---------------------------------------------------------------------------- #
+```
 # Patch 2
+```bash
 clear;
+WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
@@ -55,9 +57,11 @@ cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.2;
 # patch -p1 -R < ../patch-$KERNEL.2 | grep -v "patching file";
 make kernelversion;
-# ---------------------------------------------------------------------------- #
+```
 # Patch 3
+```bash
 clear;
+WORKDIR=/mnt/data/kernel;
 cd $WORKDIR;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
@@ -65,64 +69,82 @@ cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.3;
 # patch -p1 -R < ../patch-$KERNEL.3 | grep -v "patching file";
 make kernelversion;
+```
 
-# ---------------------------------------------------------------------------- #
 # Patch 4
+```bash
 clear;
 cd $WORKDIR;
+WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.4;
 # patch -p1 -R < ../patch-$KERNEL.4 | grep -v "patching file";
 make kernelversion;
-# ---------------------------------------------------------------------------- #
+```
+
 # Patch 5
+```bash
 clear;
 cd $WORKDIR;
+WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.5;
 # patch -p1 -R < ../patch-$KERNEL.5 | grep -v "patching file";
 make kernelversion;
-# ---------------------------------------------------------------------------- #
+```
+
 # Patch 6
+```bash
 clear;
 cd $WORKDIR;
+WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.6;
 # patch -p1 -R < ../patch-$KERNEL.6 | grep -v "patching file";
 make kernelversion;
-# ---------------------------------------------------------------------------- #
+```
+
 # Patch 7
+```bash
 clear;
 cd $WORKDIR;
+WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.7;
 # patch -p1 -R < ../patch-$KERNEL.7 | grep -v "patching file";
 make kernelversion;
-# ---------------------------------------------------------------------------- #
+```
+
 # Patch 8
+```bash
 clear;
 cd $WORKDIR;
+WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.8;
 # patch -p1 -R < ../patch-$KERNEL.8 | grep -v "patching file";
 make kernelversion;
-# ---------------------------------------------------------------------------- #
+```
+
 # Patch 9
+```bash
 clear;
 cd $WORKDIR;
+WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
 patch -p1 -t < ../patch-$KERNEL.9;
 # patch -p1 -R < ../patch-$KERNEL.9 | grep -v "patching file";
 make kernelversion;
+```
