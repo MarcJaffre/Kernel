@@ -128,7 +128,7 @@ sudo make install;
 # Demarrage #
 #############
 clear;
-sudo update-initramfs -c -k 6.15;
+sudo update-initramfs -c -k $KERNEL;
 sudo update-grub;
 #############################################################################################
 ```
