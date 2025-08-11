@@ -1,6 +1,8 @@
-# <p align='center'> NON FONCTIONNEL </p>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------# <p align='center'> NON FONCTIONNEL </p>
 
-## A. Information sur le Kernel 6.12
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## I. Compilation du kernel 6.15
+## A. Information du kernel 6.12
 ```bash
 # uname -r
 6.12.38+deb13-amd64
@@ -130,9 +132,8 @@ sudo update-grub;
 
 <br />
 
-------------------------------------------------------------------
-
-Pour que la compilation et l'installation d'un noyau Linux fonctionnent correctement, il faut s'assurer que la configuration du kernel soit adaptée à votre matériel et aux modules que vous souhaitez utiliser. Voici des points clés à vérifier ou configurer dans votre kernel pour qu'il marche bien, notamment dans le contexte du kernel 6.12 et supérieur (vous utilisez la 6.12.38, et compilez la 6.15) :
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## II.
 
 - **Configuration de base :**  
   Faites un `make oldconfig` à partir de votre configuration actuelle (`/boot/config-$(uname -r)`) pour garder les options compatibles avec votre système actuel. Puis lancez `make menuconfig` pour ajuster manuellement si besoin.
