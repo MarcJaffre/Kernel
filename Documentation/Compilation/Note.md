@@ -421,7 +421,8 @@ patch -p1 -t < ../patch-$KERNEL.9; make kernelversion;
 
 make defconfig;
 make clean;
-prlimit --as=21474836480 make -j$(( $(nproc) - 3 )) > compilation.log;
+prlimit --as=21474836480 make -j$(( $(nproc) - 3 )) > compilation.log &;
+tail -f compilation.log;
 
 # Les options marquées [ * ] sont compilées directement dans le noyau.
 # Les options marquées [ M ] seront compilées en modules.
