@@ -57,8 +57,9 @@ make -j11 modules;
 ############################################################################################################
 # Installation #
 ################
-sudo make modules_install
-sudo make install
+#sudo make headers_install; # Optionnel
+sudo make modules_install;
+sudo make install;
 
 ############################################################################################################
 sudo update-initramfs -c -k 6.15;
