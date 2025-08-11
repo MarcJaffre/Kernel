@@ -131,6 +131,11 @@ clear;
 sudo update-initramfs -c -k $KERNEL;
 sudo update-grub;
 #############################################################################################
+# Verification #
+################
+clear;
+ls /boot/ | grep $KERNEL
+ls /lib/modules/ | grep $KERNEL
 ```
 
 <br />
