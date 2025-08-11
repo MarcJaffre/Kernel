@@ -1,3 +1,4 @@
+# <p align='center'> NON FONCTIONNEL </p>
 
 Un logiciel Diff pour comparer le contenue ! (kdiff3, meld)
 
