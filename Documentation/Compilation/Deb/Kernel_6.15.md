@@ -10,7 +10,7 @@ cd $WORKDIR;
 
 wget https://www.kernel.org/pub/linux/kernel/v6.x/linux-$KERNEL.tar.xz  2>/dev/null;
 unxz patch-$KERNEL.xz;
-# for i in $(ls *.xz);do unxz $i; done
+# for i in $(ls *.xz);do echo unxz $i; done
 ```
 
 
