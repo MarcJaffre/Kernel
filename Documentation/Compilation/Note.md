@@ -161,46 +161,45 @@ WORKDIR=/mnt/data/kernel;
 rm -r linux-$KERNEL 2>/dev/null;
 tar xf ./linux-$KERNEL.tar.xz;
 cd ./linux-$KERNEL;
-
 ```
 
 
 
 
 ```bash
-patch -p1 --dry-run < ../patch-$KERNEL.1;
-patch -p1    < ../patch-$KERNEL.1;
-patch -p1 -R < ../patch-$KERNEL.1;
+patch -p1 --dry-run -t < ../patch-$KERNEL.1;
+patch -p1  -t    < ../patch-$KERNEL.1;
+patch -p1 -R -t  < ../patch-$KERNEL.1;
 
-patch -p1 --dry-run < ../patch-$KERNEL.2;
-patch -p1    < ../patch-$KERNEL.2;
-patch -p1 -R < ../patch-$KERNEL.2;
+patch -p1 --dry-run -t < ../patch-$KERNEL.2;
+patch -p1 -t    < ../patch-$KERNEL.2;
+patch -p1 -R -t < ../patch-$KERNEL.2;
 
-patch -p1 --dry-run < ../patch-$KERNEL.2;
-patch -p1    < ../patch-$KERNEL.2;
-patch -p1 -R < ../patch-$KERNEL.2;
+patch -p1 --dry-run -t < ../patch-$KERNEL.2;
+patch -p1 -t    < ../patch-$KERNEL.2;
+patch -p1 -R -t < ../patch-$KERNEL.2;
 
-patch -p1 --dry-run < ../patch-$KERNEL.3;
-patch -p1    < ../patch-$KERNEL.3;
-patch -p1 -R < ../patch-$KERNEL.3;
+patch -p1 --dry-run -t < ../patch-$KERNEL.3;
+patch -p1 -t    < ../patch-$KERNEL.3;
+patch -p1 -R -t < ../patch-$KERNEL.3;
 
-patch -p1 --dry-run < ../patch-$KERNEL.4;
+patch -p1 --dry-run -t < ../patch-$KERNEL.4;
 patch -p1    < ../patch-$KERNEL.4;
 patch -p1 -R < ../patch-$KERNEL.4;
 
-patch -p1 --dry-run < ../patch-$KERNEL.5;
+patch -p1 --dry-run -t < ../patch-$KERNEL.5;
 patch -p1    < ../patch-$KERNEL.6;
 patch -p1 -R < ../patch-$KERNEL.6;
 
-patch -p1 --dry-run < ../patch-$KERNEL.7;
-patch -p1    < ../patch-$KERNEL.7;
-patch -p1 -R < ../patch-$KERNEL.7;
+patch -p1 --dry-run -t < ../patch-$KERNEL.7;
+patch -p1 -t    < ../patch-$KERNEL.7;
+patch -p1 -R -t < ../patch-$KERNEL.7;
 
-patch -p1 --dry-run < ../patch-$KERNEL.8;
-patch -p1    < ../patch-$KERNEL.8;
-patch -p1 -R < ../patch-$KERNEL.8;
+patch -p1 --dry-run -t < ../patch-$KERNEL.8;
+patch -p1 -t    < ../patch-$KERNEL.8;
+patch -p1 -R -t < ../patch-$KERNEL.8;
 
-patch -p1 --dry-run < ../patch-$KERNEL.9;
-patch -p1    < ../patch-$KERNEL.9;
-patch -p1 -R < ../patch-$KERNEL.9;
+patch -p1 --dry-run -t < ../patch-$KERNEL.9;
+patch -p1 -t    < ../patch-$KERNEL.9;
+patch -p1 -R -t < ../patch-$KERNEL.9;
 ```
