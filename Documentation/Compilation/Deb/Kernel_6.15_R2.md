@@ -7,7 +7,7 @@
 
 # ls /lib/modules/$(uname -r)
 
-# lsmod | grep -v 0
+# lsmod | grep -v 0; # Module charge et utilise
 Module                  Size  Used by
 inet_diag              28672  4 tcp_diag,mptcp_diag,raw_diag,udp_diag
 snd_hrtimer            12288  1
