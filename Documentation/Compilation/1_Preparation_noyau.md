@@ -25,7 +25,7 @@ URL_KERNEL="$URL/linux-${KERNEL_MAJOR}.${KERNEL_MINOR}.tar.xz"
 ##############################################################################################################################
 # Dossier de Travail #
 ######################
-cd /Data;
+cd /mnt/data;
 rm -r kernel 2>/dev/null;
 mkdir kernel 2>/dev/null;
 cd kernel;
@@ -75,7 +75,6 @@ cd /usr/src
 tar xvf linux-source-*.tar.xz
 cd linux-source-*
 ```
-
 
 ```
 https://www.siberoloji.com/how-to-compile-the-linux-kernel-from-source-on-debian-12-bookworm/
