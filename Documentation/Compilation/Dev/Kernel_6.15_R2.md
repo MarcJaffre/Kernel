@@ -50,13 +50,13 @@ patch -p1 --dry-run < ../patch-$KERNEL.1;
 grep CONFIG_OPTION /boot/config-$(uname -r)
 
 ############################################################################################################
-make mrproper;
-#cp /boot/config-$(uname -r) .config;
-make oldconfig;
-make menuconfig;
-make oldconfig;
-make prepare;
+make -j$(nproc) mrproper;
+make -j$(nproc) oldconfig;
+make -j$(nproc) menuconfig;
+make -j$(nproc) oldconfig;
+make -j$(nproc) prepare;
 
+#cp /boot/config-$(uname -r) .config;
 
 ############################################################################################################
 make -j11 bzImage;
@@ -65,9 +65,12 @@ make -j11 modules;
 ############################################################################################################
 # Installation #
 ################
-#sudo make headers_install; # Optionnel
-sudo make modules_install;
-sudo make install;
+sudo make -j$(nproc) modules_install;
+sudo make -j$(nproc) install;
+
+# Optionnel
+sudo make -j$(nproc) headers_install;
+
 
 ############################################################################################################
 sudo update-initramfs -c -k 6.15;
