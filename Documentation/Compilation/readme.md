@@ -37,17 +37,20 @@ clear;
 rm -r linux-6.18 2>/dev/null;
 for files in $(ls *.xz);  do unxz   $files; done
 for files in $(ls *.tar); do tar xf $files; done
-rm *.tar;
+
 
 # ===================================================================================
 clear;
 cd linux-6.18;
 
+
 # ===================================================================================
-# Patchage
+# Patchage 6.18.1 (v6.x)
 clear;
 patch -p1 < ../patch-6.18.1;     make kernelversion;
 
+# ===================================================================================
+# Patchage incremental
 patch -p1 < ../patch-6.18.1-2;   make kernelversion;
 patch -p1 < ../patch-6.18.2-3;   make kernelversion;
 patch -p1 < ../patch-6.18.3-4;   make kernelversion;
@@ -62,7 +65,4 @@ patch -p1 < ../patch-6.18.11-12; make kernelversion;
 patch -p1 < ../patch-6.18.12-13; make kernelversion;
 patch -p1 < ../patch-6.18.13-14; make kernelversion;
 patch -p1 < ../patch-6.18.14-15; make kernelversion;
-
-
-
 ```
