@@ -17,7 +17,6 @@ clear;
 ##############################################################################################################################
 # Variables d-environnement #
 #############################
-WORKDIR="/mnt/data"
 KERNEL_MAJOR="6"
 KERNEL_MINOR="10"
 URL="https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_MAJOR}.x/"
@@ -26,6 +25,11 @@ URL_KERNEL="$URL/linux-${KERNEL_MAJOR}.${KERNEL_MINOR}.tar.xz"
 ##############################################################################################################################
 # Dossier de Travail #
 ######################
+
+if [ ! -d "$WORKDIR" ]; then
+    mkdir -p "$WORKDIR"
+fi
+
 cd $WORKDIR;
 rm -r kernel 2>/dev/null;
 mkdir kernel 2>/dev/null;
