@@ -17,7 +17,7 @@ apt upgrade -y;
 ### C. Package
 ```bash
 clear;
-sudo apt install -y build-essential dwarves python3 libncurses-dev flex bison libssl-dev bc libelf-dev;
+apt install -y build-essential dwarves python3 libncurses-dev flex bison libssl-dev bc libelf-dev;
 ```
 
 ### D. Kernel 6.15.1
@@ -39,46 +39,46 @@ gpg --search-keys 38DBBDC86092693E;
 ```bash
 clear;
 cd linux-6.15.1
-sudo cp -v /boot/config-$(uname -r) .config;
+cp -v /boot/config-$(uname -r) .config;
 ```
 
 ### G. Custom (Save > Exit)
 ```bash
 clear;
-sudo make menuconfig;
+make menuconfig;
 ```
 
 ### H. Compilation
 ```bash
 clear;
-sudo make bzImage;
+make bzImage;
 ```
 
 ### I. Fix error : debian-uefi-certs.pem
 ```bash
 clear;
 make localmodconfig;
-sudo make bzImage;
+make bzImage;
 ```
 
 ### J. Install
 ```bash
 clear;
-sudo make modules;
-sudo make modules_install;
-sudo make install;
+make modules;
+make modules_install;
+make install;
 ```
 
 ### K. Grub
 ```bash
 clear;
-sudo update-grub;
+update-grub;
 ```
 
 ### L. Reboot
 ```bash
 clear;
-sudo reboot -i;
+reboot -i;
 ```
 
 ### M. Check Kernel
