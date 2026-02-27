@@ -1,4 +1,4 @@
-### A. 6.18.0 à 6.18.15
+### A. 6.18.0 à 6.18.15 (Réussite)
 https://docs.kernel.org/process/applying-patches.html
 ```bash
 # ===================================================================================
@@ -65,4 +65,7 @@ patch -p1 < ../patch-6.18.11-12; make kernelversion;
 patch -p1 < ../patch-6.18.12-13; make kernelversion;
 patch -p1 < ../patch-6.18.13-14; make kernelversion;
 patch -p1 < ../patch-6.18.14-15; make kernelversion;
+
+# Nettoyage pré‑compilation
+make clean
 ```
