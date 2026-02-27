@@ -5,8 +5,8 @@
 ```bash
 ##############################################################################################################################
 # Presentation:
-# - Telecharge le Kernel 6.10.0
-# - Telecharge les patchs (v1 a v14)
+# - Telecharge du kernel
+# - Telecharge les patchs
 ##############################################################################################################################
 
 ##############################################################################################################################
@@ -19,7 +19,7 @@ clear;
 #############################
 WORKDIR="/root"
 KERNEL_MAJOR="6"
-KERNEL_MINOR="10"
+KERNEL_MINOR="18"
 URL="https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_MAJOR}.x/"
 URL_KERNEL="$URL/linux-${KERNEL_MAJOR}.${KERNEL_MINOR}.tar.xz"
 #
