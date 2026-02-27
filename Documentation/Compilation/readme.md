@@ -66,6 +66,22 @@ patch -p1 < ../patch-6.18.12-13; make kernelversion;
 patch -p1 < ../patch-6.18.13-14; make kernelversion;
 patch -p1 < ../patch-6.18.14-15; make kernelversion;
 
+# ===================================================================================
 # Nettoyage pré‑compilation
-make clean
+clear;
+make clean;
+
+# ===================================================================================
+# Configure tes options
+make menuconfig;
+
+# ===================================================================================
+# Compile
+make -j$(nproc) all
+
+# ===================================================================================
+# Creation des modules
+make modules_install
+# ===================================================================================
+make install;
 ```
