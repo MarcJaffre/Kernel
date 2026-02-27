@@ -28,7 +28,7 @@ URL_KERNEL="$URL/linux-${KERNEL_MAJOR}.${KERNEL_MINOR}.tar.xz"
 ######################
 
 cd $WORKDIR;
-rm -r kernel    2>/dev/null;
+rm -r    kernel 2>/dev/null;
 mkdir -p kernel 2>/dev/null;
 cd kernel;
 #
