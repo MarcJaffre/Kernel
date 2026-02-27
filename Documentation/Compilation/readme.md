@@ -15,7 +15,7 @@ wget -q https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.tar.xz;
 wget -q https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.18.1.xz;
 
 # ===================================================================================
-# Patch incrementiel
+# Patch incrementiel (Le patch 6.18.0 vers 6.18.1 n'existe pas)
 clear;
 wget -q https://www.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.18.1-2.xz;
 wget -q https://www.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.18.2-3.xz;
