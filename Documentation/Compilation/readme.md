@@ -87,5 +87,7 @@ clear;
 make modules_install;
 
 # ===================================================================================
+# Installation du Kernel
+clear;
 make install;
 ```
