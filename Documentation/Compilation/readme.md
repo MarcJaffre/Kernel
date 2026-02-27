@@ -1,5 +1,11 @@
-### A. 6.18.0 à 6.18.15 (Réussite)
+### A. Kernel 6.18.X (Réussi)
+#### 1. Documentation
 https://docs.kernel.org/process/applying-patches.html
+#### 2. Kernel et Patch
+Les patchs du dossier `vY.x` ne sont pas des incrémentials. On applique le patch 6.18.1.
+#### 2. Patch incrémentiel
+Le kernel est en `6.18.1` puis on fait une montée de version par patch. (Exemple: `6.18.1` -> `6.18.2` > .... > `6.18.15`)
+
 ```bash
 # ===================================================================================
 clear;
