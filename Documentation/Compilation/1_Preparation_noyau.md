@@ -17,7 +17,7 @@ clear;
 ##############################################################################################################################
 # Variables d-environnement #
 #############################
-WORKDIR=/root
+WORKDIR="/root"
 KERNEL_MAJOR="6"
 KERNEL_MINOR="10"
 URL="https://cdn.kernel.org/pub/linux/kernel/v${KERNEL_MAJOR}.x/"
