@@ -7,8 +7,11 @@ rm    -r $HOME/kernel 2>/dev/null;
 mkdir -p $HOME/kernel;
 cd       $HOME/kernel;
 # ===================================================================================
+# Kernel 6.18.0 puis patch 6.18.1
 wget -q https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.18.tar.xz;
 wget -q https://cdn.kernel.org/pub/linux/kernel/v6.x/patch-6.18.1.xz;
+# ===================================================================================
+# Patch incrementiel
 wget -q https://www.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.18.1-2.xz;
 wget -q https://www.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.18.2-3.xz;
 wget -q https://www.kernel.org/pub/linux/kernel/v6.x/incr/patch-6.18.3-4.xz;
