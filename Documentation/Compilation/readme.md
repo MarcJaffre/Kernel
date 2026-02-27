@@ -37,6 +37,7 @@ clear;
 rm -r linux-6.18 2>/dev/null;
 for files in $(ls *.xz);  do unxz   $files; done
 for files in $(ls *.tar); do tar xf $files; done
+rm *.tar;
 
 # ===================================================================================
 clear;
