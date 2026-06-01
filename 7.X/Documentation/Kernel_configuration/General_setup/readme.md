@@ -15,8 +15,8 @@
 | Auditing support |   -*- | Support d'audit. |
 | [IRQ subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/IRQ_subsystem.md)     |   ---&gt; | Sous-système des interruptions (IRQ). |
 | [Timers subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/Timers_subsystem.md)  |   ---&gt; | Sous-système des compteurs de temps. |
-| [BPF subsystem](ici)     |   ---&gt; | Sous-système BPF (Berkeley Packet Filter). |
-| [Preemption Model](ici)  |   ---&gt; | Modèle de préemptibilité (sous-contrôlé par le scheduleur). |
+| [BPF subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/BPF_subsystem.md)     |   ---&gt; | Sous-système BPF (Berkeley Packet Filter). |
+| [Preemption Model]([ici](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/Preemption_Mode.md))  |   ---&gt; | Modèle de préemptibilité (sous-contrôlé par le scheduleur). |
 | Fully Preemptible Kernel (Real-Time) |   [ ] | Noyau entièrement préemptible (réalisation temps réel). |
 | Preemption behaviour defined on boot |   [*] | Comportement de préemption défini au démarrage. |
 | Core Scheduling for SMT |   [ ] | Planification des noyaux pour SMT (Multiprocessing Simultaneous Multithreading). |
