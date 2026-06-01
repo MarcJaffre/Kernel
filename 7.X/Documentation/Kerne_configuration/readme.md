@@ -1,4 +1,4 @@
-#### General setup  --->
+#### [General setup  --->](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kerne_configuration/General_setup/readme.md)
 #### [*] 64-bit kernel
 #### Processor type and features  --->
 #### [*] Mitigations for CPU vulnerabilities  --->
