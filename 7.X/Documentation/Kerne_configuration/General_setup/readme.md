@@ -5,7 +5,7 @@
 () Local version - append to kernel release          |        | Ajouter une version locale à la version du noyau                             |
 [ ] Automatically append version information to the version string |  | Ajouter automatiquement des informations de version au nom du noyau           |
 () Build ID Salt                                    |        | Selon le système, ajoute un sel unique pour chaque compilation               |
-Kernel compression mode (ZSTD) ---&gt;                | ZSTD  | Mode de compression du noyau                                                |
+Kernel compression mode (ZSTD) ---&gt;                | ZSTD  | Mode de compression du noyau ( BZip2, LZMA, XZ, LZ0, LZ4, ZSTD |
 () Default init path                                 |        | Chemin par défaut pour l'initialisation                                      |
 ((none)) Default hostname                            | none   | Nom d'hôte par défaut                                                        |
 [*] System V IPC                                     | enabled| Activer le support IPC (Inter-Process Communication) du système V             |
