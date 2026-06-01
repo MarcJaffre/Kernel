@@ -16,12 +16,12 @@
 | [IRQ subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/IRQ_subsystem.md)     |   ---&gt; | Sous-système des interruptions (IRQ). |
 | [Timers subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/Timers_subsystem.md)  |   ---&gt; | Sous-système des compteurs de temps. |
 | [BPF subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/BPF_subsystem.md)     |   ---&gt; | Sous-système BPF (Berkeley Packet Filter). |
-| [Preemption Model]([ici](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/Preemption_Mode.md))  |   ---&gt; | Modèle de préemptibilité (sous-contrôlé par le scheduleur). |
+| [Preemption Model](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/Preemption_Mode.md)  |   ---&gt; | Modèle de préemptibilité (sous-contrôlé par le scheduleur). |
 | Fully Preemptible Kernel (Real-Time) |   [ ] | Noyau entièrement préemptible (réalisation temps réel). |
 | Preemption behaviour defined on boot |   [*] | Comportement de préemption défini au démarrage. |
 | Core Scheduling for SMT |   [ ] | Planification des noyaux pour SMT (Multiprocessing Simultaneous Multithreading). |
 | Extensible Scheduling Class |   [ ] | Classe de planification étendue. |
-| [CPU/Task time and stats accounting](ici)  |   ---&gt; | Comptage du temps CPU et statistiques des tâches. |
+| [CPU/Task time and stats accounting](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/CPU_Task_time_and_stats_accounting.md)  |   ---&gt; | Comptage du temps CPU et statistiques des tâches. |
 | CPU isolation |   -*- | Isolation du processeur. |
 | [RCU Subsystem](ici) |   ---&gt; | Sous-système RCU (Read-Copy-Update). |
 | Kernel .config support |   < > | Support de `.config` du noyau. |
