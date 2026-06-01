@@ -23,7 +23,7 @@
 | Extensible Scheduling Class |   [ ] | Classe de planification étendue. |
 | [CPU/Task time and stats accounting](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/CPU_Task_time_and_stats_accounting.md)  |   ---&gt; | Comptage du temps CPU et statistiques des tâches. |
 | CPU isolation |   -*- | Isolation du processeur. |
-| [RCU Subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/) |   ---&gt; | Sous-système RCU (Read-Copy-Update). |
+| [RCU Subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/RCU_Subsystem.md) |   ---&gt; | Sous-système RCU (Read-Copy-Update). |
 | Kernel .config support |   < > | Support de `.config` du noyau. |
 | Enable kernel headers through /sys/kernel/kheaders.tar.xz |   < > | Activer les en-têtes du noyau via `/sys/kernel/kheaders.tar.xz`. |
 | Kernel log buffer size |   (17) | Taille du tampon des journaux de noyau (16 => 64KB, 17 => 128KB). |
