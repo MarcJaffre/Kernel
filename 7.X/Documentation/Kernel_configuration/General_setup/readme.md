@@ -23,13 +23,13 @@
 | Extensible Scheduling Class |   [ ] | Classe de planification étendue. |
 | [CPU/Task time and stats accounting](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/CPU_Task_time_and_stats_accounting.md)  |   ---&gt; | Comptage du temps CPU et statistiques des tâches. |
 | CPU isolation |   -*- | Isolation du processeur. |
-| [RCU Subsystem](ici) |   ---&gt; | Sous-système RCU (Read-Copy-Update). |
+| [RCU Subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/) |   ---&gt; | Sous-système RCU (Read-Copy-Update). |
 | Kernel .config support |   < > | Support de `.config` du noyau. |
 | Enable kernel headers through /sys/kernel/kheaders.tar.xz |   < > | Activer les en-têtes du noyau via `/sys/kernel/kheaders.tar.xz`. |
 | Kernel log buffer size |   (17) | Taille du tampon des journaux de noyau (16 => 64KB, 17 => 128KB). |
 | CPU kernel log buffer size contribution |   (12) | Contribution de la taille du tampon des journaux CPU au noyau (13 => 8 KB, 17 => 128KB). |
 | Printk indexing debugfs interface |   [ ] | Interface de `debugfs` pour l'indexation `printk`. |
-| [Scheduler features](ici) |   ---&gt; | Fonctionnalités du planificateur. |
+| [Scheduler features](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/) |   ---&gt; | Fonctionnalités du planificateur. |
 | Memory placement aware NUMA scheduler |   [*] | Planificateur NUMA conscient de la mise en place des mémoires. |
 | Automatically enable NUMA aware memory/task placement |   [*] | Activer automatiquement le placement mémoire/du processus NUMA conscient. |
 | Control Group support |   -*- | Support des groupes de contrôle. |
