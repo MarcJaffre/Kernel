@@ -21,7 +21,7 @@
 | Preemption behaviour defined on boot |   [*] | Comportement de préemption défini au démarrage. |
 | Core Scheduling for SMT |   [ ] | Planification des noyaux pour SMT (Multiprocessing Simultaneous Multithreading). |
 | Extensible Scheduling Class |   [ ] | Classe de planification étendue. |
-| [CPU/Task time and stats accounting |   ---&gt; | Comptage du temps CPU et statistiques des tâches. |
+| [CPU/Task time and stats accounting](ici)  |   ---&gt; | Comptage du temps CPU et statistiques des tâches. |
 | CPU isolation |   -*- | Isolation du processeur. |
 | [RCU Subsystem](ici) |   ---&gt; | Sous-système RCU (Read-Copy-Update). |
 | Kernel .config support |   < > | Support de `.config` du noyau. |
