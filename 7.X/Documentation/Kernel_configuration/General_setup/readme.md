@@ -29,7 +29,7 @@
 | Kernel log buffer size |   (17) | Taille du tampon des journaux de noyau (16 => 64KB, 17 => 128KB). |
 | CPU kernel log buffer size contribution |   (12) | Contribution de la taille du tampon des journaux CPU au noyau (13 => 8 KB, 17 => 128KB). |
 | Printk indexing debugfs interface |   [ ] | Interface de `debugfs` pour l'indexation `printk`. |
-| [Scheduler features](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/) |   ---&gt; | Fonctionnalités du planificateur. |
+| [Scheduler features](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/Scheduler_features.md) |   ---&gt; | Fonctionnalités du planificateur. |
 | Memory placement aware NUMA scheduler |   [*] | Planificateur NUMA conscient de la mise en place des mémoires. |
 | Automatically enable NUMA aware memory/task placement |   [*] | Activer automatiquement le placement mémoire/du processus NUMA conscient. |
 | Control Group support |   -*- | Support des groupes de contrôle. |
