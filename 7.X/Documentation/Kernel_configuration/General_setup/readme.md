@@ -14,7 +14,7 @@
 | Enable process_vm_readv/writev syscalls |   [*] | Activer les appels systèmes `process_vm_readv` et `writev`. |
 | Auditing support |   -*- | Support d'audit. |
 | [IRQ subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/IRQ_subsystem.md)     |   ---&gt; | Sous-système des interruptions (IRQ). |
-| [Timers subsystem](ici)  |   ---&gt; | Sous-système des compteurs de temps. |
+| [Timers subsystem](https://github.com/MarcJaffre/Kernel/blob/main/7.X/Documentation/Kernel_configuration/General_setup/Timers_subsystem.md)  |   ---&gt; | Sous-système des compteurs de temps. |
 | [BPF subsystem](ici)     |   ---&gt; | Sous-système BPF (Berkeley Packet Filter). |
 | [Preemption Model](ici)  |   ---&gt; | Modèle de préemptibilité (sous-contrôlé par le scheduleur). |
 | Fully Preemptible Kernel (Real-Time) |   [ ] | Noyau entièrement préemptible (réalisation temps réel). |
